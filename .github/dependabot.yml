@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      react-runtime:
+        patterns:
+          [
+            "react",
+            "react-reconciler",
+            "scheduler",
+            "@types/react*",
+            "@react-native/normalize-colors",
+          ]
+      roku-sdk:
+        patterns: ["@roku-sdk/*"]
+      nativewind:
+        patterns: ["nativewind", "react-native-css-interop", "tailwindcss"]
+      layout:
+        patterns: ["yoga-layout-prebuilt"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

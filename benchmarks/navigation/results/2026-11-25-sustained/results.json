@@ -1,0 +1,5931 @@
+{
+  "source": {
+    "baselineCommit": "d8005fac3714ce208649dfe77476a408b7c96fac",
+    "candidateCommit": "d4f751b6f6365e06a40ceb1610ad3667872c47f4",
+    "startingArchiveSha256": "a304bfbaed6c85cb680012d18295e25e0ab5929d677fdbe46671930235c2869e",
+    "scoredBaselineArchiveSha256": "04e21bdec15b075fd1e233141332a092679cbba385767af9ed2869c72b3782b9",
+    "candidateArchiveSha256": "6eb59875d6d5df01097214037902170df531b998cf09a718ca4fd7fc23f7af57",
+    "sdk": "2.19.1"
+  },
+  "scope": {
+    "model": "4850X",
+    "firmware": "16.0.4",
+    "firmwareBuild": "853",
+    "uiResolution": "1080p",
+    "firstVisibleHighlight": null,
+    "physicalScreenReader": null,
+    "compositorFrameContents": null,
+    "sixLaneSeal": {
+      "status": "not-admitted",
+      "availableGiB": 12.574,
+      "requiredGiB": 32,
+      "receipt": "candidate-seal.log"
+    }
+  },
+  "warm": {
+    "baseline": {
+      "react": {
+        "pooledMs": {
+          "overall": {
+            "n": 120,
+            "median": 28.862721999999998,
+            "p95": 38.361148,
+            "worst": 41.837963
+          },
+          "stationary": {
+            "n": 96,
+            "median": 28.442463,
+            "p95": 39.687445,
+            "worst": 41.837963
+          },
+          "scrolling": {
+            "n": 24,
+            "median": 33.9517405,
+            "p95": 37.654185,
+            "worst": 38.078259
+          }
+        },
+        "launches": [
+          {
+            "launch": "warm-baseline-01-react",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 29.595259,
+                "p95": 38.078259,
+                "worst": 38.374074
+              },
+              "stationary": {
+                "n": 24,
+                "median": 29.082148,
+                "p95": 37.371741,
+                "worst": 38.374074
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 32.413852,
+                "p95": 38.078259,
+                "worst": 38.078259
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-baseline-04-react",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 28.8697035,
+                "p95": 41.237592,
+                "worst": 41.311593
+              },
+              "stationary": {
+                "n": 24,
+                "median": 28.8697035,
+                "p95": 41.237592,
+                "worst": 41.311593
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 31.182555,
+                "p95": 37.370444,
+                "worst": 37.370444
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-baseline-05-react",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 28.1742965,
+                "p95": 38.052259,
+                "worst": 39.687445
+              },
+              "stationary": {
+                "n": 24,
+                "median": 27.646425999999998,
+                "p95": 38.052259,
+                "worst": 39.687445
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 34.323907500000004,
+                "p95": 37.157814,
+                "worst": 37.157814
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-baseline-08-react",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 30.212481500000003,
+                "p95": 40.354814,
+                "worst": 41.837963
+              },
+              "stationary": {
+                "n": 24,
+                "median": 29.0241845,
+                "p95": 40.354814,
+                "worst": 41.837963
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 34.915833500000005,
+                "p95": 37.654185,
+                "worst": 37.654185
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          }
+        ]
+      },
+      "solid": {
+        "pooledMs": {
+          "overall": {
+            "n": 120,
+            "median": 13.2986115,
+            "p95": 18.240852,
+            "worst": 20.289297
+          },
+          "stationary": {
+            "n": 96,
+            "median": 13.645814999999999,
+            "p95": 18.432333,
+            "worst": 20.289297
+          },
+          "scrolling": {
+            "n": 24,
+            "median": 12.9900555,
+            "p95": 17.127778,
+            "worst": 19.108444
+          }
+        },
+        "launches": [
+          {
+            "launch": "warm-baseline-02-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 13.907167,
+                "p95": 16.966593,
+                "worst": 17.821741
+              },
+              "stationary": {
+                "n": 24,
+                "median": 13.907167,
+                "p95": 16.942,
+                "worst": 17.821741
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 14.022185,
+                "p95": 16.966593,
+                "worst": 16.966593
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-baseline-03-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 11.767315,
+                "p95": 18.240852,
+                "worst": 19.108444
+              },
+              "stationary": {
+                "n": 24,
+                "median": 11.767315,
+                "p95": 17.909481,
+                "worst": 18.240852
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 11.7974815,
+                "p95": 19.108444,
+                "worst": 19.108444
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-baseline-06-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 13.645814999999999,
+                "p95": 17.127778,
+                "worst": 19.723518
+              },
+              "stationary": {
+                "n": 24,
+                "median": 13.645814999999999,
+                "p95": 16.937555,
+                "worst": 19.723518
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 14.4390185,
+                "p95": 17.127778,
+                "worst": 17.127778
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-baseline-07-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 14.0757595,
+                "p95": 19.704592,
+                "worst": 20.289297
+              },
+              "stationary": {
+                "n": 24,
+                "median": 14.0757595,
+                "p95": 19.704592,
+                "worst": 20.289297
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 13.319278,
+                "p95": 15.921037,
+                "worst": 15.921037
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          }
+        ]
+      }
+    },
+    "followup": {
+      "react": {
+        "pooledMs": {
+          "overall": {
+            "n": 120,
+            "median": 29.276648,
+            "p95": 38.072186,
+            "worst": 41.821296
+          },
+          "stationary": {
+            "n": 96,
+            "median": 28.788037000000003,
+            "p95": 38.072186,
+            "worst": 41.821296
+          },
+          "scrolling": {
+            "n": 24,
+            "median": 30.7089625,
+            "p95": 38.12437,
+            "worst": 39.103481
+          }
+        },
+        "launches": [
+          {
+            "launch": "warm-followup-01-control",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 29.750371,
+                "p95": 36.625185,
+                "worst": 41.821296
+              },
+              "stationary": {
+                "n": 24,
+                "median": 29.631982,
+                "p95": 36.625185,
+                "worst": 41.821296
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 30.312129499999998,
+                "p95": 36.119926,
+                "worst": 36.119926
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-06-control",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 28.6305185,
+                "p95": 36.509481,
+                "worst": 38.072186
+              },
+              "stationary": {
+                "n": 24,
+                "median": 27.4566665,
+                "p95": 36.509481,
+                "worst": 38.072186
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 29.089814500000003,
+                "p95": 34.111222,
+                "worst": 34.111222
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-07-control",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 28.080962999999997,
+                "p95": 38.193518,
+                "worst": 39.103481
+              },
+              "stationary": {
+                "n": 24,
+                "median": 27.690815,
+                "p95": 37.595667,
+                "worst": 38.193518
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 32.513981,
+                "p95": 39.103481,
+                "worst": 39.103481
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-12-control",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 29.1422775,
+                "p95": 39.040111,
+                "worst": 40.964593
+              },
+              "stationary": {
+                "n": 24,
+                "median": 28.788037000000003,
+                "p95": 39.040111,
+                "worst": 40.964593
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 32.332611,
+                "p95": 38.12437,
+                "worst": 38.12437
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          }
+        ]
+      },
+      "candidate": {
+        "pooledMs": {
+          "overall": {
+            "n": 120,
+            "median": 29.046537,
+            "p95": 38.018037,
+            "worst": 40.77663
+          },
+          "stationary": {
+            "n": 96,
+            "median": 28.9314075,
+            "p95": 37.954185,
+            "worst": 40.77663
+          },
+          "scrolling": {
+            "n": 24,
+            "median": 30.885759,
+            "p95": 38.437778,
+            "worst": 38.573926
+          }
+        },
+        "launches": [
+          {
+            "launch": "warm-followup-02-candidate",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 29.209833,
+                "p95": 37.793482,
+                "worst": 38.018037
+              },
+              "stationary": {
+                "n": 24,
+                "median": 29.458444,
+                "p95": 37.743222,
+                "worst": 37.793482
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 28.4304075,
+                "p95": 38.018037,
+                "worst": 38.018037
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-05-candidate",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 28.9571855,
+                "p95": 38.573926,
+                "worst": 40.77663
+              },
+              "stationary": {
+                "n": 24,
+                "median": 28.6102225,
+                "p95": 37.954185,
+                "worst": 40.77663
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 31.779981499999998,
+                "p95": 38.573926,
+                "worst": 38.573926
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-09-candidate",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 28.817648,
+                "p95": 37.946333,
+                "worst": 38.558445
+              },
+              "stationary": {
+                "n": 24,
+                "median": 28.691537,
+                "p95": 37.89837,
+                "worst": 38.558445
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 31.2335925,
+                "p95": 37.946333,
+                "worst": 37.946333
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-10-candidate",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 29.523888999999997,
+                "p95": 39.086,
+                "worst": 39.442926
+              },
+              "stationary": {
+                "n": 24,
+                "median": 29.053444499999998,
+                "p95": 39.086,
+                "worst": 39.442926
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 33.111426,
+                "p95": 38.437778,
+                "worst": 38.437778
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          }
+        ]
+      },
+      "solid": {
+        "pooledMs": {
+          "overall": {
+            "n": 120,
+            "median": 13.7575925,
+            "p95": 19.545259,
+            "worst": 21.948556
+          },
+          "stationary": {
+            "n": 96,
+            "median": 14.539684999999999,
+            "p95": 19.762259,
+            "worst": 21.948556
+          },
+          "scrolling": {
+            "n": 24,
+            "median": 13.161425999999999,
+            "p95": 18.895926,
+            "worst": 19.667777
+          }
+        },
+        "launches": [
+          {
+            "launch": "warm-followup-03-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 14.739759,
+                "p95": 19.667777,
+                "worst": 19.762259
+              },
+              "stationary": {
+                "n": 24,
+                "median": 15.0382775,
+                "p95": 18.182481,
+                "worst": 19.762259
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 11.9632225,
+                "p95": 19.667777,
+                "worst": 19.667777
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-04-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 14.1633335,
+                "p95": 19.545259,
+                "worst": 20.363592
+              },
+              "stationary": {
+                "n": 24,
+                "median": 14.850795999999999,
+                "p95": 19.545259,
+                "worst": 20.363592
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 13.2239445,
+                "p95": 18.895926,
+                "worst": 18.895926
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-08-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 11.739426,
+                "p95": 20.339297,
+                "worst": 21.948556
+              },
+              "stationary": {
+                "n": 24,
+                "median": 11.739426,
+                "p95": 20.339297,
+                "worst": 21.948556
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 12.811852,
+                "p95": 18.383,
+                "worst": 18.383
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          },
+          {
+            "launch": "warm-followup-11-solid",
+            "failed": 0,
+            "unattempted": 0,
+            "identity": {
+              "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+              "model": "4850X",
+              "firmware": "16.0.4"
+            },
+            "restoration": {
+              "installed": true,
+              "foreground": "rollback",
+              "playbackClosed": true
+            },
+            "missingFirstSwapTails": 0,
+            "ms": {
+              "overall": {
+                "n": 30,
+                "median": 14.0557595,
+                "p95": 18.763482,
+                "worst": 19.828704
+              },
+              "stationary": {
+                "n": 24,
+                "median": 13.839315,
+                "p95": 18.763482,
+                "worst": 19.828704
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 14.661685499999999,
+                "p95": 17.889963,
+                "worst": 17.889963
+              }
+            },
+            "missingQualifiedEndpoints": 0
+          }
+        ]
+      }
+    },
+    "gap": {
+      "overall": {
+        "median": {
+          "baselineMs": 15.564110499999998,
+          "candidateMs": 15.288944500000001,
+          "closedMs": 0.2751659999999969,
+          "closedPercent": 1.7679519815796536
+        },
+        "p95": {
+          "baselineMs": 20.120296,
+          "candidateMs": 18.472777999999998,
+          "closedMs": 1.6475180000000016,
+          "closedPercent": 8.188338779906626
+        }
+      },
+      "stationary": {
+        "median": {
+          "baselineMs": 14.796648000000001,
+          "candidateMs": 14.3917225,
+          "closedMs": 0.40492550000000094,
+          "closedPercent": 2.7366029116864907
+        },
+        "p95": {
+          "baselineMs": 21.255111999999997,
+          "candidateMs": 18.191926000000002,
+          "closedMs": 3.0631859999999946,
+          "closedPercent": 14.411526036654125
+        }
+      },
+      "scrolling": {
+        "median": {
+          "baselineMs": 20.961685,
+          "candidateMs": 17.724333,
+          "closedMs": 3.237351999999998,
+          "closedPercent": 15.444140106103102
+        },
+        "p95": {
+          "baselineMs": 20.526407,
+          "candidateMs": 19.541852000000002,
+          "closedMs": 0.9845549999999967,
+          "closedPercent": 4.79652868619431
+        }
+      }
+    },
+    "comparisons": {
+      "baseline": {
+        "sameBuildMatchedNoise": [
+          {
+            "role": "control",
+            "runs": ["warm-baseline-01-react/journey", "warm-baseline-04-react/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.2410549999999976,
+              "scrolling": 3.584351999999999,
+              "nonScrolling": 3.08887
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-baseline-01-react/journey", "warm-baseline-05-react/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.941703499999999,
+              "scrolling": 5.462406999999999,
+              "nonScrolling": 2.7487410000000008
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-baseline-01-react/journey", "warm-baseline-08-react/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 4.569796499999999,
+              "scrolling": 3.2762405,
+              "nonScrolling": 4.861611499999999
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-baseline-04-react/journey", "warm-baseline-05-react/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.773333000000001,
+              "scrolling": 3.1413525000000018,
+              "nonScrolling": 3.773333000000001
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-baseline-04-react/journey", "warm-baseline-08-react/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.0944629999999993,
+              "scrolling": 1.9469814999999997,
+              "nonScrolling": 3.1933149999999983
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-baseline-05-react/journey", "warm-baseline-08-react/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.924888499999998,
+              "scrolling": 1.5907410000000013,
+              "nonScrolling": 4.364814999999998
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-baseline-02-solid/journey", "warm-baseline-03-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.4706294999999994,
+              "scrolling": 1.7957774999999994,
+              "nonScrolling": 1.2465929999999994
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-baseline-02-solid/journey", "warm-baseline-06-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.2737224999999999,
+              "scrolling": 0.6503889999999997,
+              "nonScrolling": 1.3331299999999997
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-baseline-02-solid/journey", "warm-baseline-07-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.2493150000000002,
+              "scrolling": 0.6851665000000011,
+              "nonScrolling": 1.5168894999999996
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-baseline-03-solid/journey", "warm-baseline-06-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.6142594999999993,
+              "scrolling": 1.3829440000000006,
+              "nonScrolling": 1.6142594999999993
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-baseline-03-solid/journey", "warm-baseline-07-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.6789260000000006,
+              "scrolling": 1.8864445,
+              "nonScrolling": 1.2101485000000007
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-baseline-06-solid/journey", "warm-baseline-07-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.1361300000000005,
+              "scrolling": 1.4903890000000004,
+              "nonScrolling": 1.0962415000000014
+            }
+          }
+        ],
+        "blocks": [
+          {
+            "order": ["control", "candidate"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 15.496962499999999,
+                "p95": 23.719110999999998,
+                "worst": 24.205889
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 19.527296,
+                "p95": 22.53026,
+                "worst": 22.53026
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 15.368333,
+                "p95": 23.719110999999998,
+                "worst": 24.205889
+              }
+            }
+          },
+          {
+            "order": ["candidate", "control"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 18.086889,
+                "p95": 24.269629,
+                "worst": 24.708296
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 19.6838515,
+                "p95": 24.269629,
+                "worst": 24.269629
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 17.5855365,
+                "p95": 23.973295999999998,
+                "worst": 24.708296
+              }
+            }
+          },
+          {
+            "order": ["control", "candidate"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 16.785593,
+                "p95": 24.181518000000004,
+                "worst": 27.639482
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 19.3700185,
+                "p95": 24.181518000000004,
+                "worst": 24.181518000000004
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 16.060964,
+                "p95": 22.079223000000002,
+                "worst": 27.639482
+              }
+            }
+          },
+          {
+            "order": ["candidate", "control"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 16.2349625,
+                "p95": 23.699222999999996,
+                "worst": 25.153444999999998
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 21.425870500000002,
+                "p95": 25.153444999999998,
+                "worst": 25.153444999999998
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 15.684425499999998,
+                "p95": 22.133371,
+                "worst": 23.699222999999996
+              }
+            }
+          }
+        ],
+        "withinBuildLaunchMedianRangeMs": {
+          "control": {
+            "overall": 2.038185000000002,
+            "scrolling": 3.7332785000000044,
+            "nonScrolling": 1.435722000000002
+          },
+          "candidate": {
+            "overall": 2.3084445000000002,
+            "scrolling": 2.6415369999999996,
+            "nonScrolling": 2.3084445000000002
+          }
+        },
+        "identicalArtifacts": false,
+        "excludedAttempts": [
+          {
+            "path": "baseline-01-react",
+            "reason": "Launch omitted required ROKU_BENCHMARK_OUTPUT_MODE, so there were no scored inputs"
+          },
+          {
+            "path": "baseline-02-solid",
+            "reason": "Launch omitted required ROKU_BENCHMARK_OUTPUT_MODE, so there were no scored inputs"
+          },
+          {
+            "path": "baseline-03-solid",
+            "reason": "Launch omitted required ROKU_BENCHMARK_OUTPUT_MODE, so there were no scored inputs"
+          }
+        ],
+        "firstVisibleHighlight": "UNMEASURED"
+      },
+      "followup-solid": {
+        "sameBuildMatchedNoise": [
+          {
+            "role": "control",
+            "runs": ["warm-followup-02-candidate/journey", "warm-followup-05-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.130519000000003,
+              "scrolling": 1.3871294999999986,
+              "nonScrolling": 2.212556000000001
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-02-candidate/journey", "warm-followup-09-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.2409809999999997,
+              "scrolling": 3.278741000000002,
+              "nonScrolling": 3.2409809999999997
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-02-candidate/journey", "warm-followup-10-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.5734440000000003,
+              "scrolling": 3.9075735000000016,
+              "nonScrolling": 2.4795549999999995
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-05-candidate/journey", "warm-followup-09-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.658351999999999,
+              "scrolling": 3.5968149999999994,
+              "nonScrolling": 2.314036999999999
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-05-candidate/journey", "warm-followup-10-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 4.2422045000000015,
+              "scrolling": 2.2201664999999995,
+              "nonScrolling": 5.018352
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-09-candidate/journey", "warm-followup-10-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.3440364999999996,
+              "scrolling": 2.9255734999999987,
+              "nonScrolling": 3.699073500000001
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-03-solid/journey", "warm-followup-04-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.3125370000000003,
+              "scrolling": 0.8269075000000008,
+              "nonScrolling": 1.4535744999999998
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-03-solid/journey", "warm-followup-08-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.0118889999999996,
+              "scrolling": 1.4058699999999993,
+              "nonScrolling": 2.216871
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-03-solid/journey", "warm-followup-11-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.5089074999999994,
+              "scrolling": 0.3934255000000002,
+              "nonScrolling": 1.7001855
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-04-solid/journey", "warm-followup-08-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.0719814999999984,
+              "scrolling": 1.0498515,
+              "nonScrolling": 2.1588884999999993
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-04-solid/journey", "warm-followup-11-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 1.8245374999999995,
+              "scrolling": 0.7631114999999999,
+              "nonScrolling": 1.8891120000000003
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-08-solid/journey", "warm-followup-11-solid/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.7055925000000003,
+              "scrolling": 0.5955549999999987,
+              "nonScrolling": 3.4041664999999997
+            }
+          }
+        ],
+        "blocks": [
+          {
+            "order": ["control", "candidate"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 16.249537000000004,
+                "p95": 23.900185,
+                "worst": 25.105739999999997
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 16.5898335,
+                "p95": 25.105739999999997,
+                "worst": 25.105739999999997
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 16.249537000000004,
+                "p95": 22.411889000000002,
+                "worst": 23.143259999999998
+              }
+            }
+          },
+          {
+            "order": ["candidate", "control"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 16.4125,
+                "p95": 25.174037,
+                "worst": 25.576037999999997
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 19.511463499999998,
+                "p95": 25.174037,
+                "worst": 25.174037
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 14.986833,
+                "p95": 23.525334,
+                "worst": 25.576037999999997
+              }
+            }
+          },
+          {
+            "order": ["candidate", "control"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 17.2566665,
+                "p95": 23.560518,
+                "worst": 26.500444
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 19.639167,
+                "p95": 23.478703,
+                "worst": 23.478703
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 16.1910925,
+                "p95": 23.560518,
+                "worst": 26.500444
+              }
+            }
+          },
+          {
+            "order": ["control", "candidate"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 18.085499499999997,
+                "p95": 23.719925999999997,
+                "worst": 28.819036999999998
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 19.222371000000003,
+                "p95": 23.719925999999997,
+                "worst": 23.719925999999997
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 17.852166500000003,
+                "p95": 22.335333,
+                "worst": 28.819036999999998
+              }
+            }
+          }
+        ],
+        "withinBuildLaunchMedianRangeMs": {
+          "control": {
+            "overall": 0.7062409999999986,
+            "scrolling": 4.6810185,
+            "nonScrolling": 0.8482215000000011
+          },
+          "candidate": {
+            "overall": 3.0003329999999995,
+            "scrolling": 2.6984629999999985,
+            "nonScrolling": 3.2988514999999996
+          }
+        },
+        "identicalArtifacts": false,
+        "excludedAttempts": [],
+        "firstVisibleHighlight": "UNMEASURED"
+      },
+      "followup-control": {
+        "sameBuildMatchedNoise": [
+          {
+            "role": "control",
+            "runs": ["warm-followup-01-control/journey", "warm-followup-06-control/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.1530745000000007,
+              "scrolling": 3.6817399999999996,
+              "nonScrolling": 3.1530745000000007
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-01-control/journey", "warm-followup-07-control/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 4.0486115,
+              "scrolling": 1.134129999999999,
+              "nonScrolling": 4.737536999999998
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-01-control/journey", "warm-followup-12-control/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 4.235296,
+              "scrolling": 2.5031484999999982,
+              "nonScrolling": 4.481851999999998
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-06-control/journey", "warm-followup-07-control/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 5.075832999999999,
+              "scrolling": 4.745370999999999,
+              "nonScrolling": 5.075832999999999
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-06-control/journey", "warm-followup-12-control/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 4.396852000000003,
+              "scrolling": 6.011981499999999,
+              "nonScrolling": 4.3272780000000015
+            }
+          },
+          {
+            "role": "control",
+            "runs": ["warm-followup-07-control/journey", "warm-followup-12-control/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.5763514999999977,
+              "scrolling": 2.6334254999999995,
+              "nonScrolling": 2.478722499999998
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-02-candidate/journey", "warm-followup-05-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.130519000000003,
+              "scrolling": 1.3871294999999986,
+              "nonScrolling": 2.212556000000001
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-02-candidate/journey", "warm-followup-09-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.2409809999999997,
+              "scrolling": 3.278741000000002,
+              "nonScrolling": 3.2409809999999997
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-02-candidate/journey", "warm-followup-10-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.5734440000000003,
+              "scrolling": 3.9075735000000016,
+              "nonScrolling": 2.4795549999999995
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-05-candidate/journey", "warm-followup-09-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 2.658351999999999,
+              "scrolling": 3.5968149999999994,
+              "nonScrolling": 2.314036999999999
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-05-candidate/journey", "warm-followup-10-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 4.2422045000000015,
+              "scrolling": 2.2201664999999995,
+              "nonScrolling": 5.018352
+            }
+          },
+          {
+            "role": "candidate",
+            "runs": ["warm-followup-09-candidate/journey", "warm-followup-10-candidate/journey"],
+            "medianAbsMatchedMs": {
+              "overall": 3.3440364999999996,
+              "scrolling": 2.9255734999999987,
+              "nonScrolling": 3.699073500000001
+            }
+          }
+        ],
+        "blocks": [
+          {
+            "order": ["control", "candidate"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": 0.26098150000000153,
+                "p95": 9.948258999999997,
+                "worst": 10.869592
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 1.5072414999999992,
+                "p95": 7.192445000000003,
+                "worst": 7.192445000000003
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": 0.0677600000000016,
+                "p95": 9.948258999999997,
+                "worst": 10.869592
+              }
+            }
+          },
+          {
+            "order": ["candidate", "control"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": -1.0065185000000003,
+                "p95": 6.066261000000004,
+                "worst": 10.145
+              },
+              "scrolling": {
+                "n": 6,
+                "median": -0.9610185000000016,
+                "p95": 1.8583320000000008,
+                "worst": 1.8583320000000008
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": -1.0065185000000003,
+                "p95": 6.066261000000004,
+                "worst": 10.145
+              }
+            }
+          },
+          {
+            "order": ["control", "candidate"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": -0.45650000000000013,
+                "p95": 10.337518000000003,
+                "worst": 11.598444
+              },
+              "scrolling": {
+                "n": 6,
+                "median": -0.3217224999999999,
+                "p95": 10.337518000000003,
+                "worst": 10.337518000000003
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": -0.45650000000000013,
+                "p95": 9.117,
+                "worst": 11.598444
+              }
+            }
+          },
+          {
+            "order": ["candidate", "control"],
+            "matchedSavedMs": {
+              "overall": {
+                "n": 30,
+                "median": -0.27214799999999784,
+                "p95": 6.686333000000001,
+                "worst": 11.343704000000002
+              },
+              "scrolling": {
+                "n": 6,
+                "median": 0.8320185000000002,
+                "p95": 2.4939619999999962,
+                "worst": 2.4939619999999962
+              },
+              "nonScrolling": {
+                "n": 24,
+                "median": -0.4658889999999989,
+                "p95": 6.686333000000001,
+                "worst": 11.343704000000002
+              }
+            }
+          }
+        ],
+        "withinBuildLaunchMedianRangeMs": {
+          "control": {
+            "overall": 1.6694080000000042,
+            "scrolling": 3.4241664999999983,
+            "nonScrolling": 2.1753155
+          },
+          "candidate": {
+            "overall": 0.7062409999999986,
+            "scrolling": 4.6810185,
+            "nonScrolling": 0.8482215000000011
+          }
+        },
+        "identicalArtifacts": false,
+        "excludedAttempts": [],
+        "firstVisibleHighlight": "UNMEASURED"
+      }
+    },
+    "basis": "Device key-down to first completed SDK swap whose render starts after the state-qualified native applies"
+  },
+  "sustained": {
+    "baseline-deep": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 48'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.8573,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 1962797720940,
+          "spacingMs": null,
+          "keyToDispatchMs": 2.0706,
+          "linkedSwapCandidateMs": 103.8026
+        },
+        {
+          "id": 35,
+          "keyNs": 1962995379606,
+          "spacingMs": 197.6587,
+          "keyToDispatchMs": 409.84,
+          "linkedSwapCandidateMs": 508.5238
+        },
+        {
+          "id": 39,
+          "keyNs": 1963194276977,
+          "spacingMs": 198.8974,
+          "keyToDispatchMs": 210.9548,
+          "linkedSwapCandidateMs": 309.6264
+        },
+        {
+          "id": 43,
+          "keyNs": 1963396542273,
+          "spacingMs": 202.2653,
+          "keyToDispatchMs": 8.6957,
+          "linkedSwapCandidateMs": 107.3611
+        },
+        {
+          "id": 47,
+          "keyNs": 1963594604532,
+          "spacingMs": 198.0623,
+          "keyToDispatchMs": 378.2594,
+          "linkedSwapCandidateMs": 832.2273
+        },
+        {
+          "id": 51,
+          "keyNs": 1963794515458,
+          "spacingMs": 199.9109,
+          "keyToDispatchMs": 178.3606,
+          "linkedSwapCandidateMs": 632.3164
+        },
+        {
+          "id": 55,
+          "keyNs": 1963995308347,
+          "spacingMs": 200.7929,
+          "keyToDispatchMs": 59.3127,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 1964194555309,
+          "spacingMs": 199.247,
+          "keyToDispatchMs": 232.3704,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 63,
+          "keyNs": 1964394995383,
+          "spacingMs": 200.4401,
+          "keyToDispatchMs": 31.9425,
+          "flowError": "unlinked directional focus transaction"
+        }
+      ]
+    },
+    "baseline-deep-fields": {
+      "identity": {
+        "sha256": "877c25d11a5d8d3b84469661c4c93466abfa9463e87ac517b3377763d4ead203",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 13144.493125
+      },
+      "detail": {
+        "title": "Mountain route 64",
+        "focus": "catalog-info",
+        "checkedHostMs": 15759.822542
+      },
+      "back": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17815.312542
+      },
+      "finalWindow": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17841.3885
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": true,
+      "observedActivations": [
+        {
+          "id": 63,
+          "offset": 2520
+        }
+      ],
+      "focusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 2.3025,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 2255751524506,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.1809,
+          "linkedSwapCandidateMs": 107.8064,
+          "directKeyToEligibleSwapMs": 107.8064
+        },
+        {
+          "id": 35,
+          "keyNs": 2255951754321,
+          "spacingMs": 200.2298,
+          "keyToDispatchMs": 398.8037,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 39,
+          "keyNs": 2256151651061,
+          "spacingMs": 199.8967,
+          "keyToDispatchMs": 198.9189,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 43,
+          "keyNs": 2256355503469,
+          "spacingMs": 203.8524,
+          "keyToDispatchMs": 4.8581,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 47,
+          "keyNs": 2256551487543,
+          "spacingMs": 195.9841,
+          "keyToDispatchMs": 373.8847,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 51,
+          "keyNs": 2256751937839,
+          "spacingMs": 200.4503,
+          "keyToDispatchMs": 173.4409,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 55,
+          "keyNs": 2256951596542,
+          "spacingMs": 199.6587,
+          "keyToDispatchMs": 71.0069,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 2257150907098,
+          "spacingMs": 199.3106,
+          "keyToDispatchMs": 347.1496,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 63,
+          "keyNs": 2257351167950,
+          "spacingMs": 200.2609,
+          "keyToDispatchMs": 146.8954,
+          "directKeyToEligibleSwapMs": 2997.1631,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        }
+      ]
+    },
+    "combined-first-deep": {
+      "identity": {
+        "sha256": "a3081c090a6e56b714c78be61c79c238509c9a1f39f54ba83cb62a622a1cd232",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 56'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.932,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3064877433468,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.8119,
+          "linkedSwapCandidateMs": 102.1079
+        },
+        {
+          "id": 35,
+          "keyNs": 3065061597394,
+          "spacingMs": 184.1639,
+          "keyToDispatchMs": 197.7989,
+          "linkedSwapCandidateMs": 300.4626
+        },
+        {
+          "id": 39,
+          "keyNs": 3065262445801,
+          "spacingMs": 200.8484,
+          "keyToDispatchMs": null,
+          "flowError": "unlinked key transfer"
+        },
+        {
+          "id": 43,
+          "keyNs": 3065462079468,
+          "spacingMs": 199.6337,
+          "keyToDispatchMs": 164.1336,
+          "linkedSwapCandidateMs": 555.6753
+        },
+        {
+          "id": 47,
+          "keyNs": 3065660827468,
+          "spacingMs": 198.748,
+          "keyToDispatchMs": 256.6223,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 51,
+          "keyNs": 3065861557208,
+          "spacingMs": 200.7297,
+          "keyToDispatchMs": 55.9053,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 55,
+          "keyNs": 3066061864097,
+          "spacingMs": 200.3069,
+          "keyToDispatchMs": 201.8267,
+          "linkedSwapCandidateMs": 301.2566
+        },
+        {
+          "id": 59,
+          "keyNs": 3066261853690,
+          "spacingMs": 199.9896,
+          "keyToDispatchMs": 1.8496,
+          "linkedSwapCandidateMs": 101.267
+        },
+        {
+          "id": 63,
+          "keyNs": 3066460295134,
+          "spacingMs": 198.4414,
+          "keyToDispatchMs": 169.9341,
+          "linkedSwapCandidateMs": 553.5896
+        }
+      ]
+    },
+    "correctness-deep-second": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": null,
+      "detail": null,
+      "back": null,
+      "finalWindow": null,
+      "strictTraceStatus": "PASS",
+      "strictTraceReason": null,
+      "trials": [
+        {
+          "route": "down",
+          "repeat": 0,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 258.0024,
+          "deviceSpacingMs": 197.4522,
+          "deviceSecondToSelectMs": 150.4368
+        },
+        {
+          "route": "reverse",
+          "repeat": 0,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 234.6867,
+          "deviceSpacingMs": 199.8619,
+          "deviceSecondToSelectMs": 147.8864
+        },
+        {
+          "route": "paced",
+          "repeat": 0,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 435.2224,
+          "deviceSpacingMs": 999.5465,
+          "deviceSecondToSelectMs": 150.0811
+        },
+        {
+          "route": "down",
+          "repeat": 1,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 260.7981,
+          "deviceSpacingMs": 195.5503,
+          "deviceSecondToSelectMs": 148.783
+        },
+        {
+          "route": "reverse",
+          "repeat": 1,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 268.2313,
+          "deviceSpacingMs": 197.8989,
+          "deviceSecondToSelectMs": 149.1077
+        },
+        {
+          "route": "paced",
+          "repeat": 1,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 460.2027,
+          "deviceSpacingMs": 1000.2634,
+          "deviceSecondToSelectMs": 149.2052
+        },
+        {
+          "route": "down",
+          "repeat": 2,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 263.0243,
+          "deviceSpacingMs": 200.9154,
+          "deviceSecondToSelectMs": 148.921
+        },
+        {
+          "route": "reverse",
+          "repeat": 2,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 282.8447,
+          "deviceSpacingMs": 196.0712,
+          "deviceSecondToSelectMs": 151.7602
+        },
+        {
+          "route": "paced",
+          "repeat": 2,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 500.019,
+          "deviceSpacingMs": 999.2501,
+          "deviceSecondToSelectMs": 149.2143
+        },
+        {
+          "route": "down",
+          "repeat": 3,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 300.1194,
+          "deviceSpacingMs": 198.7413,
+          "deviceSecondToSelectMs": 149.7547
+        },
+        {
+          "route": "reverse",
+          "repeat": 3,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 297.0737,
+          "deviceSpacingMs": 201.6813,
+          "deviceSecondToSelectMs": 150.4297
+        },
+        {
+          "route": "paced",
+          "repeat": 3,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 503.3305,
+          "deviceSpacingMs": 1001.2194,
+          "deviceSecondToSelectMs": 146.9691
+        },
+        {
+          "route": "down",
+          "repeat": 4,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 296.8965,
+          "deviceSpacingMs": 197.2737,
+          "deviceSecondToSelectMs": 150.7076
+        },
+        {
+          "route": "reverse",
+          "repeat": 4,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 306.5503,
+          "deviceSpacingMs": 199.6243,
+          "deviceSecondToSelectMs": 149.2502
+        },
+        {
+          "route": "paced",
+          "repeat": 4,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 510.2512,
+          "deviceSpacingMs": 999.4241,
+          "deviceSecondToSelectMs": 149.657
+        },
+        {
+          "route": "down",
+          "repeat": 5,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 314.7211,
+          "deviceSpacingMs": 200.7817,
+          "deviceSecondToSelectMs": 148.3511
+        },
+        {
+          "route": "reverse",
+          "repeat": 5,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 302.0911,
+          "deviceSpacingMs": 197.8663,
+          "deviceSecondToSelectMs": 160.9447
+        },
+        {
+          "route": "paced",
+          "repeat": 5,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 513.567,
+          "deviceSpacingMs": 1003.4479,
+          "deviceSecondToSelectMs": 149.1667
+        },
+        {
+          "route": "down",
+          "repeat": 6,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 315.912,
+          "deviceSpacingMs": 199.1092,
+          "deviceSecondToSelectMs": 148.2781
+        },
+        {
+          "route": "reverse",
+          "repeat": 6,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 335.4169,
+          "deviceSpacingMs": 197.6985,
+          "deviceSecondToSelectMs": 149.5606
+        },
+        {
+          "route": "paced",
+          "repeat": 6,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 543.0887,
+          "deviceSpacingMs": 1002.2289,
+          "deviceSecondToSelectMs": 148.3913
+        },
+        {
+          "route": "down",
+          "repeat": 7,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 361.1727,
+          "deviceSpacingMs": 196.708,
+          "deviceSecondToSelectMs": 149.9359
+        },
+        {
+          "route": "reverse",
+          "repeat": 7,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 350.9001,
+          "deviceSpacingMs": 199.0074,
+          "deviceSecondToSelectMs": 148.8503
+        },
+        {
+          "route": "paced",
+          "repeat": 7,
+          "detail": true,
+          "back": true,
+          "error": null,
+          "SelectKeyToDispatchMs": 540.0504,
+          "deviceSpacingMs": 999.5431,
+          "deviceSecondToSelectMs": 150.3789
+        }
+      ]
+    },
+    "correctness-deep-triple": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": null,
+      "detail": {
+        "title": "Mountain route 40",
+        "focus": "catalog-info",
+        "checkedHostMs": 8879.435792
+      },
+      "back": {
+        "offset": 1320,
+        "rows": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-39",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 11124.952917
+      },
+      "finalWindow": {
+        "offset": 1320,
+        "rows": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-39",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 11159.027542
+      },
+      "strictTraceStatus": "PASS",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39],
+      "SelectKeyToDispatchMs": 60.4139,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 4540012314478,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.8893,
+          "linkedSwapCandidateMs": 106.2506
+        },
+        {
+          "id": 35,
+          "keyNs": 4540209311885,
+          "spacingMs": 196.9974,
+          "keyToDispatchMs": 412.8254,
+          "linkedSwapCandidateMs": 512.1284
+        },
+        {
+          "id": 39,
+          "keyNs": 4540408165478,
+          "spacingMs": 198.8536,
+          "keyToDispatchMs": 213.9831,
+          "linkedSwapCandidateMs": 313.2748
+        }
+      ]
+    },
+    "correctness-first-deep": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 12195.734083
+      },
+      "detail": {
+        "title": "Mountain route 64",
+        "focus": "catalog-info",
+        "checkedHostMs": 14979.183125
+      },
+      "back": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17046.512125
+      },
+      "finalWindow": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17071.377125
+      },
+      "strictTraceStatus": "PASS",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 2.0147,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3148307974530,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.7827,
+          "linkedSwapCandidateMs": 100.5034
+        },
+        {
+          "id": 35,
+          "keyNs": 3148507984048,
+          "spacingMs": 200.0095,
+          "keyToDispatchMs": 406.1741,
+          "linkedSwapCandidateMs": 506.5343
+        },
+        {
+          "id": 39,
+          "keyNs": 3148706875826,
+          "spacingMs": 198.8918,
+          "keyToDispatchMs": 207.293,
+          "linkedSwapCandidateMs": 307.6426
+        },
+        {
+          "id": 43,
+          "keyNs": 3148908063196,
+          "spacingMs": 201.1874,
+          "keyToDispatchMs": 6.1117,
+          "linkedSwapCandidateMs": 106.4552
+        },
+        {
+          "id": 47,
+          "keyNs": 3149106995159,
+          "spacingMs": 198.932,
+          "keyToDispatchMs": 373.0294,
+          "linkedSwapCandidateMs": 903.6528
+        },
+        {
+          "id": 51,
+          "keyNs": 3149306974418,
+          "spacingMs": 199.9793,
+          "keyToDispatchMs": 173.0621,
+          "linkedSwapCandidateMs": 703.6736
+        },
+        {
+          "id": 55,
+          "keyNs": 3149507880973,
+          "spacingMs": 200.9066,
+          "keyToDispatchMs": 52.4532,
+          "linkedSwapCandidateMs": 952.4673
+        },
+        {
+          "id": 59,
+          "keyNs": 3149706412047,
+          "spacingMs": 198.5311,
+          "keyToDispatchMs": 302.3474,
+          "linkedSwapCandidateMs": 1370.7749
+        },
+        {
+          "id": 63,
+          "keyNs": 3149906704862,
+          "spacingMs": 200.2928,
+          "keyToDispatchMs": 102.0668,
+          "linkedSwapCandidateMs": 1170.4821
+        }
+      ]
+    },
+    "correctness-marked-long": {
+      "identity": {
+        "sha256": "bbd84bd5ddfbe1ed60633ab5cc4c962a7113a984e94362b3feb39a2098691a7a",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 13181.636167
+      },
+      "detail": {
+        "title": "Mountain route 64",
+        "focus": "catalog-info",
+        "checkedHostMs": 15787.478459
+      },
+      "back": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17848.444667
+      },
+      "finalWindow": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17875.116875
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": true,
+      "observedActivations": [
+        {
+          "id": 63,
+          "offset": 2520
+        }
+      ],
+      "focusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9475,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3686121518209,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.807,
+          "linkedSwapCandidateMs": 110.6352,
+          "directKeyToEligibleSwapMs": 110.6352
+        },
+        {
+          "id": 35,
+          "keyNs": 3686320471357,
+          "spacingMs": 198.9531,
+          "keyToDispatchMs": 406.0877,
+          "linkedSwapCandidateMs": 517.1427
+        },
+        {
+          "id": 39,
+          "keyNs": 3686518186987,
+          "spacingMs": 197.7156,
+          "keyToDispatchMs": 208.3829,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 43,
+          "keyNs": 3686720099727,
+          "spacingMs": 201.9127,
+          "keyToDispatchMs": 6.4762,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 47,
+          "keyNs": 3686920480986,
+          "spacingMs": 200.3813,
+          "keyToDispatchMs": 378.8551,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 51,
+          "keyNs": 3687118755875,
+          "spacingMs": 198.2749,
+          "keyToDispatchMs": 180.5869,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 55,
+          "keyNs": 3687318889171,
+          "spacingMs": 200.1333,
+          "keyToDispatchMs": 77.0069,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 3687520364356,
+          "spacingMs": 201.4752,
+          "keyToDispatchMs": 350.5704,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        },
+        {
+          "id": 63,
+          "keyNs": 3687718462949,
+          "spacingMs": 198.0986,
+          "keyToDispatchMs": 152.4784,
+          "directKeyToEligibleSwapMs": 2997.5897,
+          "flowError": "expected focus, paint, clip, scroll or visible rows missing from linked apply"
+        }
+      ]
+    },
+    "deep-pairs-01-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 48'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.99,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3298642902366,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.8954,
+          "linkedSwapCandidateMs": 102.2834
+        },
+        {
+          "id": 35,
+          "keyNs": 3298841719921,
+          "spacingMs": 198.8176,
+          "keyToDispatchMs": 401.4373,
+          "linkedSwapCandidateMs": 499.9158
+        },
+        {
+          "id": 39,
+          "keyNs": 3299041804255,
+          "spacingMs": 200.0843,
+          "keyToDispatchMs": 201.3641,
+          "linkedSwapCandidateMs": 299.8315
+        },
+        {
+          "id": 43,
+          "keyNs": 3299242201143,
+          "spacingMs": 200.3969,
+          "keyToDispatchMs": 4.5891,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 47,
+          "keyNs": 3299440874291,
+          "spacingMs": 198.6731,
+          "keyToDispatchMs": 371.7089,
+          "linkedSwapCandidateMs": 823.9283
+        },
+        {
+          "id": 51,
+          "keyNs": 3299642552032,
+          "spacingMs": 201.6777,
+          "keyToDispatchMs": 170.0437,
+          "linkedSwapCandidateMs": 622.2506
+        },
+        {
+          "id": 55,
+          "keyNs": 3299841873736,
+          "spacingMs": 199.3217,
+          "keyToDispatchMs": 52.5,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 3300043565772,
+          "spacingMs": 201.692,
+          "keyToDispatchMs": 221.252,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 63,
+          "keyNs": 3300242513587,
+          "spacingMs": 198.9478,
+          "keyToDispatchMs": 22.3158,
+          "flowError": "unlinked directional focus transaction"
+        }
+      ]
+    },
+    "deep-pairs-02-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 12305.142459
+      },
+      "detail": {
+        "title": "Mountain route 64",
+        "focus": "catalog-info",
+        "checkedHostMs": 15090.775875
+      },
+      "back": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17154.486542
+      },
+      "finalWindow": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17186.349625
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.8996,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3349389368113,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.2598,
+          "linkedSwapCandidateMs": 97.4879
+        },
+        {
+          "id": 35,
+          "keyNs": 3349591466780,
+          "spacingMs": 202.0987,
+          "keyToDispatchMs": 399.385,
+          "linkedSwapCandidateMs": 499.8167
+        },
+        {
+          "id": 39,
+          "keyNs": 3349789750372,
+          "spacingMs": 198.2836,
+          "keyToDispatchMs": 201.1137,
+          "linkedSwapCandidateMs": 301.5331
+        },
+        {
+          "id": 43,
+          "keyNs": 3349993182558,
+          "spacingMs": 203.4322,
+          "keyToDispatchMs": null,
+          "flowError": "unlinked key transfer"
+        },
+        {
+          "id": 47,
+          "keyNs": 3350191330743,
+          "spacingMs": 198.1482,
+          "keyToDispatchMs": 365.8684,
+          "linkedSwapCandidateMs": 899.2924
+        },
+        {
+          "id": 51,
+          "keyNs": 3350389951668,
+          "spacingMs": 198.6209,
+          "keyToDispatchMs": 167.2591,
+          "linkedSwapCandidateMs": 700.6715
+        },
+        {
+          "id": 55,
+          "keyNs": 3350591292446,
+          "spacingMs": 201.3408,
+          "keyToDispatchMs": 46.929,
+          "linkedSwapCandidateMs": 946.3062
+        },
+        {
+          "id": 59,
+          "keyNs": 3350790987927,
+          "spacingMs": 199.6955,
+          "keyToDispatchMs": 297.7756,
+          "linkedSwapCandidateMs": 1358.0072
+        },
+        {
+          "id": 63,
+          "keyNs": 3350991301557,
+          "spacingMs": 200.3136,
+          "keyToDispatchMs": 97.4738,
+          "linkedSwapCandidateMs": 1157.6936
+        }
+      ]
+    },
+    "deep-pairs-03-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 12776.228583
+      },
+      "detail": {
+        "title": "Mountain route 64",
+        "focus": "catalog-info",
+        "checkedHostMs": 15561.573708
+      },
+      "back": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17625.781333
+      },
+      "finalWindow": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17655.975375
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 2.0851,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3395785321234,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.2692,
+          "linkedSwapCandidateMs": 97.2807
+        },
+        {
+          "id": 35,
+          "keyNs": 3395984329789,
+          "spacingMs": 199.0086,
+          "keyToDispatchMs": 399.8496,
+          "linkedSwapCandidateMs": 503.3047
+        },
+        {
+          "id": 39,
+          "keyNs": 3396185418308,
+          "spacingMs": 201.0885,
+          "keyToDispatchMs": 198.7736,
+          "linkedSwapCandidateMs": 302.2161
+        },
+        {
+          "id": 43,
+          "keyNs": 3396387175308,
+          "spacingMs": 201.757,
+          "keyToDispatchMs": null,
+          "flowError": "unlinked key transfer"
+        },
+        {
+          "id": 47,
+          "keyNs": 3396584729567,
+          "spacingMs": 197.5543,
+          "keyToDispatchMs": 367.509,
+          "linkedSwapCandidateMs": 898.3313
+        },
+        {
+          "id": 51,
+          "keyNs": 3396784646419,
+          "spacingMs": 199.9169,
+          "keyToDispatchMs": 167.6049,
+          "linkedSwapCandidateMs": 698.4144
+        },
+        {
+          "id": 55,
+          "keyNs": 3396985516641,
+          "spacingMs": 200.8702,
+          "keyToDispatchMs": 47.1472,
+          "linkedSwapCandidateMs": 946.3395
+        },
+        {
+          "id": 59,
+          "keyNs": 3397184271196,
+          "spacingMs": 198.7546,
+          "keyToDispatchMs": 296.9433,
+          "linkedSwapCandidateMs": 1361.1836
+        },
+        {
+          "id": 63,
+          "keyNs": 3397384938789,
+          "spacingMs": 200.6676,
+          "keyToDispatchMs": 96.2883,
+          "linkedSwapCandidateMs": 1160.516
+        }
+      ]
+    },
+    "deep-pairs-04-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 48'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 2.1194,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3442079066058,
+          "spacingMs": null,
+          "keyToDispatchMs": 2.179,
+          "linkedSwapCandidateMs": 99.0663
+        },
+        {
+          "id": 35,
+          "keyNs": 3442279095725,
+          "spacingMs": 200.0297,
+          "keyToDispatchMs": 399.2959,
+          "linkedSwapCandidateMs": 498.3139
+        },
+        {
+          "id": 39,
+          "keyNs": 3442476733725,
+          "spacingMs": 197.638,
+          "keyToDispatchMs": 201.6692,
+          "linkedSwapCandidateMs": 300.6759
+        },
+        {
+          "id": 43,
+          "keyNs": 3442681107725,
+          "spacingMs": 204.374,
+          "keyToDispatchMs": null,
+          "flowError": "unlinked key transfer"
+        },
+        {
+          "id": 47,
+          "keyNs": 3442877066428,
+          "spacingMs": 195.9587,
+          "keyToDispatchMs": 372.3258,
+          "linkedSwapCandidateMs": 824.9712
+        },
+        {
+          "id": 51,
+          "keyNs": 3443076728835,
+          "spacingMs": 199.6624,
+          "keyToDispatchMs": 172.676,
+          "linkedSwapCandidateMs": 625.3088
+        },
+        {
+          "id": 55,
+          "keyNs": 3443275909095,
+          "spacingMs": 199.1803,
+          "keyToDispatchMs": 54.9737,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 3443476735131,
+          "spacingMs": 200.826,
+          "keyToDispatchMs": 225.1311,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 63,
+          "keyNs": 3443675290317,
+          "spacingMs": 198.5552,
+          "keyToDispatchMs": 26.5889,
+          "flowError": "unlinked directional focus transaction"
+        }
+      ]
+    },
+    "deep-pairs-05-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 48'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9141,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3492750873398,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.9393,
+          "linkedSwapCandidateMs": 105.45
+        },
+        {
+          "id": 35,
+          "keyNs": 3492947470843,
+          "spacingMs": 196.5974,
+          "keyToDispatchMs": 413.7796,
+          "linkedSwapCandidateMs": 512.7349
+        },
+        {
+          "id": 39,
+          "keyNs": 3493145934509,
+          "spacingMs": 198.4637,
+          "keyToDispatchMs": 215.3273,
+          "linkedSwapCandidateMs": 314.2712
+        },
+        {
+          "id": 43,
+          "keyNs": 3493349669917,
+          "spacingMs": 203.7354,
+          "keyToDispatchMs": 11.5979,
+          "linkedSwapCandidateMs": 110.5358
+        },
+        {
+          "id": 47,
+          "keyNs": 3493547870694,
+          "spacingMs": 198.2008,
+          "keyToDispatchMs": 383.8101,
+          "linkedSwapCandidateMs": 840.4692
+        },
+        {
+          "id": 51,
+          "keyNs": 3493748679509,
+          "spacingMs": 200.8088,
+          "keyToDispatchMs": 183.0143,
+          "linkedSwapCandidateMs": 639.6604
+        },
+        {
+          "id": 55,
+          "keyNs": 3493948183694,
+          "spacingMs": 199.5042,
+          "keyToDispatchMs": 67.1034,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 3494147314138,
+          "spacingMs": 199.1304,
+          "keyToDispatchMs": 241.2778,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 63,
+          "keyNs": 3494348071620,
+          "spacingMs": 200.7575,
+          "keyToDispatchMs": 40.5321,
+          "flowError": "unlinked directional focus transaction"
+        }
+      ]
+    },
+    "deep-pairs-06-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 13001.099708
+      },
+      "detail": {
+        "title": "Mountain route 64",
+        "focus": "catalog-info",
+        "checkedHostMs": 15781.060917
+      },
+      "back": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17855.008875
+      },
+      "finalWindow": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17888.57275
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9153,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3543152393146,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.8104,
+          "linkedSwapCandidateMs": 102.0539
+        },
+        {
+          "id": 35,
+          "keyNs": 3543346985961,
+          "spacingMs": 194.5928,
+          "keyToDispatchMs": 405.689,
+          "linkedSwapCandidateMs": 504.2166
+        },
+        {
+          "id": 39,
+          "keyNs": 3543548768850,
+          "spacingMs": 201.7829,
+          "keyToDispatchMs": 203.9178,
+          "linkedSwapCandidateMs": 302.4337
+        },
+        {
+          "id": 43,
+          "keyNs": 3543751356627,
+          "spacingMs": 202.5878,
+          "keyToDispatchMs": 4.4213,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 47,
+          "keyNs": 3543951481923,
+          "spacingMs": 200.1253,
+          "keyToDispatchMs": 363.3049,
+          "linkedSwapCandidateMs": 893.9743
+        },
+        {
+          "id": 51,
+          "keyNs": 3544150032812,
+          "spacingMs": 198.5509,
+          "keyToDispatchMs": 164.7648,
+          "linkedSwapCandidateMs": 695.4234
+        },
+        {
+          "id": 55,
+          "keyNs": 3544349954627,
+          "spacingMs": 199.9218,
+          "keyToDispatchMs": 45.5661,
+          "linkedSwapCandidateMs": 942.5442
+        },
+        {
+          "id": 59,
+          "keyNs": 3544549170701,
+          "spacingMs": 199.2161,
+          "keyToDispatchMs": 294.1965,
+          "linkedSwapCandidateMs": 1355.7861
+        },
+        {
+          "id": 63,
+          "keyNs": 3544748580293,
+          "spacingMs": 199.4096,
+          "keyToDispatchMs": 94.7987,
+          "linkedSwapCandidateMs": 1156.3765
+        }
+      ]
+    },
+    "deep-pairs-07-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": true,
+      "settled": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 12823.126375
+      },
+      "detail": {
+        "title": "Mountain route 64",
+        "focus": "catalog-info",
+        "checkedHostMs": 15602.592417
+      },
+      "back": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17671.813542
+      },
+      "finalWindow": {
+        "offset": 2520,
+        "rows": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+        "x": 1226,
+        "y": 669,
+        "name": "catalog-card-63",
+        "bounds": "{1146, 0, 366, 188}",
+        "checkedHostMs": 17699.141834
+      },
+      "strictTraceStatus": "PASS",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9387,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3589066854045,
+          "spacingMs": null,
+          "keyToDispatchMs": 2.2752,
+          "linkedSwapCandidateMs": 104.1039
+        },
+        {
+          "id": 35,
+          "keyNs": 3589264158008,
+          "spacingMs": 197.304,
+          "keyToDispatchMs": 406.7558,
+          "linkedSwapCandidateMs": 504.9684
+        },
+        {
+          "id": 39,
+          "keyNs": 3589466053600,
+          "spacingMs": 201.8956,
+          "keyToDispatchMs": 204.8716,
+          "linkedSwapCandidateMs": 303.0729
+        },
+        {
+          "id": 43,
+          "keyNs": 3589665670896,
+          "spacingMs": 199.6173,
+          "keyToDispatchMs": 5.2607,
+          "linkedSwapCandidateMs": 103.4556
+        },
+        {
+          "id": 47,
+          "keyNs": 3589864825452,
+          "spacingMs": 199.1546,
+          "keyToDispatchMs": 368.1056,
+          "linkedSwapCandidateMs": 897.9734
+        },
+        {
+          "id": 51,
+          "keyNs": 3590066980007,
+          "spacingMs": 202.1546,
+          "keyToDispatchMs": 165.9631,
+          "linkedSwapCandidateMs": 695.8189
+        },
+        {
+          "id": 55,
+          "keyNs": 3590263785229,
+          "spacingMs": 196.8052,
+          "keyToDispatchMs": 49.5114,
+          "linkedSwapCandidateMs": 948.6866
+        },
+        {
+          "id": 59,
+          "keyNs": 3590464814599,
+          "spacingMs": 201.0294,
+          "keyToDispatchMs": 296.0768,
+          "linkedSwapCandidateMs": 1359.5233
+        },
+        {
+          "id": 63,
+          "keyNs": 3590664768710,
+          "spacingMs": 199.9541,
+          "keyToDispatchMs": 96.1351,
+          "linkedSwapCandidateMs": 1159.5692
+        }
+      ]
+    },
+    "deep-pairs-08-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 48'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.8247,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 3635382344795,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.8373,
+          "linkedSwapCandidateMs": 100.3158
+        },
+        {
+          "id": 35,
+          "keyNs": 3635579693461,
+          "spacingMs": 197.3487,
+          "keyToDispatchMs": 405.1872,
+          "linkedSwapCandidateMs": 502.0952
+        },
+        {
+          "id": 39,
+          "keyNs": 3635777126832,
+          "spacingMs": 197.4334,
+          "keyToDispatchMs": 207.7644,
+          "linkedSwapCandidateMs": 304.6619
+        },
+        {
+          "id": 43,
+          "keyNs": 3635978823276,
+          "spacingMs": 201.6964,
+          "keyToDispatchMs": 6.0741,
+          "linkedSwapCandidateMs": 102.9654
+        },
+        {
+          "id": 47,
+          "keyNs": 3636179406572,
+          "spacingMs": 200.5833,
+          "keyToDispatchMs": 371.9544,
+          "linkedSwapCandidateMs": 822.3114
+        },
+        {
+          "id": 51,
+          "keyNs": 3636380226276,
+          "spacingMs": 200.8197,
+          "keyToDispatchMs": 171.1471,
+          "linkedSwapCandidateMs": 621.4917
+        },
+        {
+          "id": 55,
+          "keyNs": 3636580128053,
+          "spacingMs": 199.9018,
+          "keyToDispatchMs": 52.078,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 3636779012905,
+          "spacingMs": 198.8849,
+          "keyToDispatchMs": 222.6161,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 63,
+          "keyNs": 3636979833794,
+          "spacingMs": 200.8209,
+          "keyToDispatchMs": 21.8069,
+          "flowError": "unlinked directional focus transaction"
+        }
+      ]
+    },
+    "diagnostic-deep": {
+      "identity": {
+        "sha256": "ea7fb5f2cdfe69f4202466125359113a137a0ea6cefc67d5b0fff52371821ce8",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 48'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9042,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 2172605407445,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.829,
+          "linkedSwapCandidateMs": 104.6794
+        },
+        {
+          "id": 35,
+          "keyNs": 2172802920852,
+          "spacingMs": 197.5134,
+          "keyToDispatchMs": 409.241,
+          "linkedSwapCandidateMs": 508.2024
+        },
+        {
+          "id": 39,
+          "keyNs": 2173003225704,
+          "spacingMs": 200.3049,
+          "keyToDispatchMs": 208.9479,
+          "linkedSwapCandidateMs": 307.8975
+        },
+        {
+          "id": 43,
+          "keyNs": 2173203272815,
+          "spacingMs": 200.0471,
+          "keyToDispatchMs": 8.9069,
+          "linkedSwapCandidateMs": 107.8504
+        },
+        {
+          "id": 47,
+          "keyNs": 2173403302037,
+          "spacingMs": 200.0292,
+          "keyToDispatchMs": 384.015,
+          "linkedSwapCandidateMs": 842.4154
+        },
+        {
+          "id": 51,
+          "keyNs": 2173603740555,
+          "spacingMs": 200.4385,
+          "keyToDispatchMs": 183.5879,
+          "linkedSwapCandidateMs": 641.9769
+        },
+        {
+          "id": 55,
+          "keyNs": 2173803389407,
+          "spacingMs": 199.6489,
+          "keyToDispatchMs": 68.3393,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 2174003257518,
+          "spacingMs": 199.8681,
+          "keyToDispatchMs": 244.7021,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 63,
+          "keyNs": 2174202290073,
+          "spacingMs": 199.0326,
+          "keyToDispatchMs": 45.6824,
+          "flowError": "unlinked directional focus transaction"
+        }
+      ]
+    },
+    "signed-baseline-deep": {
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": null,
+      "settled": null,
+      "detail": null,
+      "back": null,
+      "finalWindow": null
+    },
+    "signed-baseline-deep-retry": {
+      "identity": {
+        "sha256": "ccb3fbb246915a6f8c7fe84c071f16c3a0c47d2be297f5f4b5bdaf06bccda1c2",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 56'\n- 'Mountain route 64'\n                  ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9681,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 179270757041,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.8049,
+          "linkedSwapCandidateMs": 104.8587
+        },
+        {
+          "id": 35,
+          "keyNs": 179468970522,
+          "spacingMs": 198.2135,
+          "keyToDispatchMs": 414.1606,
+          "linkedSwapCandidateMs": 513.0219
+        },
+        {
+          "id": 39,
+          "keyNs": 179669765744,
+          "spacingMs": 200.7952,
+          "keyToDispatchMs": 213.3764,
+          "linkedSwapCandidateMs": 312.2267
+        },
+        {
+          "id": 43,
+          "keyNs": 179868846003,
+          "spacingMs": 199.0803,
+          "keyToDispatchMs": 14.3022,
+          "linkedSwapCandidateMs": 113.1464
+        },
+        {
+          "id": 47,
+          "keyNs": 180068418188,
+          "spacingMs": 199.5722,
+          "keyToDispatchMs": 386.783,
+          "linkedSwapCandidateMs": 1096.1145
+        },
+        {
+          "id": 51,
+          "keyNs": 180269655670,
+          "spacingMs": 201.2375,
+          "keyToDispatchMs": 185.5586,
+          "linkedSwapCandidateMs": 894.877
+        },
+        {
+          "id": 55,
+          "keyNs": 180468789262,
+          "spacingMs": 199.1336,
+          "keyToDispatchMs": 71.1913,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 59,
+          "keyNs": 180668906743,
+          "spacingMs": 200.1175,
+          "keyToDispatchMs": 397.2024,
+          "linkedSwapCandidateMs": 962.8087
+        },
+        {
+          "id": 63,
+          "keyNs": 180869770854,
+          "spacingMs": 200.8641,
+          "keyToDispatchMs": 196.3448,
+          "linkedSwapCandidateMs": 761.9446
+        }
+      ]
+    },
+    "trial-v2-deep": {
+      "identity": {
+        "sha256": "9ef1343b046b095e36e0ea9bf9774fc9e3268a46dfefd7ce5fe148f92a43ee80",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 60'\n- 'Mountain route 64'\n                   ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9226,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 2666443305595,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.9653,
+          "linkedSwapCandidateMs": 101.3053
+        },
+        {
+          "id": 35,
+          "keyNs": 2666642418780,
+          "spacingMs": 199.1132,
+          "keyToDispatchMs": 181.4938,
+          "linkedSwapCandidateMs": 276.924
+        },
+        {
+          "id": 39,
+          "keyNs": 2666841480483,
+          "spacingMs": 199.0617,
+          "keyToDispatchMs": 77.4489,
+          "linkedSwapCandidateMs": 418.8364
+        },
+        {
+          "id": 43,
+          "keyNs": 2667042570446,
+          "spacingMs": 201.09,
+          "keyToDispatchMs": 121.2855,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 47,
+          "keyNs": 2667241591705,
+          "spacingMs": 199.0213,
+          "keyToDispatchMs": 18.2933,
+          "linkedSwapCandidateMs": 373.4268
+        },
+        {
+          "id": 51,
+          "keyNs": 2667442256890,
+          "spacingMs": 200.6652,
+          "keyToDispatchMs": 89.729,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 55,
+          "keyNs": 2667641961853,
+          "spacingMs": 199.705,
+          "keyToDispatchMs": 311.875,
+          "linkedSwapCandidateMs": 418.2982
+        },
+        {
+          "id": 59,
+          "keyNs": 2667841498149,
+          "spacingMs": 199.5363,
+          "keyToDispatchMs": 112.3521,
+          "linkedSwapCandidateMs": 218.7619
+        },
+        {
+          "id": 63,
+          "keyNs": 2668039366964,
+          "spacingMs": 197.8688,
+          "keyToDispatchMs": 20.4943,
+          "linkedSwapCandidateMs": 365.3276
+        }
+      ]
+    },
+    "trial-v2-deep-phase": {
+      "identity": {
+        "sha256": "255d4cfcb51cb3b971a5b48f287376ccb0a68cc8a8cbe8b51b5fc5f7595ea34f",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "terminalStatePassed": false,
+      "settled": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "detail": {
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Mountain route 60'\n- 'Mountain route 64'\n                   ^\n"
+      },
+      "back": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "finalWindow": {
+        "error": "AssertionError [ERR_ASSERTION]: one native focus owner"
+      },
+      "strictTraceStatus": "FAIL",
+      "strictTraceReason": null,
+      "activation": null,
+      "observedActivations": [],
+      "focusOrder": [],
+      "expectedFocusOrder": [31, 35, 39, 43, 47, 51, 55, 59, 63],
+      "SelectKeyToDispatchMs": 1.9178,
+      "SelectGesture": true,
+      "moves": [
+        {
+          "id": 31,
+          "keyNs": 2947447636427,
+          "spacingMs": null,
+          "keyToDispatchMs": 1.9081,
+          "linkedSwapCandidateMs": 102.1746
+        },
+        {
+          "id": 35,
+          "keyNs": 2947647496094,
+          "spacingMs": 199.8597,
+          "keyToDispatchMs": 179.1256,
+          "linkedSwapCandidateMs": 277.3733
+        },
+        {
+          "id": 39,
+          "keyNs": 2947847202168,
+          "spacingMs": 199.7061,
+          "keyToDispatchMs": 77.0819,
+          "linkedSwapCandidateMs": 419.4832
+        },
+        {
+          "id": 43,
+          "keyNs": 2948045994464,
+          "spacingMs": 198.7923,
+          "keyToDispatchMs": 124.4205,
+          "flowError": "unlinked directional focus transaction"
+        },
+        {
+          "id": 47,
+          "keyNs": 2948250433056,
+          "spacingMs": 204.4386,
+          "keyToDispatchMs": 15.8571,
+          "linkedSwapCandidateMs": 372.1241
+        },
+        {
+          "id": 51,
+          "keyNs": 2948446968649,
+          "spacingMs": 196.5356,
+          "keyToDispatchMs": 96.1538,
+          "flowError": "unlinked directional highlight/scroll transaction"
+        },
+        {
+          "id": 55,
+          "keyNs": 2948649697204,
+          "spacingMs": 202.7286,
+          "keyToDispatchMs": 313.2264,
+          "linkedSwapCandidateMs": 419.105
+        },
+        {
+          "id": 59,
+          "keyNs": 2948848135278,
+          "spacingMs": 198.4381,
+          "keyToDispatchMs": 114.7989,
+          "linkedSwapCandidateMs": 220.667
+        },
+        {
+          "id": 63,
+          "keyNs": 2949046262574,
+          "spacingMs": 198.1273,
+          "keyToDispatchMs": 22.1423,
+          "linkedSwapCandidateMs": 667.8391
+        }
+      ]
+    }
+  },
+  "holdout": [
+    {
+      "launch": "baseline-holdout",
+      "role": "control",
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": false,
+      "timed": false,
+      "stepsPassed": 7,
+      "stepsAttempted": 8,
+      "error": "Error: No matching native state for route-8"
+    },
+    {
+      "launch": "combined-first-holdout",
+      "role": "candidate",
+      "identity": {
+        "sha256": "ad313f375cb89b2233f478669e342fdc3d2d63db5fb70e2fb37a91c14b0d21d3",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": false,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "correctness-first-holdout",
+      "role": "candidate",
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": false,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "correctness-resize-in-scroll",
+      "role": "candidate",
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": null,
+      "timed": null,
+      "stepsPassed": 0,
+      "stepsAttempted": 0,
+      "error": null
+    },
+    {
+      "launch": "correctness-resize-in-scroll-retry",
+      "role": "candidate",
+      "identity": {
+        "sha256": "f65ffb9c3ee7b1a6fd2a4dd1d1d96411f238d44ae5702deb0047ddc1cb7287ec",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": false,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "correctness-unpaced-verification",
+      "role": "candidate",
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": false,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "diagnostic-holdout",
+      "role": "candidate",
+      "identity": {
+        "sha256": "fc7dc76a76e577cfc4afa966aaded50cdcdaa06b5b958063043db4fd3eb3d516",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": false,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "exact-holdout-unpaced-trace",
+      "role": "candidate",
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": false,
+      "timed": false,
+      "stepsPassed": 7,
+      "stepsAttempted": 8,
+      "error": "Error: No matching native state for route-8"
+    },
+    {
+      "launch": "holdout-candidate-fields",
+      "role": "candidate",
+      "identity": {
+        "sha256": "ef00f606723198bcd5d686d02a3db4c99e721702acc19655905cdb697ab80c87",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": true,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "holdout-control-fields",
+      "role": "control",
+      "identity": {
+        "sha256": "0f31dc8be6ca1e7442dcdcb97c72d1a24c2dea2e64ac4f8a209ad449299e8f3a",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": true,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "paced-holdout-01-control",
+      "role": "control",
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": null,
+      "timed": null,
+      "stepsPassed": 0,
+      "stepsAttempted": 0,
+      "error": null,
+      "settledApply": {
+        "excluded": "[Errno 2] No such file or directory: 'paced-holdout-01-control/journey/trace-stats.csv'"
+      },
+      "fieldAttributed": {
+        "excluded": "[Errno 2] No such file or directory: 'paced-holdout-01-control/journey/trace-stats.csv'"
+      }
+    },
+    {
+      "launch": "paced-holdout-02-candidate",
+      "role": "candidate",
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": null,
+      "timed": null,
+      "stepsPassed": 0,
+      "stepsAttempted": 0,
+      "error": null,
+      "settledApply": {
+        "excluded": "[Errno 2] No such file or directory: 'paced-holdout-02-candidate/journey/trace-stats.csv'"
+      },
+      "fieldAttributed": {
+        "excluded": "[Errno 2] No such file or directory: 'paced-holdout-02-candidate/journey/trace-stats.csv'"
+      }
+    },
+    {
+      "launch": "paced-holdout-03-candidate",
+      "role": "candidate",
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": null,
+      "timed": null,
+      "stepsPassed": 0,
+      "stepsAttempted": 0,
+      "error": null,
+      "settledApply": {
+        "excluded": "[Errno 2] No such file or directory: 'paced-holdout-03-candidate/journey/trace-stats.csv'"
+      },
+      "fieldAttributed": {
+        "excluded": "[Errno 2] No such file or directory: 'paced-holdout-03-candidate/journey/trace-stats.csv'"
+      }
+    },
+    {
+      "launch": "paced-holdout-retry-01-control",
+      "role": "control",
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": true,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null,
+      "settledApply": {
+        "ms": {
+          "n": 7,
+          "median": 202.794667,
+          "p95": 265.140778,
+          "worst": 265.140778
+        },
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "basis": "SDK sequence and independent settled replay; native field attribution pending",
+        "firstVisibleHighlight": "UNMEASURED"
+      },
+      "fieldAttributed": {
+        "ms": {
+          "n": 7,
+          "median": 35.709074,
+          "p95": 58.78737,
+          "worst": 58.78737
+        },
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "basis": "SDK flow with separate marked attribution",
+        "firstVisibleHighlight": "UNMEASURED"
+      }
+    },
+    {
+      "launch": "paced-holdout-retry-02-candidate",
+      "role": "candidate",
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": true,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null,
+      "settledApply": {
+        "ms": {
+          "n": 7,
+          "median": 202.256593,
+          "p95": 266.967815,
+          "worst": 266.967815
+        },
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "basis": "SDK sequence and independent settled replay; native field attribution pending",
+        "firstVisibleHighlight": "UNMEASURED"
+      },
+      "fieldAttributed": {
+        "ms": {
+          "n": 7,
+          "median": 31.581222,
+          "p95": 57.224629,
+          "worst": 57.224629
+        },
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "basis": "SDK flow with separate marked attribution",
+        "firstVisibleHighlight": "UNMEASURED"
+      }
+    },
+    {
+      "launch": "paced-holdout-retry-03-candidate",
+      "role": "candidate",
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": true,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null,
+      "settledApply": {
+        "ms": {
+          "n": 7,
+          "median": 202.323926,
+          "p95": 265.913407,
+          "worst": 265.913407
+        },
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "basis": "SDK sequence and independent settled replay; native field attribution pending",
+        "firstVisibleHighlight": "UNMEASURED"
+      },
+      "fieldAttributed": {
+        "ms": {
+          "n": 7,
+          "median": 34.677926,
+          "p95": 47.274555,
+          "worst": 47.274555
+        },
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "basis": "SDK flow with separate marked attribution",
+        "firstVisibleHighlight": "UNMEASURED"
+      }
+    },
+    {
+      "launch": "paced-holdout-retry-04-control",
+      "role": "control",
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": true,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null,
+      "settledApply": {
+        "ms": {
+          "n": 7,
+          "median": 203.904593,
+          "p95": 266.084333,
+          "worst": 266.084333
+        },
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "basis": "SDK sequence and independent settled replay; native field attribution pending",
+        "firstVisibleHighlight": "UNMEASURED"
+      },
+      "fieldAttributed": {
+        "ms": {
+          "n": 7,
+          "median": 32.104037,
+          "p95": 55.332963,
+          "worst": 55.332963
+        },
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "basis": "SDK flow with separate marked attribution",
+        "firstVisibleHighlight": "UNMEASURED"
+      }
+    },
+    {
+      "launch": "signed-baseline-unpaced",
+      "role": "control",
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": null,
+      "timed": null,
+      "stepsPassed": 0,
+      "stepsAttempted": 0,
+      "error": null
+    },
+    {
+      "launch": "signed-baseline-unpaced-retry",
+      "role": "control",
+      "identity": {
+        "sha256": "2515b042503b3c9bd65ea6dcd062b9f753b4917fe7ddcfd22537e7dc10c16de7",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": false,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "trial-v2-holdout-phase",
+      "role": "candidate",
+      "identity": {
+        "sha256": "1d19a236bb40ed28af7a5b004ff9dfecd7eb244a349b0f1ec6c57c037f67ae1f",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": true,
+      "timed": false,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "error": null
+    },
+    {
+      "launch": "trial-v2-holdout-unpaced",
+      "role": "candidate",
+      "identity": {
+        "sha256": "bb9229c01031283a68d7c17feb3be3d67e29ad82191b2eeb34d3b5789a09c850",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "passed": false,
+      "timed": false,
+      "stepsPassed": 7,
+      "stepsAttempted": 8,
+      "error": "Error: No matching native state for route-8"
+    }
+  ],
+  "breadth": {
+    "cold-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "workload": "public-catalog",
+        "clock": "host monotonic, ECP tree polling",
+        "firstVisibleHighlight": "UNMEASURED",
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "initialTreeMs": 8120.873500000001,
+        "responsiveTreeMs": 8644.255834,
+        "firstInputToObservedMs": 521.9680839999992,
+        "pass": true
+      }
+    },
+    "cold-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "workload": "public-catalog",
+        "clock": "host monotonic, ECP tree polling",
+        "firstVisibleHighlight": "UNMEASURED",
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "initialTreeMs": 8243.558375,
+        "responsiveTreeMs": 8768.824291,
+        "firstInputToObservedMs": 522.6008330000004,
+        "pass": true
+      }
+    },
+    "correctness-gallery": {
+      "identity": {
+        "sha256": "d042ee6759ef12a882b9cbae5436c464aaf1fd1cf63eceb3c0efe04188a1955b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "sha256": "d042ee6759ef12a882b9cbae5436c464aaf1fd1cf63eceb3c0efe04188a1955b",
+        "steps": ["loaded", "missing", "unmounted", "reloaded"],
+        "passed": true
+      }
+    },
+    "correctness-modal": {
+      "identity": {
+        "sha256": "bbfd118c2b2b586e70e3e32c26556611c0df4bd4e3a6494a4fb32dcfbc0a3e71",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "sha256": "bbfd118c2b2b586e70e3e32c26556611c0df4bd4e3a6494a4fb32dcfbc0a3e71",
+        "steps": ["initial", "opened-Back", "restored-Back", "opened-Select", "restored-Select"],
+        "passed": true
+      }
+    },
+    "correctness-recovery": {
+      "identity": {
+        "sha256": "3a5e58134eb23e92133e2fd1fca999a95d1bef6789dcafd71ac27c473138563c",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "sha256": "3a5e58134eb23e92133e2fd1fca999a95d1bef6789dcafd71ac27c473138563c",
+        "withheld": "[TS]: RNR_WITHHELD_FOCUS|shelf-1",
+        "pass": true
+      }
+    },
+    "soak-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "zipSha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "rounds": 9,
+        "completedRounds": 9,
+        "checkpoints": [
+          {
+            "completedRounds": 0,
+            "inputs": 0,
+            "elapsedMs": 3007.883875,
+            "mountedCards": 20,
+            "observedNodes": 131,
+            "hostToObserved": null,
+            "channelResidentBytes": 96661504,
+            "sceneGraphNodes": 180,
+            "unparentedSceneGraphNodes": 3
+          },
+          {
+            "completedRounds": 3,
+            "inputs": 72,
+            "elapsedMs": 28481.456875,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": {
+              "count": 72,
+              "medianMs": 297.74118750000025,
+              "p95Ms": 811.0477499999979,
+              "worstMs": 971.1367089999985
+            },
+            "channelResidentBytes": 132587520,
+            "sceneGraphNodes": 692,
+            "unparentedSceneGraphNodes": 23
+          },
+          {
+            "completedRounds": 6,
+            "inputs": 144,
+            "elapsedMs": 54823.781624999996,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": {
+              "count": 72,
+              "medianMs": 266.26845850000245,
+              "p95Ms": 884.9111660000053,
+              "worstMs": 1001.7414170000047
+            },
+            "channelResidentBytes": 168308736,
+            "sceneGraphNodes": 2153,
+            "unparentedSceneGraphNodes": 77
+          },
+          {
+            "completedRounds": 9,
+            "inputs": 216,
+            "elapsedMs": 82482.707833,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": {
+              "count": 72,
+              "medianMs": 268.4882505000023,
+              "p95Ms": 971.9982920000039,
+              "worstMs": 1019.8135410000032
+            },
+            "channelResidentBytes": 183742464,
+            "sceneGraphNodes": 1223,
+            "unparentedSceneGraphNodes": 43
+          },
+          {
+            "completedRounds": 9,
+            "inputs": 216,
+            "elapsedMs": 113639.11370799999,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": null,
+            "idleSampleMs": 30000,
+            "channelResidentBytes": 183738368,
+            "sceneGraphNodes": 1223,
+            "unparentedSceneGraphNodes": 43
+          }
+        ],
+        "completedInputs": 216,
+        "initialTreeMs": 3003.852958,
+        "captures": [
+          "initial",
+          "round-0",
+          "scrolled",
+          "detail",
+          "modal",
+          "restored",
+          "round-3",
+          "round-6",
+          "round-9",
+          "round-9-idle"
+        ],
+        "totalMs": 114780.13191699999,
+        "hostToObserved": {
+          "count": 216,
+          "medianMs": 297.74118750000025,
+          "p95Ms": 887.7814169999983,
+          "worstMs": 1019.8135410000032
+        },
+        "maximumMountedCards": 44
+      }
+    },
+    "soak-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "zipSha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "rounds": 9,
+        "completedRounds": 9,
+        "checkpoints": [
+          {
+            "completedRounds": 0,
+            "inputs": 0,
+            "elapsedMs": 2336.59675,
+            "mountedCards": 20,
+            "observedNodes": 131,
+            "hostToObserved": null,
+            "channelResidentBytes": 96395264,
+            "sceneGraphNodes": 180,
+            "unparentedSceneGraphNodes": 3
+          },
+          {
+            "completedRounds": 3,
+            "inputs": 72,
+            "elapsedMs": 27995.444000000003,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": {
+              "count": 72,
+              "medianMs": 255.0904789999995,
+              "p95Ms": 854.3814999999995,
+              "worstMs": 947.8495000000003
+            },
+            "channelResidentBytes": 132739072,
+            "sceneGraphNodes": 692,
+            "unparentedSceneGraphNodes": 23
+          },
+          {
+            "completedRounds": 6,
+            "inputs": 144,
+            "elapsedMs": 54310.417708,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": {
+              "count": 72,
+              "medianMs": 233.43195800000103,
+              "p95Ms": 901.4430829999983,
+              "worstMs": 990.2643339999995
+            },
+            "channelResidentBytes": 168755200,
+            "sceneGraphNodes": 2153,
+            "unparentedSceneGraphNodes": 77
+          },
+          {
+            "completedRounds": 9,
+            "inputs": 216,
+            "elapsedMs": 81906.371416,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": {
+              "count": 72,
+              "medianMs": 264.35706249999566,
+              "p95Ms": 965.1937499999985,
+              "worstMs": 1139.2272089999897
+            },
+            "channelResidentBytes": 182005760,
+            "sceneGraphNodes": 1267,
+            "unparentedSceneGraphNodes": 45
+          },
+          {
+            "completedRounds": 9,
+            "inputs": 216,
+            "elapsedMs": 113138.159083,
+            "mountedCards": 28,
+            "observedNodes": 175,
+            "hostToObserved": null,
+            "idleSampleMs": 30000,
+            "channelResidentBytes": 181878784,
+            "sceneGraphNodes": 1267,
+            "unparentedSceneGraphNodes": 45
+          }
+        ],
+        "completedInputs": 216,
+        "initialTreeMs": 2334.83375,
+        "captures": [
+          "initial",
+          "round-0",
+          "scrolled",
+          "detail",
+          "modal",
+          "restored",
+          "round-3",
+          "round-6",
+          "round-9",
+          "round-9-idle"
+        ],
+        "totalMs": 114371.45166600001,
+        "hostToObserved": {
+          "count": 216,
+          "medianMs": 255.0904789999995,
+          "p95Ms": 892.0010419999999,
+          "worstMs": 1139.2272089999897
+        },
+        "maximumMountedCards": 44
+      }
+    },
+    "pixels-control": {
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "steps": [
+          {
+            "key": null,
+            "id": "route-1",
+            "pass": true,
+            "card": {
+              "id": "route-1",
+              "y": 0,
+              "image": true
+            },
+            "mounted": 5
+          },
+          {
+            "key": "Down",
+            "id": "route-2",
+            "pass": true,
+            "card": {
+              "id": "route-2",
+              "y": 96,
+              "image": true
+            },
+            "mounted": 7
+          },
+          {
+            "key": "Down",
+            "id": "route-3",
+            "pass": true,
+            "card": {
+              "id": "route-3",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 7
+          },
+          {
+            "key": "Down",
+            "id": "route-4",
+            "pass": true,
+            "card": {
+              "id": "route-4",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 7
+          },
+          {
+            "key": "Down",
+            "id": "route-5",
+            "pass": true,
+            "card": {
+              "id": "route-5",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 8
+          },
+          {
+            "key": "Down",
+            "id": "route-6",
+            "pass": true,
+            "card": {
+              "id": "route-6",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 9
+          },
+          {
+            "key": "Down",
+            "id": "route-7",
+            "pass": true,
+            "card": {
+              "id": "route-7",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 10
+          },
+          {
+            "key": "Down",
+            "id": "route-8",
+            "pass": true,
+            "card": {
+              "id": "route-8",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 11
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 72,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 320,
+              "height": 108,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Back",
+            "id": "route-8",
+            "pass": true,
+            "card": {
+              "id": "route-8",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 3
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 72,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Down",
+            "id": "holdout-remove",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 72,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Select",
+            "id": "route-9",
+            "pass": true,
+            "card": {
+              "id": "route-9",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 3
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 36,
+              "text": "Route 9 \u2014 Valley walk"
+            }
+          },
+          {
+            "key": "Back",
+            "id": "route-9",
+            "pass": true,
+            "card": {
+              "id": "route-9",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 3
+          }
+        ],
+        "firstVisibleHighlight": "UNMEASURED",
+        "timed": true,
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "pass": true
+      }
+    },
+    "pixels-candidate": {
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      },
+      "summary": {
+        "steps": [
+          {
+            "key": null,
+            "id": "route-1",
+            "pass": true,
+            "card": {
+              "id": "route-1",
+              "y": 0,
+              "image": true
+            },
+            "mounted": 5
+          },
+          {
+            "key": "Down",
+            "id": "route-2",
+            "pass": true,
+            "card": {
+              "id": "route-2",
+              "y": 96,
+              "image": true
+            },
+            "mounted": 7
+          },
+          {
+            "key": "Down",
+            "id": "route-3",
+            "pass": true,
+            "card": {
+              "id": "route-3",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 7
+          },
+          {
+            "key": "Down",
+            "id": "route-4",
+            "pass": true,
+            "card": {
+              "id": "route-4",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 7
+          },
+          {
+            "key": "Down",
+            "id": "route-5",
+            "pass": true,
+            "card": {
+              "id": "route-5",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 8
+          },
+          {
+            "key": "Down",
+            "id": "route-6",
+            "pass": true,
+            "card": {
+              "id": "route-6",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 9
+          },
+          {
+            "key": "Down",
+            "id": "route-7",
+            "pass": true,
+            "card": {
+              "id": "route-7",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 10
+          },
+          {
+            "key": "Down",
+            "id": "route-8",
+            "pass": true,
+            "card": {
+              "id": "route-8",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 11
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 72,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 320,
+              "height": 108,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Back",
+            "id": "route-8",
+            "pass": true,
+            "card": {
+              "id": "route-8",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 3
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 72,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Down",
+            "id": "holdout-remove",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 72,
+              "text": "Route 8 \u2014 Long ridge walk past the lakes and back to the valley"
+            }
+          },
+          {
+            "key": "Select",
+            "id": "route-9",
+            "pass": true,
+            "card": {
+              "id": "route-9",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 3
+          },
+          {
+            "key": "Select",
+            "id": "holdout-resize",
+            "pass": true,
+            "mounted": 0,
+            "title": {
+              "width": 720,
+              "height": 36,
+              "text": "Route 9 \u2014 Valley walk"
+            }
+          },
+          {
+            "key": "Back",
+            "id": "route-9",
+            "pass": true,
+            "card": {
+              "id": "route-9",
+              "y": 192,
+              "image": true
+            },
+            "mounted": 3
+          }
+        ],
+        "firstVisibleHighlight": "UNMEASURED",
+        "timed": true,
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "pass": true
+      }
+    }
+  },
+  "attempts": {
+    "baseline-01-react": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "baseline-02-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "baseline-03-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "baseline-deep": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "baseline-deep-fields": {
+      "identity": {
+        "sha256": "877c25d11a5d8d3b84469661c4c93466abfa9463e87ac517b3377763d4ead203",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "baseline-holdout": {
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "baseline-react-fields": {
+      "identity": {
+        "sha256": "77c609db1e67adb974ef041c106316a34ff97f242e14977a826e47cd51fb7fb0",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "baseline-solid-fields": {
+      "identity": {
+        "sha256": "06608425d7ff01065870dda4426e8d95af2b368fa2c0043ec92dc54f32e8c398",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "cold-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "cold-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "combined-first-deep": {
+      "identity": {
+        "sha256": "a3081c090a6e56b714c78be61c79c238509c9a1f39f54ba83cb62a622a1cd232",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "combined-first-holdout": {
+      "identity": {
+        "sha256": "ad313f375cb89b2233f478669e342fdc3d2d63db5fb70e2fb37a91c14b0d21d3",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-deep-second": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-deep-triple": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-first-deep": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-first-holdout": {
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-gallery": {
+      "identity": {
+        "sha256": "d042ee6759ef12a882b9cbae5436c464aaf1fd1cf63eceb3c0efe04188a1955b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-marked-long": {
+      "identity": {
+        "sha256": "bbd84bd5ddfbe1ed60633ab5cc4c962a7113a984e94362b3feb39a2098691a7a",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-modal": {
+      "identity": {
+        "sha256": "bbfd118c2b2b586e70e3e32c26556611c0df4bd4e3a6494a4fb32dcfbc0a3e71",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-recovery": {
+      "identity": {
+        "sha256": "3a5e58134eb23e92133e2fd1fca999a95d1bef6789dcafd71ac27c473138563c",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-resize-in-scroll": {
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-resize-in-scroll-retry": {
+      "identity": {
+        "sha256": "f65ffb9c3ee7b1a6fd2a4dd1d1d96411f238d44ae5702deb0047ddc1cb7287ec",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-shelf-fields": {
+      "identity": {
+        "sha256": "358e8fed69e99b7da3903dee759ed490de5b814a6546299c1ebf67facadb6c27",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "correctness-unpaced-verification": {
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-01-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-02-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-03-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-04-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-05-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-06-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-07-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "deep-pairs-08-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "diagnostic-deep": {
+      "identity": {
+        "sha256": "ea7fb5f2cdfe69f4202466125359113a137a0ea6cefc67d5b0fff52371821ce8",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "diagnostic-holdout": {
+      "identity": {
+        "sha256": "fc7dc76a76e577cfc4afa966aaded50cdcdaa06b5b958063043db4fd3eb3d516",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "exact-holdout-unpaced-trace": {
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "holdout-candidate-fields": {
+      "identity": {
+        "sha256": "ef00f606723198bcd5d686d02a3db4c99e721702acc19655905cdb697ab80c87",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "holdout-control-fields": {
+      "identity": {
+        "sha256": "0f31dc8be6ca1e7442dcdcb97c72d1a24c2dea2e64ac4f8a209ad449299e8f3a",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "paced-holdout-01-control": {
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "paced-holdout-02-candidate": {
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "paced-holdout-03-candidate": {
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "paced-holdout-retry-01-control": {
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "paced-holdout-retry-02-candidate": {
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "paced-holdout-retry-03-candidate": {
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "paced-holdout-retry-04-control": {
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "pixels-candidate": {
+      "identity": {
+        "sha256": "a96d059b5e2e3fac26c0f9a8b07e6fe6afec7ea9817484208f0299aff63ffe24",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "pixels-control": {
+      "identity": {
+        "sha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "shelf-baseline-diagnostic": {
+      "identity": {
+        "sha256": "8501ee04fd13e1deb2441a4ead4a90cacc28c706205690918f973599e2029963",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "signed-baseline-deep": {
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "signed-baseline-deep-retry": {
+      "identity": {
+        "sha256": "ccb3fbb246915a6f8c7fe84c071f16c3a0c47d2be297f5f4b5bdaf06bccda1c2",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "signed-baseline-unpaced": {
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "signed-baseline-unpaced-retry": {
+      "identity": {
+        "sha256": "2515b042503b3c9bd65ea6dcd062b9f753b4917fe7ddcfd22537e7dc10c16de7",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "soak-candidate": {
+      "identity": {
+        "sha256": "804ca6f26fbd8702b8711fc30886205f833a228ad697f7f56befd3d128e6e83b",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "soak-control": {
+      "identity": {
+        "sha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "trial-v2-deep": {
+      "identity": {
+        "sha256": "9ef1343b046b095e36e0ea9bf9774fc9e3268a46dfefd7ce5fe148f92a43ee80",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "trial-v2-deep-phase": {
+      "identity": {
+        "sha256": "255d4cfcb51cb3b971a5b48f287376ccb0a68cc8a8cbe8b51b5fc5f7595ea34f",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "trial-v2-holdout-phase": {
+      "identity": {
+        "sha256": "1d19a236bb40ed28af7a5b004ff9dfecd7eb244a349b0f1ec6c57c037f67ae1f",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "trial-v2-holdout-unpaced": {
+      "identity": {
+        "sha256": "bb9229c01031283a68d7c17feb3be3d67e29ad82191b2eeb34d3b5789a09c850",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-01-react": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-02-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-03-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-04-react": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-05-react": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-06-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-07-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-baseline-08-react": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-01-control": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-02-candidate": {
+      "identity": {
+        "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-03-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-04-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-05-candidate": {
+      "identity": {
+        "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-06-control": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-07-control": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-08-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-09-candidate": {
+      "identity": {
+        "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-10-candidate": {
+      "identity": {
+        "sha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-11-solid": {
+      "identity": {
+        "sha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    },
+    "warm-followup-12-control": {
+      "identity": {
+        "sha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+        "model": "4850X",
+        "firmware": "16.0.4"
+      },
+      "restoration": {
+        "installed": true,
+        "foreground": "rollback",
+        "playbackClosed": true
+      }
+    }
+  },
+  "settledPixels": [
+    {
+      "step": 1,
+      "region": "full capture",
+      "width": 1920,
+      "height": 1080,
+      "pixels": 2073600,
+      "differentPixels": 0,
+      "status": "scored"
+    },
+    {
+      "step": 8,
+      "region": "full capture",
+      "width": 1920,
+      "height": 1080,
+      "pixels": 2073600,
+      "differentPixels": 0,
+      "status": "scored"
+    },
+    {
+      "step": 9,
+      "region": "top-left detail and controls",
+      "width": 760,
+      "height": 400,
+      "pixels": 304000,
+      "differentPixels": 0,
+      "status": "scored"
+    },
+    {
+      "step": 10,
+      "region": "top-left detail and controls",
+      "width": 760,
+      "height": 400,
+      "pixels": 304000,
+      "differentPixels": 0,
+      "status": "scored"
+    },
+    {
+      "step": 11,
+      "region": "full capture",
+      "width": 1920,
+      "height": 1080,
+      "pixels": 2073600,
+      "differentPixels": 0,
+      "status": "scored"
+    }
+  ],
+  "resizeInScroll": {
+    "launch": "correctness-resize-in-scroll-retry",
+    "beforeWidth": 720,
+    "afterWidth": 560,
+    "height": 288,
+    "route7And8Y": 192,
+    "afterBackWidth": 560,
+    "startupRetry": true
+  },
+  "finalRestoration": {
+    "observedAt": "2026-11-25T19:09:05.111Z",
+    "installedDigestAndBytesMatch": true,
+    "foreground": "rollback",
+    "playback": "none",
+    "leaseReleased": true
+  }
+}

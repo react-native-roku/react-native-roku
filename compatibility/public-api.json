@@ -1,0 +1,327 @@
+{
+  "schema": "react-native-roku-public-api/v1",
+  "phase": "experimental",
+  "policy": "Every export is a maintained contract within its documented subset; none implies the entire upstream React Native API. Breaking changes before 1.0 require a minor version.",
+  "exports": {
+    ".": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./react-native": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./scene": {
+      "audience": "types",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./text": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./text-raster": {
+      "audience": "types",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./text-raster-cache": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./sdk": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./sdk-text": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./sdk-text-raster": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./testing": {
+      "audience": "testing",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./testing/node": {
+      "audience": "testing",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./preview": {
+      "audience": "testing",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./expo-router": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./router": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./vector": {
+      "audience": "types",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./graphics": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./services": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./timers": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./sdk-services": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./keys": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./media": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./web": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./sdk-web": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./system": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./sdk-device-facts": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./package.json": {
+      "audience": "metadata",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./svg": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./svg-key": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./reanimated": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./worklets": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./image": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./linear-gradient": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./safe-area": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./async-storage": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./secure-store": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./crypto": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./expo-constants": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./expo-linking": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./expo-status-bar": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./fonts": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./registry-storage": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./interop/nativewind": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./build": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/yoga": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/nativewind": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/surfaces": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./native/manifest": {
+      "audience": "metadata",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./build/esbuild": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./sdk-host": {
+      "audience": "advanced-host",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./tsconfig": {
+      "audience": "types",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./host": {
+      "audience": "types",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./app-registry": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./application": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/resolution": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/project": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/dev": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./metro": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/environment": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/compatibility": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/dev-workspace": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/device": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/maintenance.md"
+    },
+    "./intl/en": {
+      "audience": "application",
+      "stability": "experimental",
+      "contract": "docs/compatibility.md"
+    },
+    "./build/frontend": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    },
+    "./build/assets": {
+      "audience": "build",
+      "stability": "experimental",
+      "contract": "docs/getting-started.md"
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "model": "4850X",
+  "firmware": "16.0.4",
+  "initialArchiveSha256": "04e21bdec15b075fd1e233141332a092679cbba385767af9ed2869c72b3782b9",
+  "finalArchiveSha256": "a304bfbaed6c85cb680012d18295e25e0ab5929d677fdbe46671930235c2869e",
+  "changedArchiveMembers": ["package/docs/maintenance.md"],
+  "runs": {
+    "react-warm": {
+      "zipSha256": "d3ceb908e0fc2b789f2fc9a2ac594c540e224d96fa3691241780e7de04969cb1",
+      "freshLaunches": 1,
+      "passCount": 30,
+      "moves": 30,
+      "failedInputs": 0,
+      "missingTraceTails": 0,
+      "passed": true
+    },
+    "solid-warm": {
+      "zipSha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+      "freshLaunches": 1,
+      "passCount": 30,
+      "moves": 30,
+      "failedInputs": 0,
+      "missingTraceTails": 0,
+      "passed": true
+    },
+    "device-gallery": {
+      "sha256": "47c77d06e814440db3f8435f1ef7caf1a854f38a9f5958d4e5ae6e6eeae128a4",
+      "steps": ["loaded", "missing", "unmounted", "reloaded"],
+      "passed": true
+    },
+    "device-settings": {
+      "sha256": "1611d3cc3b535159aeb2eaa97e035a02e0c28b8e02cc424a2af73dc84eba589c",
+      "steps": ["initial", "opened-Back", "restored-Back", "opened-Select", "restored-Select"],
+      "passed": true
+    },
+    "verified-window-2": {
+      "zipSha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+      "steps": 20,
+      "passed": true,
+      "returnCard": 16,
+      "restoredOffset": 600,
+      "windowUpdates": 7,
+      "missingWindowEndpoints": 0
+    },
+    "verified-fields": {
+      "zipSha256": "a749d95b079eb8bf93e587578423fb15e115d55c78da416a16df5230905de69d",
+      "steps": 20,
+      "passed": true,
+      "returnCard": 16,
+      "restoredOffset": 600,
+      "windowUpdates": 7,
+      "missingWindowEndpoints": 0
+    },
+    "verified-second": {
+      "zipSha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+      "passed": true,
+      "marked": false,
+      "routes": [
+        {
+          "route": "down",
+          "detail": true,
+          "restoration": true,
+          "activationSequence": null
+        },
+        {
+          "route": "reverse",
+          "detail": true,
+          "restoration": true,
+          "activationSequence": null
+        },
+        {
+          "route": "paced",
+          "detail": true,
+          "restoration": true,
+          "activationSequence": null
+        }
+      ]
+    },
+    "marked-second-compact": {
+      "zipSha256": "ac3b740c96d13b523fac152c71941122bcf450d996e33edad530b2ce165af5d4",
+      "passed": true,
+      "marked": true,
+      "routes": [
+        {
+          "route": "down",
+          "detail": true,
+          "restoration": true,
+          "activationSequence": true
+        },
+        {
+          "route": "reverse",
+          "detail": true,
+          "restoration": true,
+          "activationSequence": true
+        },
+        {
+          "route": "paced",
+          "detail": true,
+          "restoration": true,
+          "activationSequence": true
+        }
+      ]
+    },
+    "sustained": {
+      "zipSha256": "56ab0a06987fe3cb32926c8551556395fe3115e7aa4d67307617a689ac5c249d",
+      "directions": 9,
+      "expectedCard": 64,
+      "observedCard": 48,
+      "passed": false
+    },
+    "durable-holdout": {
+      "zipSha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+      "passed": false,
+      "stepsPassed": 7,
+      "stepsAttempted": 8,
+      "timed": false
+    },
+    "timed-holdout": {
+      "zipSha256": "1b96c72e1a0e007c55201c737ac5e87dacf6bab04ff3eab93aaf18148bfb24a9",
+      "passed": true,
+      "stepsPassed": 16,
+      "stepsAttempted": 16,
+      "timed": true
+    },
+    "final-archive-second-input": {
+      "zipSha256": "ccb3fbb246915a6f8c7fe84c071f16c3a0c47d2be297f5f4b5bdaf06bccda1c2",
+      "passed": true,
+      "routes": ["down", "reverse", "paced"]
+    }
+  },
+  "excludedDiagnostic": {
+    "workload": "marked second input, first attempt",
+    "reason": "Perfetto sorter_push_event_out_of_order",
+    "timingStatus": "UNMEASURED"
+  },
+  "firstVisibleHighlight": "UNMEASURED"
+}

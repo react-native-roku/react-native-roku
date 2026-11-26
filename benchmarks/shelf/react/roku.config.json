@@ -1,0 +1,29 @@
+{
+  "name": "ReactShelf",
+  "displayName": "React Shelf Diagnostics",
+  "entry": "src/App.tsx",
+  "background": "#101014",
+  "fonts": {
+    "defaultFamily": "Inter",
+    "assets": {
+      "InterRegular": "@expo-google-fonts/inter/400Regular/Inter_400Regular.ttf",
+      "InterBold": "@expo-google-fonts/inter/700Bold/Inter_700Bold.ttf",
+      "InterItalic": "@expo-google-fonts/inter/400Regular_Italic/Inter_400Regular_Italic.ttf",
+      "InterBoldItalic": "@expo-google-fonts/inter/700Bold_Italic/Inter_700Bold_Italic.ttf"
+    },
+    "families": {
+      "Inter": {
+        "normal": {
+          "400": "InterRegular",
+          "700": "InterBold"
+        },
+        "italic": {
+          "400": "InterItalic",
+          "700": "InterBoldItalic"
+        }
+      }
+    },
+    "variants": ["tabular-nums"]
+  },
+  "reactCompiler": true
+}

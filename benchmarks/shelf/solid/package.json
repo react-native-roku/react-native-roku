@@ -1,0 +1,26 @@
+{
+  "name": "roku-sdk-shelf-control",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.23.0",
+  "engines": {
+    "node": ">=24.18.1 <25",
+    "pnpm": "11.23.0"
+  },
+  "scripts": {
+    "typecheck": "tsc6 --noEmit",
+    "build": "rk build --debug --local"
+  },
+  "dependencies": {
+    "@roku-sdk/components": "2.19.1",
+    "@roku-sdk/rsg-ts": "2.19.1",
+    "@roku-sdk/solid": "2.19.1"
+  },
+  "devDependencies": {
+    "@roku-sdk/tooling": "2.19.1",
+    "@roku-sdk/interfaces": "2.19.1",
+    "@types/node": "24.19.1",
+    "esbuild": "0.28.1",
+    "typescript": "npm:@typescript/typescript6@6.0.2"
+  }
+}

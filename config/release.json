@@ -1,0 +1,15 @@
+{
+  "schema": "react-native-roku-release-policy/v1",
+  "licenseDecision": "MIT for the developer preview",
+  "distTag": "preview",
+  "phase": "experimental",
+  "versionPolicy": "Before 1.0, breaking public API changes increment the minor version; patch releases preserve documented contracts. Published bytes are immutable.",
+  "requiredChecks": ["check:fast", "test:consumer", "test:sdk", "test:development"],
+  "deviceRequiredForStable": true,
+  "trustedPublisher": {
+    "provider": "github",
+    "repository": "react-native-roku/react-native-roku",
+    "workflow": "release.yml",
+    "environment": "npm-release"
+  }
+}

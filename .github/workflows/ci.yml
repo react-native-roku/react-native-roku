@@ -1,0 +1,102 @@
+name: Package qualification
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      full_qualification:
+        description: Run all six lanes and verify the exact archive on macOS and Linux
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: qualification-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.23.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Prepare the disposable runner for bounded qualification
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost "$AGENT_TOOLSDIRECTORY/CodeQL"
+          # The fast package lane does not use the preinstalled Android or Haskell SDKs.
+          sudo rm -rf /usr/local/lib/android /usr/local/.ghcup
+          docker image prune --all --force
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends python3 lsof zip unzip
+          df -h /
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check:fast
+  qualification:
+    if: github.event_name == 'workflow_dispatch' && inputs.full_qualification
+    needs: fast
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.23.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Prepare the disposable Linux runner for bounded qualification
+        if: runner.os == 'Linux'
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost "$AGENT_TOOLSDIRECTORY/CodeQL"
+          docker image prune --all --force
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends python3 lsof zip unzip
+          df -h /
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+        with:
+          chrome-version: stable
+          install-dependencies: true
+      - name: Preserve the macOS browser bundle
+        id: browser
+        shell: bash
+        env:
+          CHROME_BINARY: ${{ steps.chrome.outputs.chrome-path }}
+        run: |
+          browser_binary="$CHROME_BINARY"
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            browser_root="${browser_binary%/Contents/MacOS/*}"
+            if [[ "$browser_root" != *.app ]]; then
+              # The setup cache drops .app, breaking Chrome's Mach service identity.
+              browser_bundle="$RUNNER_TEMP/Chrome for Testing.app"
+              ditto "$browser_root" "$browser_bundle"
+              browser_binary="$browser_bundle/Contents/MacOS/${browser_binary##*/}"
+            fi
+          fi
+          echo "path=$browser_binary" >> "$GITHUB_OUTPUT"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run doctor
+        env:
+          ROKU_TEST_CHROMIUM: ${{ steps.browser.outputs.path }}
+      - run: pnpm check --archive="$PWD/.local/ci-qualification/runtime.tgz" --output="$PWD/.local/ci-qualification/evidence"
+        env:
+          ROKU_TEST_CHROMIUM: ${{ steps.browser.outputs.path }}
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qualification-${{ matrix.os }}
+          path: .local/ci-qualification/
+          if-no-files-found: warn
+          include-hidden-files: true

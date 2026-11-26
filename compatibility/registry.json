@@ -1,0 +1,2258 @@
+{
+  "schema": "react-native-roku-compatibility/v1",
+  "qualification": "Type surface is an inventory, not blanket behavioral certification; only named contracts have host evidence.",
+  "contracts": {
+    "core-ui-composed-fixture": {
+      "tests": [
+        "build/core-ui-fixture.test.mjs",
+        "src/graphics/surfaces.test.ts",
+        "examples/minimal/src/coreUiFixture.tsx",
+        "scripts/qualify-core-ui.mjs",
+        "scripts/qualify-sdk-consumer.mjs"
+      ],
+      "scope": "Public JSX exercises the same three fixture states through recording, packed Canvas, and React Native Web. Plain leaf opacity, isolated corner and stacking probes, and spaced Select activations have bounded host assertions. Group compositing, transparent image pixels, physical focus/repeat, typography, and device rendering need independent evidence. The Ultra 4850X on 16.0.4 build 853 rendered crop, stacking, outline and leaf opacity in a provenance-matched standalone fixture. Three corners failed natively with the nested MaskGroup implementation. The standalone target now composes one alpha bitmap for all four corners. Host tests check the alpha values and replacement/retirement; the candidate requires exact-archive stills on the Ultra.",
+      "versions": {
+        "renderer": "0.2.0",
+        "react": "19.2.8",
+        "reactNativeReference": "0.86.2",
+        "reactNativeWebReference": "0.21.2",
+        "rokuSdk": "2.19.1",
+        "minimumRokuOsForRoundedGraphics": "16"
+      },
+      "claims": [
+        {
+          "api": "View.style flexDirection/flexWrap/width and absolute position",
+          "expected": "The third 52px view wraps at 106px, appears at x=104 when widened to 160px, and returns after narrowing.",
+          "requires": [
+            "recording",
+            "packed-canvas",
+            "web-reference",
+            "native-reference",
+            "physical-roku"
+          ]
+        },
+        {
+          "api": "Image resizeMode=cover inside View overflow=hidden and borderRadius",
+          "expected": "The cover image keeps its red and blue interior, drops both edge bands and masks all four corners. A separately styled focus outline remains visible.",
+          "requires": ["packed-canvas", "web-reference", "native-reference", "physical-roku-opengl"]
+        },
+        {
+          "api": "View.style zIndex and leaf opacity",
+          "expected": "The higher sibling draws above the later lower sibling. White on #202020 draws at alpha 0.5 then 0.25 and returns to opaque when opacity is removed.",
+          "requires": [
+            "recording",
+            "packed-canvas",
+            "web-reference",
+            "native-reference",
+            "physical-roku"
+          ]
+        },
+        {
+          "api": "Pressable onPress and React effects",
+          "expected": "Each spaced activation produces one ordered press and one commit. Held Select release after unmount produces no activation.",
+          "requires": [
+            "recording",
+            "packed-canvas",
+            "web-reference",
+            "native-reference",
+            "physical-roku"
+          ]
+        }
+      ]
+    },
+    "react-native-subset": {
+      "tests": [
+        "src/react-native/accessibility.test.ts",
+        "src/react-native/nativeViewHandle.test.ts",
+        "src/react-native/inputEligibility.test.ts",
+        "src/react-native/directionalFocus.test.ts",
+        "src/react-native/createNativeRoot.test.ts",
+        "src/react-native/focusEvents.test.ts",
+        "src/react-native/inlineParagraph.test.ts",
+        "src/layout/inlineParagraph.test.ts",
+        "src/react-native/environment.test.ts",
+        "src/react-native/textInput.test.ts",
+        "src/react-native/textInput.live.test.ts",
+        "src/react-native/textInput.selection.test.ts",
+        "src/react-native/keyboard.test.ts",
+        "src/scene/SdkTextEntry.test.ts",
+        "src/react-native/scrollView.test.ts",
+        "src/react-native/modal.test.ts",
+        "src/react-native/flatListBatching.test.ts"
+      ],
+      "scope": "React Native host subset, including committed RN/ARIA role/state/value/label semantics and English Audio Guide requests. TextInput publishes observed dialog edits, reconciles controlled formatting/rejection and fences reentrant or retired subscriptions; programmatic writes do not fabricate input changes. Observed editor selections reach onSelectionChange in UTF-16 offsets; SDK carets are collapsed and Canvas can observe ranges. Missing or retired observations do not infer a cursor; native ranges and programmatic selection remain unsupported. Keyboard.dismiss cancels the focused modal editor; keyboardDidHide requires an observed closure and follows accepted-text delivery. Missing/unshown/disposed closures do not fabricate hide, geometry or will/show events. Native accessibility traversal, speech completion/queue retirement, keyboard/focus/metrics/services require device qualification. AppRegistry registration only. Keyed vertical collections prioritize visible rows and batch offscreen additions with cancellable interaction-aware JS work; initialScrollIndex requires declared geometry and visible-position preservation respects its minimum index. Native scroll/performance remain device-pending. Authored ARIA current/invalid/popup state and explicit level/orientation/role descriptions reach committed host semantics and English focus/live requests. Native structural traversal and action delivery are not admitted by this metadata or speech profile."
+    },
+    "react-native-svg-subset": {
+      "tests": ["src/vector/svg.test.ts", "src/vector/svgPath.test.ts"],
+      "scope": "Bounded geometry and packaged raster variants; transforms, masks and device graphics require separate qualification."
+    },
+    "react-native-reanimated-subset": {
+      "tests": ["src/animation/animation.test.ts"],
+      "scope": "JavaScript-host animation subset; no native UI worklet thread."
+    },
+    "react-native-worklets-subset": {
+      "tests": ["src/animation/animation.test.ts"],
+      "scope": "Functions execute on the JavaScript host; not upstream UI-thread worklets."
+    },
+    "react-native-safe-area-context-subset": {
+      "tests": ["src/react-native/systemAndInsets.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "react-native-async-storage-async-storage-subset": {
+      "tests": ["src/services/RegistryStorage.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "expo-router-subset": {
+      "tests": ["src/navigation/RouterStore.test.ts"],
+      "scope": "Normalized href history, dismissTo identity/fallback, provider-bound hooks, out-of-order retirement, and canonical path/query isolation. Native navigation remains device-pending."
+    },
+    "expo-image-subset": {
+      "tests": ["src/react-native/image.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "expo-linear-gradient-subset": {
+      "tests": ["src/graphics/gradient.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "expo-constants-subset": {
+      "tests": ["src/services/webRuntime.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "expo-linking-subset": {
+      "tests": ["src/services/webRuntime.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "expo-status-bar-subset": {
+      "tests": ["src/react-native/environment.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "expo-secure-store-subset": {
+      "tests": ["src/services/RegistryStorage.test.ts"],
+      "scope": "Registry-backed adapter; hardware storage protection is not certified."
+    },
+    "expo-crypto-subset": {
+      "tests": ["src/services/webRuntime.test.ts"],
+      "scope": "Implemented adapter subset; native execution and services remain device-pending."
+    },
+    "accessibility-label-relationships": {
+      "tests": [
+        "src/react-native/accessibility.test.ts",
+        "examples/minimal/src/accessibilityRelationships.ts"
+      ],
+      "scope": "Committed direct label relationships: HTML-whitespace ARIA IDREF parsing is distinct from explicit native alias IDs; reference order and repeated references are retained, missing sources fall back, and source replacement/retirement updates focused semantics. One final exposure snapshot bounds cycles and modal source ordering. Hidden/modal-background label sources remain excluded by this host profile, unlike HTML explicitly referenced hidden labels. Duplicate mounted native IDs fail explicitly. Host and independent packed-consumer evidence do not qualify native speech, accessibility actions, assistive traversal or the complete accessible-name algorithm."
+    },
+    "flat-list-columns": {
+      "tests": [
+        "src/react-native/flatListColumns.test.ts",
+        "src/react-native/flatListBatching.test.ts",
+        "src/react-native/scrollView.test.ts",
+        "examples/minimal/src/columnCollections.ts",
+        "examples/minimal/src/columnsFixture.tsx"
+      ],
+      "scope": "Vertical equal-height multi-column rows with incomplete tails and columnWrapperStyle. Original item/index delivery to renderItem and keyExtractor; original data plus row indices for declared layout, initial/index/end scrolling, batching, and separators, matching pinned React Native FlatList.js. Row keys combine item keys; changed row membership may remount items. Complete retained/visible rows, bounded large-list work, extraData, data replacement, held-input retirement and cleanup have host and independent packed-consumer evidence. Bounded SDK/Canvas fixture checks compilation, geometry, visible pixels and retirement. Horizontal grids, column-prop changes without remount and single-column columnWrapperStyle fail explicitly; masonry, native scrolling/focus/performance, full viewability remain unqualified; the separate single-callback contract is bounded."
+    },
+    "modal-committed-back": {
+      "tests": [
+        "src/react-native/modal.test.ts",
+        "src/react-native/modalNavigation.test.ts",
+        "examples/minimal/src/modalLifetimes.ts",
+        "src/react-native/modalOrder.test.ts",
+        "examples/minimal/src/modalOrderFixture.tsx"
+      ],
+      "scope": "Back admission follows the top committed modal exposure instead of parent/child effect registration order. Nested removal releases the next owner, closing animations retain Back, reversals cancel retired completions, and route replacement/returns fence retired native input and portals. Focus observations and Back transport are explicit host fixtures; native remote ordering, presentation and focus restoration remain device-pending. Fully hidden siblings receive a new order when presented again, independent of component mount order; closing reversals retain their order below retained nested modals. Fixed-seed sibling schedules, independently installed public consumers and SDK/actual Canvas pixels plus preview Back-port checks establish this bounded host contract."
+    },
+    "flat-list-horizontal": {
+      "tests": [
+        "src/react-native/flatListHorizontal.test.ts",
+        "src/react-native/flatListBatching.test.ts",
+        "src/react-native/scrollView.test.ts",
+        "examples/minimal/src/horizontalCollections.ts",
+        "examples/minimal/src/horizontalFixture.tsx"
+      ],
+      "scope": "Single-axis horizontal keyed windowing uses measured/declared widths, x offsets, header/footer/inset clamping, initial/index/end alignment, extraData, separators and bounded queued batches. Keyed anchors select the replacement window before reconciliation; retained owners and held input survive demonstrated insertion/reorder schedules. Independent packed consumers exercise 30,001 items with bounded mounted cells; SDK/Canvas fixture checks compilation, visible pixels, start/end geometry and retirement. Axis changes require a new React key; horizontal grids remain rejected. No native scrolling, remote focus, memory/performance or touch-drag qualification."
+    },
+    "flat-list-separators": {
+      "tests": [
+        "src/react-native/flatListSeparators.test.ts",
+        "examples/minimal/src/separatorCollections.ts",
+        "examples/minimal/src/columnsFixture.tsx"
+      ],
+      "scope": "Pinned upstream separator controller mapping: highlight/unhighlight updates current and preceding mounted row separators; leading/trailing updateProps merges custom props. Component separators receive highlighted and current leadingItem, including row arrays for grids; element separators pass through unchanged. Keyed cell state survives supported replacement, while retired or offscreen callbacks cannot target returned keys. Measured size changes retain current native items; public packed consumers and Canvas visible highlight/restoration checks pass. Native scroll/focus remain unqualified; viewability has a separate bounded contract."
+    },
+    "image-preparation-lifetimes": {
+      "tests": [
+        "src/react-native/image.test.ts",
+        "src/react-native/image.lifetimes.test.ts",
+        "src/testing/CanvasSceneGraph.lifecycle.test.ts",
+        "examples/minimal/src/imageLifetimes.ts",
+        "examples/minimal/src/imageLifecycleFixture.tsx"
+      ],
+      "scope": "Resolved source/recycling-key tuples own fresh Poster readiness, dimensions and terminal state. Late observations and reentrant callback retirement cannot continue an old load or borrow a successor. Independent public Expo-alias consumers exercise partial/recycled loads and cleanup; actual browser decoding verifies same-URI recycling, failure/recovery and visible pixels. Canvas replacement/empty-source/removal/disposal clears decoder handlers and source attributes and fences queued completions. onDisplay is renderable-raster readiness, not device frame acknowledgement. Native ordering/display and cache/prefetch capability remain unqualified."
+    },
+    "text-preparation-failure": {
+      "tests": [
+        "src/react-native/textRaster.failure.test.ts",
+        "src/react-native/fontPreparation.failure.test.ts",
+        "src/react-native/textRaster.test.ts",
+        "src/graphics/TextRasterCache.test.ts",
+        "src/layout/FontResources.test.ts",
+        "examples/minimal/src/rasterFailureLifetimes.ts",
+        "src/layout/FontResourcesFailures.test.ts",
+        "src/react-native/createNativeRoot.cleanup.test.ts",
+        "src/graphics/TextRasterCache.cleanup.test.ts",
+        "examples/minimal/src/cleanupLifetimes.ts",
+        "src/scene/SdkTextRasterTransport.test.ts",
+        "src/scene/SdkHost.test.ts",
+        "src/graphics/TextRasterCache.reentrancy.test.ts",
+        "examples/minimal/src/rasterReservations.ts"
+      ],
+      "scope": "Failed renderer preparation releases ready and late sibling raster leases without publishing partial fields; committed predecessors and newer cohorts keep their ownership until replacement/unmount. Started font/raster promises remain observed after a later synchronous build/walk failure, preserving the original error and existing latched-flush contract. Public packed consumer uses the actual 80,000-byte bounded cache for failure, released-entry eviction, recovery and full retirement. Native font metrics, mask/write output and firmware timing remain device-pending. FontResources fault-port checks preserve synchronous initialization and asynchronous readiness errors, maintain the existing failed-identity budget, fence retired readiness/metrics, and retain retryable disposal authority without duplicate reentrant removal. All font cleanup is attempted before reporting its first failure; changed native source compiles through the packed SDK lane, without claiming observed firmware exception behavior. Public native-root retirement preserves the earliest render/cleanup error and attempts every remaining owner, retaining failed provider/lease cleanup for retry without replaying successful work or reviving host authority. Actual bounded cache/transport-disposal failure, service unbinding, reentrant retirement and latched-error cases have source and independent installed public-consumer evidence; native physical cleanup remains unqualified. Pinned SDK call-boundary fixtures preserve the first SDK-host shutdown failure across later errors, and keep raster dispose-request submission and owned-observer detachment independently retryable. Pending/current requests retire before cleanup, successful steps are not replayed, and the changed native source compiles from the installed archive. Native task execution and physical cleanup remain pending. Font/raster owners snapshot physical asset maps at construction, keeping prepared/in-flight native URI metadata and later-size resources consistent after caller edits or deletions. Source font checks and independent installed Node/Hermes raster-request identity checks cover this configuration boundary; measured native font fidelity remains pending. Raster reservations publish before draw/eviction callbacks, so reentrant same-key callers share one pending result within budget while distinct keys remain separately accounted. Callback retirement fences bitmap writes and prevents restored entries or negative accounting; throwing draws preserve their error. Source counterexamples and an independent installed public-cache consumer use synthetic file ports, without native file-completion claims."
+    },
+    "nativewind-input-state-events": {
+      "tests": [
+        "build/nativewind.test.mjs",
+        "build/metro.test.mjs",
+        "examples/metro/src/App.tsx",
+        "examples/metro/src/qualify.ts"
+      ],
+      "scope": "Pinned 0.2.6 NativeWind state-event preparation omits only the synthetic no-op press handler for TextInput without an authored onPress. Focus/blur and authored callbacks remain preserved; Text/View state handling remains intact and source drift fails. Roku Metro/esbuild share the guarded transform, while non-Roku Metro arguments retain identity. Independent installed Metro production/development Node and explicit Hermes execution plus SDK compilation exercise a focus-styled field mounting and retiring. No new TextInput press API or native focus/style qualification."
+    },
+    "accessibility-description-relationships": {
+      "tests": [
+        "src/react-native/accessibilityDescriptions.test.ts",
+        "src/react-native/accessibility.test.ts",
+        "examples/minimal/src/accessibilityDescriptions.ts"
+      ],
+      "scope": "Direct committed aria-describedby relationships preserve HTML-whitespace reference order separately from names, use native-hint fallback for missing sources, and retain valid empty descriptions. Source changes/replacement/retirement, final modal exposure, bounded cycles and live publication have host and independent packed-consumer evidence. Hidden/modal-background sources follow the explicit exposed-host profile; actual Chromium original questionnaire observations keep HTML hidden-reference behavior distinct. The single inherited declaration property is inventoried across its actual aliases without changing API support status; behavior is scoped to the common committed owner and the tested View/Pressable/Text/TextInput contexts. Exact consumer debt review remains separate. Native speech/actions/traversal and the full accessible-description algorithm remain unqualified."
+    },
+    "flat-list-boundary-styles": {
+      "tests": [
+        "src/react-native/flatList.boundaryStyles.test.ts",
+        "src/react-native/flatList.replay.test.ts",
+        "examples/minimal/src/collectionBoundaryStyles.ts",
+        "examples/minimal/src/horizontalFixture.tsx"
+      ],
+      "scope": "ListHeaderComponentStyle and ListFooterComponentStyle style their internal View wrappers separately from child styles. Measured wrapper extents and the following cell origin, including resolved outer header margins, feed row/index/end geometry in supported vertical one/two/three-column and horizontal single-lane profiles; source replacement/removal preserves bounded windowing and cleanup. Independent installed public consumers check typed props and geometry; the packed SDK/Canvas horizontal fixture checks wrapper padding and actual background pixels. Existing style and collection limits remain; native scrolling/focus and inverted lists are not admitted."
+    },
+    "collection-geometry-replay": {
+      "tests": [
+        "src/react-native/flatList.replay.test.ts",
+        "src/react-native/flatListColumns.test.ts",
+        "src/react-native/flatListHorizontal.test.ts",
+        "examples/minimal/src/collectionGeometryLifetimes.ts"
+      ],
+      "scope": "Four fixed seeds replay 64 bounded geometry/data/input actions each across one/two/three vertical columns and a horizontal lane, with minimized independent packed cases. Declared getItemLayout length controls index alignment independently of separator stride; removed headers retire their geometry; repeated End preserves actual footer/trailing extent without requiring a changed scroll event. Initial indices await committed arriving data/header content and yield to explicit commands or retirement. Complete visible rows, bounded windows, retired held input and cleanup are host contracts only, not device scroll/focus/performance qualification. Repeated clamped index/offset commands preserve every actually visible row and correct viewability without requiring another native event; large prepends retain the visible keyed anchor while the new native extent commits."
+    },
+    "flat-list-viewability": {
+      "tests": [
+        "src/react-native/flatListViewability.test.ts",
+        "src/react-native/flatList.replay.test.ts",
+        "examples/minimal/src/collectionViewability.ts",
+        "examples/minimal/src/columnsFixture.tsx"
+      ],
+      "scope": "Single callback/config profile using committed known row metrics, pinned integer-pixel/item/viewport thresholds, fully-visible admission, delayed captured-set filtering and explicit recordInteraction. Grid row tokens expand into original item/index/key tokens. Same-value configs and callback replacement are allowed; changed config/nullability requires remount, and callback pairs fail explicitly. Pending data/extraData generations retire their timers, with published key identity and pinned empty-data silence retained. Host, independently installed packed consumers, SDK compilation and actual Canvas token delivery are checked; native drag/visibility, clipping by other content, assistive traversal and strict continuous dwell timing are not qualified."
+    },
+    "native-observer-retirement": {
+      "tests": [
+        "src/scene/SdkDeviceFacts.test.ts",
+        "src/scene/SdkTextEntry.test.ts",
+        "src/scene/SdkTextRasterTransport.test.ts",
+        "scripts/qualify-sdk-consumer.mjs"
+      ],
+      "scope": "Owned text-entry/device-facts observers submit the actual previous callback required by the pinned SDK unregister cue. Device-facts callbacks stop across reentrant disposal, and stale removal callbacks cannot delete replacement subscriptions. Failed raster submissions clear timer/current ownership before a queued successor or shutdown. Source fixtures and independent installed public DeviceFacts/raster execution use the actual pinned SDK property function with synthetic Tree API registration/field/timer ports under Node and explicitly selected host Hermes; text-entry unregister has source and SDK-build coverage. Native task execution, event ordering, physical observer removal and complete native API support remain unqualified."
+    },
+    "accessibility-publication-lifetimes": {
+      "tests": [
+        "src/react-native/accessibility.retirement.test.ts",
+        "src/react-native/accessibility.test.ts",
+        "examples/minimal/src/accessibilityRetirement.ts"
+      ],
+      "scope": "A synchronous announcement-port root unmount or committed replacement retires the old live-region publication before further submissions or de-duplication writes. Actual React source lifetimes, and independent public packed consumers cover retirement and same-ID successor delivery; the focused-speech retirement control remains preserved. This admits host publication ownership only, not native speech, submitted-queue cancellation or assistive traversal."
+    },
+    "focus-observation-lifetimes": {
+      "tests": [
+        "src/react-native/NativeInput.focusLifetime.test.ts",
+        "src/react-native/NativeInput.test.ts",
+        "src/react-native/focusEvents.test.ts",
+        "examples/minimal/src/focusObservationLifetimes.ts"
+      ],
+      "scope": "A focus observation retains its exact registered target and ordering across held-key cancellation and old-target blur. Reentrant disposal, same-ID route replacement or a newer explicit observation stops the retired continuation; removal of only the departing target preserves a live destination. Actual mounted React/RouterStore routes, and independent packed public consumers distinguish the old event from the successor's fresh native observation. Physical remote/focus arrival and firmware ordering remain unqualified."
+    },
+    "back-subscription-lifetimes": {
+      "tests": [
+        "src/react-native/NativeInput.backLifetime.test.ts",
+        "src/react-native/NativeInput.test.ts",
+        "src/react-native/environment.test.ts",
+        "examples/minimal/src/backLifetimes.ts"
+      ],
+      "scope": "Back callback deduplication, LIFO priority and consumption remain preserved. Captured registrations must still own their identity at invocation; removed/replaced callbacks cannot navigate a successor, new registrations wait for the next event, and stale removal cannot delete a replacement. Gesture retirement through disposal, inactivity/reactivation or external text entry stops remaining callbacks. Actual mounted React route/provider cleanup inside an input callback has source and independent installed public-consumer evidence. This is a bounded host lifetime contract, not all upstream mutation quirks or native remote/focus timing."
+    },
+    "application-lifetime": {
+      "tests": [
+        "src/application/lifetime.test.ts",
+        "src/application/AppRegistry.test.ts",
+        "build/runtimeBoundary.test.mjs"
+      ],
+      "scope": "Shared registered/custom application root, input, web/setup/content lifetime with original startup errors, async/reentrant disposal, independent cleanup and fenced retired callbacks. Overlapping roots retain existing shared viewport/system/services constraints. Process timer bootstrap is idempotent. Device startup/cleanup remain pending."
+    },
+    "preview-testing-resources": {
+      "tests": [
+        "src/testing/CanvasResources.test.ts",
+        "src/testing/CanvasSceneGraph.lifecycle.test.ts",
+        "build/runtimeBoundary.test.mjs"
+      ],
+      "scope": "Injected bounded shared font registration leases, late preparation retirement, source-release adapters, and attached-text observations. Independent packed consumer uses explicit decoder/resource ports and actual Node loopback sockets. No Node/native Canvas dependency enters runtime/browser/SDK entries; no firmware transport, pixels or device proof is implied."
+    },
+    "core-ui-catalog-adoption": {
+      "tests": [
+        "examples/minimal/src/catalogAdoptionFixture.tsx",
+        "scripts/qualify-catalog-preview.mjs"
+      ],
+      "scope": "Independent list, detail and controlled note editor using a public AppRegistry entry and pinned safe-area-context. The packed Canvas fixture requires a new row focus observation scoped to the remount before Select and captures press-in, press-out and activation. Native system inset discovery, handheld repeat, persistence and cross-device timing are separate claims.",
+      "versions": {
+        "renderer": "0.2.0",
+        "react": "19.2.8",
+        "reactNativeReference": "0.86.2",
+        "reactNativeWebReference": "0.21.2",
+        "reactNativeSafeAreaContext": "5.8.1",
+        "rokuSdk": "2.19.1"
+      },
+      "claims": [
+        {
+          "api": "FlatList data/keyExtractor/renderItem and Pressable accessibilityState",
+          "expected": "Row identity survives closing details and focus returns to the last selection on a directional platform.",
+          "requires": ["packed-canvas", "native-reference", "physical-roku"]
+        },
+        {
+          "api": "TextInput value/onChangeText and Modal visible/onRequestClose",
+          "expected": "Closing the editor discards the unsaved note, saving updates only the selected detail, and modal input retires with the overlay.",
+          "requires": ["packed-canvas", "native-reference", "physical-roku"]
+        },
+        {
+          "api": "SafeAreaProvider initialMetrics and useSafeAreaInsets",
+          "expected": "The shell uses provider insets. The reference may replace initial metrics with an actual layout observation after mount.",
+          "requires": ["packed-canvas", "native-reference", "physical-roku"]
+        }
+      ]
+    }
+  },
+  "modules": {
+    "react-native": {
+      "adapter": "react-native-roku/react-native",
+      "source": "src/react-native/index.ts",
+      "version": "0.86.2-0",
+      "limitations": "React Native host subset; native focus/metrics/services require device qualification. AppRegistry registration only.",
+      "contracts": [
+        "core-ui-composed-fixture",
+        "react-native-subset",
+        "accessibility-label-relationships",
+        "flat-list-columns",
+        "modal-committed-back",
+        "flat-list-horizontal",
+        "flat-list-separators",
+        "image-preparation-lifetimes",
+        "text-preparation-failure",
+        "nativewind-input-state-events",
+        "accessibility-description-relationships",
+        "collection-geometry-replay",
+        "flat-list-boundary-styles",
+        "flat-list-viewability",
+        "native-observer-retirement",
+        "back-subscription-lifetimes",
+        "focus-observation-lifetimes",
+        "accessibility-publication-lifetimes",
+        "core-ui-catalog-adoption"
+      ],
+      "device": "pending",
+      "exports": {
+        "AccessibilityInfo": {
+          "members": [
+            "addEventListener",
+            "announceForAccessibility",
+            "isReduceMotionEnabled",
+            "isScreenReaderEnabled",
+            "sendAccessibilityEvent",
+            "setAccessibilityFocus"
+          ],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "ActivityIndicator": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "animating",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "color",
+            "focusable",
+            "hidesWhenStopped",
+            "importantForAccessibility",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "pointerEvents",
+            "role",
+            "size",
+            "style",
+            "testID"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Animated": {
+          "members": [
+            "Image",
+            "ScrollView",
+            "Text",
+            "Value",
+            "View",
+            "add",
+            "createAnimatedComponent",
+            "decay",
+            "divide",
+            "event",
+            "loop",
+            "multiply",
+            "parallel",
+            "sequence",
+            "spring",
+            "subtract",
+            "timing"
+          ],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Appearance": {
+          "members": ["addChangeListener", "getColorScheme", "setColorScheme"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "AppRegistry": {
+          "members": ["getAppKeys", "getRunnable", "registerComponent", "unregisterComponent"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "AppState": {
+          "members": ["addEventListener", "currentState"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "BackHandler": {
+          "members": ["addEventListener", "exitApp"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "DeviceEventEmitter": {
+          "members": ["addListener", "emit", "listenerCount", "listeners", "removeAllListeners"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Dimensions": {
+          "members": ["addEventListener", "get"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Easing": {
+          "members": ["bezier", "cubic", "ease", "in", "inOut", "linear", "out", "quad"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "findNodeHandle": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "FlatList": {
+          "members": [],
+          "props": [
+            "ItemSeparatorComponent",
+            "ListEmptyComponent",
+            "ListFooterComponent",
+            "ListFooterComponentStyle",
+            "ListHeaderComponent",
+            "ListHeaderComponentStyle",
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "columnWrapperStyle",
+            "contentContainerStyle",
+            "data",
+            "extraData",
+            "focusable",
+            "getItemLayout",
+            "horizontal",
+            "importantForAccessibility",
+            "initialNumToRender",
+            "initialScrollIndex",
+            "key",
+            "keyExtractor",
+            "maintainVisibleContentPosition",
+            "maxToRenderPerBatch",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "numColumns",
+            "onBlur",
+            "onBlurCapture",
+            "onContentSizeChange",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onScroll",
+            "onScrollToIndexFailed",
+            "onViewableItemsChanged",
+            "pointerEvents",
+            "ref",
+            "removeClippedSubviews",
+            "renderItem",
+            "renderScrollComponent",
+            "role",
+            "scrollEventThrottle",
+            "showsHorizontalScrollIndicator",
+            "showsVerticalScrollIndicator",
+            "style",
+            "testID",
+            "updateCellsBatchingPeriod",
+            "viewabilityConfig",
+            "windowSize"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Image": {
+          "members": ["clearDiskCache", "clearMemoryCache", "prefetch"],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "blurRadius",
+            "cachePolicy",
+            "children",
+            "className",
+            "contentFit",
+            "contentPosition",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onDisplay",
+            "onError",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onLoad",
+            "onLoadEnd",
+            "onLoadStart",
+            "placeholder",
+            "placeholderContentFit",
+            "pointerEvents",
+            "priority",
+            "recyclingKey",
+            "ref",
+            "resizeMode",
+            "role",
+            "source",
+            "style",
+            "testID",
+            "transition"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "ImageBackground": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "blurRadius",
+            "cachePolicy",
+            "children",
+            "className",
+            "contentFit",
+            "contentPosition",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onDisplay",
+            "onError",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onLoad",
+            "onLoadEnd",
+            "onLoadStart",
+            "placeholder",
+            "placeholderContentFit",
+            "pointerEvents",
+            "priority",
+            "recyclingKey",
+            "ref",
+            "resizeMode",
+            "role",
+            "source",
+            "style",
+            "testID",
+            "transition"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "InteractionManager": {
+          "members": ["clearInteractionHandle", "createInteractionHandle", "runAfterInteractions"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Keyboard": {
+          "members": ["addListener", "dismiss"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "KeyboardAvoidingView": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "unsupported"
+        },
+        "Modal": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "animationType",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "importantForAccessibility",
+            "onDismiss",
+            "onRequestClose",
+            "onShow",
+            "role",
+            "transparent",
+            "visible"
+          ],
+          "openProps": false,
+          "status": "partial",
+          "limitations": "Viewport portal with none, fade and slide transitions using the JavaScript animation executor; opening/closing cancellation and Back ownership are host-tested. Native presentation and animation timing remain device-pending."
+        },
+        "NativeEventEmitter": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "NativeModules": {
+          "members": ["RokuCapabilities"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "PanResponder": {
+          "members": ["create"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "PixelRatio": {
+          "members": ["get", "getFontScale", "getPixelSizeForLayoutSize", "roundToNearestPixel"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Platform": {
+          "members": ["OS", "Version", "constants", "isPad", "isTV", "select"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Pressable": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "delayLongPress",
+            "disabled",
+            "focusable",
+            "hasTVPreferredFocus",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onLongPress",
+            "onPress",
+            "onPressIn",
+            "onPressOut",
+            "pointerEvents",
+            "ref",
+            "role",
+            "style",
+            "testID",
+            "unstable_tvFocusPresentation"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "requireNativeComponent": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "SafeAreaView": {
+          "members": [],
+          "props": ["children", "edges", "key", "ref", "style"],
+          "openProps": false,
+          "status": "partial"
+        },
+        "ScrollView": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "contentContainerStyle",
+            "focusable",
+            "horizontal",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onContentSizeChange",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onScroll",
+            "pointerEvents",
+            "ref",
+            "role",
+            "scrollEnabled",
+            "scrollEventThrottle",
+            "showsHorizontalScrollIndicator",
+            "showsVerticalScrollIndicator",
+            "style",
+            "testID"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Share": {
+          "members": ["share"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "StatusBar": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "unsupported"
+        },
+        "StyleSheet": {
+          "members": [
+            "absoluteFill",
+            "absoluteFillObject",
+            "compose",
+            "create",
+            "flatten",
+            "hairlineWidth"
+          ],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Switch": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "unsupported"
+        },
+        "Text": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "allowFontScaling",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "ellipsizeMode",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "numberOfLines",
+            "onBlur",
+            "onBlurCapture",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onPress",
+            "pointerEvents",
+            "ref",
+            "role",
+            "style",
+            "testID"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "TextInput": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "allowFontScaling",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "defaultValue",
+            "editable",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "keyboardType",
+            "maxLength",
+            "multiline",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onChangeText",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onSelectionChange",
+            "onSubmitEditing",
+            "placeholder",
+            "placeholderTextColor",
+            "pointerEvents",
+            "ref",
+            "role",
+            "secureTextEntry",
+            "style",
+            "testID",
+            "value"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "TouchableHighlight": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "unsupported"
+        },
+        "TouchableOpacity": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "unsupported"
+        },
+        "TouchableWithoutFeedback": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "unsupported"
+        },
+        "TurboModuleRegistry": {
+          "members": ["get", "getEnforcing"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "TVEventHandler": {
+          "members": ["addListener"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "UIManager": {
+          "members": ["dispatchViewManagerCommand", "getViewManagerConfig"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useTVEventHandler": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useWindowDimensions": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "View": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "collapsable",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "pointerEvents",
+            "ref",
+            "role",
+            "style",
+            "testID"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "VirtualizedList": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "unsupported"
+        }
+      }
+    },
+    "react-native-svg": {
+      "adapter": "react-native-roku/svg",
+      "source": "src/vector/svg.ts",
+      "version": "15.15.5",
+      "limitations": "Bounded geometry and packaged raster variants; transforms, masks and device graphics require separate qualification.",
+      "contracts": ["react-native-svg-subset"],
+      "device": "pending",
+      "exports": {
+        "Circle": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "ClipPath": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "default": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Defs": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Ellipse": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "G": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Image": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Line": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "LinearGradient": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Mask": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Path": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Pattern": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Polygon": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Polyline": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "RadialGradient": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Rect": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "rectilinearPath": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "shapes": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Stop": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Svg": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "color",
+            "fill",
+            "focusable",
+            "height",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "opacity",
+            "pointerEvents",
+            "ref",
+            "role",
+            "stroke",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeWidth",
+            "style",
+            "testID",
+            "viewBox",
+            "width"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Symbol": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Text": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "TSpan": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        },
+        "Use": {
+          "members": ["svgTag"],
+          "props": ["children"],
+          "openProps": true,
+          "status": "partial"
+        }
+      }
+    },
+    "react-native-reanimated": {
+      "adapter": "react-native-roku/reanimated",
+      "source": "src/animation/reanimated.ts",
+      "version": "4.5.3",
+      "limitations": "JavaScript-host animation subset; no native UI worklet thread.",
+      "contracts": ["react-native-reanimated-subset"],
+      "device": "pending",
+      "exports": {
+        "cancelAnimation": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "createAnimatedComponent": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "default": {
+          "members": ["Image", "ScrollView", "Text", "View", "createAnimatedComponent"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "dispatchCommand": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Easing": {
+          "members": ["bezier", "cubic", "ease", "in", "inOut", "linear", "out", "quad"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "interpolate": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "makeMutable": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useAnimatedRef": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useAnimatedStyle": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useDerivedValue": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useEvent": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useSharedValue": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "withDelay": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "withRepeat": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "withSequence": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "withTiming": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "react-native-worklets": {
+      "adapter": "react-native-roku/worklets",
+      "source": "src/animation/worklets.ts",
+      "version": "0.11.3",
+      "limitations": "Functions execute on the JavaScript host; not upstream UI-thread worklets.",
+      "contracts": ["react-native-worklets-subset"],
+      "device": "pending",
+      "exports": {
+        "runOnJS": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "runOnUI": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "runOnUISync": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "scheduleOnRN": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "react-native-safe-area-context": {
+      "adapter": "react-native-roku/safe-area",
+      "source": "src/react-native/safeArea.ts",
+      "version": "5.8.1",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["react-native-safe-area-context-subset", "core-ui-catalog-adoption"],
+      "device": "pending",
+      "exports": {
+        "initialWindowMetrics": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "SafeAreaFrameContext": {
+          "members": ["Consumer", "Provider"],
+          "props": ["children", "value"],
+          "openProps": false,
+          "status": "partial"
+        },
+        "SafeAreaInsetsContext": {
+          "members": ["Consumer", "Provider"],
+          "props": ["children", "value"],
+          "openProps": false,
+          "status": "partial"
+        },
+        "SafeAreaProvider": {
+          "members": [],
+          "props": ["children", "initialMetrics"],
+          "openProps": false,
+          "status": "partial"
+        },
+        "SafeAreaView": {
+          "members": [],
+          "props": ["children", "edges", "key", "ref", "style"],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useSafeAreaFrame": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useSafeAreaInsets": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "@react-native-async-storage/async-storage": {
+      "adapter": "react-native-roku/async-storage",
+      "source": "src/services/asyncStorage.ts",
+      "version": "2.2.0",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["react-native-async-storage-async-storage-subset"],
+      "device": "pending",
+      "exports": {
+        "default": {
+          "members": ["getItem", "multiGet", "multiRemove", "multiSet", "removeItem", "setItem"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "getItem": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "multiGet": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "multiRemove": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "multiSet": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "removeItem": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "setItem": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-router": {
+      "adapter": "react-native-roku/expo-router",
+      "source": "src/navigation/expoRouter.ts",
+      "version": "57.0.12",
+      "limitations": "JavaScript location-history subset. dismissTo matches the complete normalized href and replaces the current location when absent. Hooks bind to their nearest provider; the imperative router selects the most recently registered live provider. Native stacks, transitions and the full Expo Router API remain unsupported.",
+      "contracts": ["expo-router-subset"],
+      "device": "pending",
+      "exports": {
+        "Redirect": {
+          "members": [],
+          "props": ["href"],
+          "openProps": false,
+          "status": "partial"
+        },
+        "RokuRouterProvider": {
+          "members": [],
+          "props": ["children", "store"],
+          "openProps": false,
+          "status": "partial"
+        },
+        "router": {
+          "members": [
+            "back",
+            "canDismiss",
+            "canGoBack",
+            "dismiss",
+            "dismissAll",
+            "dismissTo",
+            "navigate",
+            "push",
+            "replace",
+            "setParams"
+          ],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Slot": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "SplashScreen": {
+          "members": ["hideAsync", "preventAutoHideAsync"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Stack": {
+          "members": ["Screen"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "Tabs": {
+          "members": ["Screen"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useGlobalSearchParams": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useLocalSearchParams": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "usePathname": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useRouter": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useSegments": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-image": {
+      "adapter": "react-native-roku/image",
+      "source": "src/react-native/image.ts",
+      "version": "57.0.2",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["expo-image-subset", "image-preparation-lifetimes"],
+      "device": "pending",
+      "exports": {
+        "Image": {
+          "members": ["clearDiskCache", "clearMemoryCache", "prefetch"],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "blurRadius",
+            "cachePolicy",
+            "children",
+            "className",
+            "contentFit",
+            "contentPosition",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onDisplay",
+            "onError",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onLoad",
+            "onLoadEnd",
+            "onLoadStart",
+            "placeholder",
+            "placeholderContentFit",
+            "pointerEvents",
+            "priority",
+            "recyclingKey",
+            "ref",
+            "resizeMode",
+            "role",
+            "source",
+            "style",
+            "testID",
+            "transition"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "ImageBackground": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "blurRadius",
+            "cachePolicy",
+            "children",
+            "className",
+            "contentFit",
+            "contentPosition",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onDisplay",
+            "onError",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "onLoad",
+            "onLoadEnd",
+            "onLoadStart",
+            "placeholder",
+            "placeholderContentFit",
+            "pointerEvents",
+            "priority",
+            "recyclingKey",
+            "ref",
+            "resizeMode",
+            "role",
+            "source",
+            "style",
+            "testID",
+            "transition"
+          ],
+          "openProps": false,
+          "status": "partial"
+        },
+        "registerPackagedImage": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-linear-gradient": {
+      "adapter": "react-native-roku/linear-gradient",
+      "source": "src/react-native/linearGradient.ts",
+      "version": "57.0.1",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["expo-linear-gradient-subset"],
+      "device": "pending",
+      "exports": {
+        "LinearGradient": {
+          "members": [],
+          "props": [
+            "accessibilityElementsHidden",
+            "accessibilityHint",
+            "accessibilityLabel",
+            "accessibilityLabelledBy",
+            "accessibilityLiveRegion",
+            "accessibilityRole",
+            "accessibilityState",
+            "accessibilityValue",
+            "accessibilityViewIsModal",
+            "accessible",
+            "aria-busy",
+            "aria-checked",
+            "aria-current",
+            "aria-describedby",
+            "aria-disabled",
+            "aria-expanded",
+            "aria-haspopup",
+            "aria-hidden",
+            "aria-invalid",
+            "aria-label",
+            "aria-labelledby",
+            "aria-level",
+            "aria-live",
+            "aria-modal",
+            "aria-orientation",
+            "aria-pressed",
+            "aria-roledescription",
+            "aria-selected",
+            "aria-valuemax",
+            "aria-valuemin",
+            "aria-valuenow",
+            "aria-valuetext",
+            "children",
+            "className",
+            "colors",
+            "dither",
+            "end",
+            "focusable",
+            "importantForAccessibility",
+            "key",
+            "locations",
+            "nativeID",
+            "nextFocusDown",
+            "nextFocusLeft",
+            "nextFocusRight",
+            "nextFocusUp",
+            "onBlur",
+            "onBlurCapture",
+            "onFocus",
+            "onFocusCapture",
+            "onLayout",
+            "pointerEvents",
+            "ref",
+            "role",
+            "start",
+            "style",
+            "testID"
+          ],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-constants": {
+      "adapter": "react-native-roku/expo-constants",
+      "source": "src/services/expoConstants.ts",
+      "version": "57.0.20",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["expo-constants-subset"],
+      "device": "pending",
+      "exports": {
+        "default": {
+          "members": ["appOwnership", "expoConfig", "nativeAppVersion", "nativeBuildVersion"],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-linking": {
+      "adapter": "react-native-roku/expo-linking",
+      "source": "src/services/expoLinking.ts",
+      "version": "57.0.5",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["expo-linking-subset"],
+      "device": "pending",
+      "exports": {
+        "canOpenURL": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "getInitialURL": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "openURL": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useLinkingURL": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "useURL": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-status-bar": {
+      "adapter": "react-native-roku/expo-status-bar",
+      "source": "src/services/expoStatusBar.ts",
+      "version": "57.0.1",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["expo-status-bar-subset"],
+      "device": "pending",
+      "exports": {
+        "StatusBar": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-secure-store": {
+      "adapter": "react-native-roku/secure-store",
+      "source": "src/services/secureStore.ts",
+      "version": "57.0.4",
+      "limitations": "Registry-backed adapter; hardware storage protection is not certified.",
+      "contracts": ["expo-secure-store-subset"],
+      "device": "pending",
+      "exports": {
+        "deleteItemAsync": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "getItemAsync": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "setItemAsync": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "WHEN_UNLOCKED_THIS_DEVICE_ONLY": {
+          "members": [
+            "anchor",
+            "at",
+            "big",
+            "blink",
+            "bold",
+            "charAt",
+            "charCodeAt",
+            "codePointAt",
+            "concat",
+            "endsWith",
+            "fixed",
+            "fontcolor",
+            "fontsize",
+            "includes",
+            "indexOf",
+            "italics",
+            "lastIndexOf",
+            "length",
+            "link",
+            "localeCompare",
+            "match",
+            "matchAll",
+            "normalize",
+            "padEnd",
+            "padStart",
+            "repeat",
+            "replace",
+            "replaceAll",
+            "search",
+            "slice",
+            "small",
+            "split",
+            "startsWith",
+            "strike",
+            "sub",
+            "substr",
+            "substring",
+            "sup",
+            "toLocaleLowerCase",
+            "toLocaleUpperCase",
+            "toLowerCase",
+            "toString",
+            "toUpperCase",
+            "trim",
+            "trimEnd",
+            "trimLeft",
+            "trimRight",
+            "trimStart",
+            "valueOf"
+          ],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    },
+    "expo-crypto": {
+      "adapter": "react-native-roku/crypto",
+      "source": "src/services/crypto.ts",
+      "version": "57.0.3",
+      "limitations": "Bounded adapter contract; upstream API completeness and native execution are not claimed.",
+      "contracts": ["expo-crypto-subset"],
+      "device": "pending",
+      "exports": {
+        "getRandomBytes": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "getRandomBytesAsync": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        },
+        "randomUUID": {
+          "members": [],
+          "props": [],
+          "openProps": false,
+          "status": "partial"
+        }
+      }
+    }
+  }
+}

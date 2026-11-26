@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.local/
+coverage/
+*.tsbuildinfo
+*.xml.d.ts
+.DS_Store
+examples/*/src/generated/
+
+.roku/
+
+__pycache__/
+*.pyc

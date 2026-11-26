@@ -1,0 +1,11 @@
+nodeLinker: hoisted
+autoInstallPeers: false
+allowBuilds:
+  "@roku-sdk/tooling": true
+  esbuild: true
+  "@parcel/watcher": false
+overrides:
+  "@types/node": 24.19.1
+  caniuse-lite: 1.0.30001814
+  electron-to-chromium: 1.5.444
+  glob@13: 13.0.6

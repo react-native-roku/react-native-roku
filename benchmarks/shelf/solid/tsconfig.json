@@ -1,0 +1,14 @@
+{
+  "extends": "@roku-sdk/rsg-ts/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "lib": ["ES2022", "DOM"],
+    "types": ["node", "@roku-sdk/interfaces/global"],
+    "composite": false,
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@roku-sdk/solid"
+  },
+  "include": ["src", "roku-config.ts"]
+}

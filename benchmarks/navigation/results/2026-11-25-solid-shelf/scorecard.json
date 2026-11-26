@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "workload": "Frozen 24-card full-title shelf",
+  "endpoint": "Device key-down to completed SDK swap of a render begun after the required native updates",
+  "device": {
+    "model": "4850X",
+    "firmware": "16.0.4",
+    "firmwareBuild": "853",
+    "uiResolution": "1080p",
+    "outputMode": "1080p UI reported by device-info"
+  },
+  "spacingMs": 200,
+  "pollMs": 75,
+  "deadlineMs": 6000,
+  "sdk": "2.19.1",
+  "fontSha256": "a414b48aa577ef2c62ebb135341ddeef33ee26a4f5dc9f787f93c1aab08ebb50",
+  "fixtureSha256": "8bd0652071d4ec4c2d135f584d8cca639e5de3122ff092c561f9b9c74d3f562a",
+  "route": [
+    {
+      "key": "Right",
+      "from": 0,
+      "to": 1
+    },
+    {
+      "key": "Right",
+      "from": 1,
+      "to": 2
+    },
+    {
+      "key": "Down",
+      "from": 2,
+      "to": 10
+    },
+    {
+      "key": "Right",
+      "from": 10,
+      "to": 11
+    },
+    {
+      "key": "Down",
+      "from": 11,
+      "to": 19
+    },
+    {
+      "key": "Left",
+      "from": 19,
+      "to": 18
+    },
+    {
+      "key": "Left",
+      "from": 18,
+      "to": 17
+    },
+    {
+      "key": "Up",
+      "from": 17,
+      "to": 9
+    },
+    {
+      "key": "Up",
+      "from": 9,
+      "to": 1
+    },
+    {
+      "key": "Left",
+      "from": 1,
+      "to": 0
+    },
+    {
+      "key": "Down",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "key": "Down",
+      "from": 8,
+      "to": 16
+    },
+    {
+      "key": "Right",
+      "from": 16,
+      "to": 17
+    },
+    {
+      "key": "Right",
+      "from": 17,
+      "to": 18
+    },
+    {
+      "key": "Right",
+      "from": 18,
+      "to": 19
+    },
+    {
+      "key": "Up",
+      "from": 19,
+      "to": 11
+    },
+    {
+      "key": "Up",
+      "from": 11,
+      "to": 3
+    },
+    {
+      "key": "Left",
+      "from": 3,
+      "to": 2
+    },
+    {
+      "key": "Left",
+      "from": 2,
+      "to": 1
+    },
+    {
+      "key": "Left",
+      "from": 1,
+      "to": 0
+    },
+    {
+      "key": "Right",
+      "from": 0,
+      "to": 1
+    },
+    {
+      "key": "Down",
+      "from": 1,
+      "to": 9
+    },
+    {
+      "key": "Right",
+      "from": 9,
+      "to": 10
+    },
+    {
+      "key": "Down",
+      "from": 10,
+      "to": 18
+    },
+    {
+      "key": "Right",
+      "from": 18,
+      "to": 19
+    },
+    {
+      "key": "Left",
+      "from": 19,
+      "to": 18
+    },
+    {
+      "key": "Up",
+      "from": 18,
+      "to": 10
+    },
+    {
+      "key": "Left",
+      "from": 10,
+      "to": 9
+    },
+    {
+      "key": "Up",
+      "from": 9,
+      "to": 1
+    },
+    {
+      "key": "Left",
+      "from": 1,
+      "to": 0
+    }
+  ],
+  "processorSha256": "8488edbefadfc4be152cda1d42d9bfcede8b47638295eb85eb3bad8cd148fdf4",
+  "builds": {
+    "react": {
+      "zipSha256": "7642387f5aec3f990a08989770a300115a847d702d6ac70432454fc7d69931fb",
+      "markedZipSha256": "358e8fed69e99b7da3903dee759ed490de5b814a6546299c1ebf67facadb6c27",
+      "markedTraceSha256": "200bda3c1ba2df53d277e062ca76a1c9883fba0b6dd4b198324071d9bf3336a7",
+      "verifiedFieldMoves": 30,
+      "requiredApplyOrdinals": [
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+      ],
+      "nativeApplyCounts": [
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+      ],
+      "packageSha256": "6eb59875d6d5df01097214037902170df531b998cf09a718ca4fd7fc23f7af57"
+    },
+    "solid": {
+      "zipSha256": "4085057050dd571746c2d76db13e4847badbcbb5b52f3c478199964ae1dfa300",
+      "markedZipSha256": "06608425d7ff01065870dda4426e8d95af2b368fa2c0043ec92dc54f32e8c398",
+      "markedTraceSha256": "71868fbc8049f7531213f2053dc8b74f82130e8191923923f0f4732ef13c461f",
+      "verifiedFieldMoves": 30,
+      "requiredApplyOrdinals": [
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+      ],
+      "nativeApplyCounts": [
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+      ]
+    }
+  },
+  "launches": [
+    {
+      "postApplySwapMs": [
+        28.062185, 35.272333, 25.755593, 37.72163, 28.488111, 27.255963, 37.793482, 25.279445,
+        38.018037, 26.52337, 34.188963, 34.914333, 29.390555, 30.105778, 30.575815, 31.873037,
+        22.606593, 37.743222, 33.846074, 29.526333, 25.248, 23.997185, 35.695518, 27.762629,
+        30.061037, 29.029111, 21.598111, 22.334518, 28.372704, 27.381259
+      ],
+      "pair": 1,
+      "renderer": "react",
+      "traceSha256": "17caa47d9ac4b2cd0f219ea3e0270274c9b0a87a60b3181fa41608a68a26a493",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 29.209833,
+          "p95": 37.793482,
+          "worst": 38.018037
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 29.458444,
+          "p95": 37.743222,
+          "worst": 37.793482
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 28.4304075,
+          "p95": 38.018037,
+          "worst": 38.018037
+        }
+      }
+    },
+    {
+      "postApplySwapMs": [
+        13.675148, 17.790038, 15.993889, 14.57837, 17.465667, 8.768186, 19.762259, 9.62326,
+        12.912297, 9.708074, 18.182481, 11.014148, 17.384704, 8.742926, 15.847963, 17.677186,
+        8.729777, 15.331333, 17.353482, 7.268592, 15.175407, 8.709185, 15.760408, 8.459778,
+        14.901148, 8.38, 17.320111, 8.558852, 19.667777, 8.639852
+      ],
+      "pair": 1,
+      "renderer": "solid",
+      "traceSha256": "8dec7e96f72cd5aba82b466a38a37cc83f2a9359010438fce24be3783d4457bc",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 14.739759,
+          "p95": 19.667777,
+          "worst": 19.762259
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 15.0382775,
+          "p95": 18.182481,
+          "worst": 19.762259
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 11.9632225,
+          "p95": 19.667777,
+          "worst": 19.667777
+        }
+      }
+    },
+    {
+      "postApplySwapMs": [
+        17.436296, 18.328926, 14.501, 16.783259, 13.399889, 8.760444, 15.200592, 9.509963, 13.048,
+        5.803926, 17.51637, 16.959222, 16.535852, 9.439815, 20.363592, 19.362408, 8.489074,
+        19.545259, 15.50074, 5.538629, 11.081926, 6.894852, 16.971222, 7.577814, 13.825667,
+        8.540334, 18.334223, 8.625852, 18.895926, 7.225592
+      ],
+      "pair": 2,
+      "renderer": "solid",
+      "traceSha256": "8e5ee6811308d1dacac1d104dc8af74cf13035c747e28ff60a99b52b52308d77",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 14.1633335,
+          "p95": 19.545259,
+          "worst": 20.363592
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 14.850795999999999,
+          "p95": 19.545259,
+          "worst": 20.363592
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 13.2239445,
+          "p95": 18.895926,
+          "worst": 18.895926
+        }
+      }
+    },
+    {
+      "postApplySwapMs": [
+        28.370037, 37.954185, 35.73037, 36.821, 38.573926, 27.75063, 40.77663, 20.239518, 35.522777,
+        24.281296, 32.005925, 34.300111, 28.850408, 29.525778, 31.887074, 32.785703, 23.883629,
+        27.463926, 25.718, 29.063963, 24.918556, 28.090333, 30.305482, 29.259852, 32.139037,
+        24.024445, 23.472518, 26.469518, 27.624112, 20.014777
+      ],
+      "pair": 2,
+      "renderer": "react",
+      "traceSha256": "e3b20744ebe274b4a38622bb2741206789f093de57a06558c3e9b09de398b39e",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 28.9571855,
+          "p95": 38.573926,
+          "worst": 40.77663
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 28.6102225,
+          "p95": 37.954185,
+          "worst": 40.77663
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 31.779981499999998,
+          "p95": 38.573926,
+          "worst": 38.573926
+        }
+      }
+    },
+    {
+      "postApplySwapMs": [
+        15.536815, 12.080926, 13.689518, 15.778222, 18.383, 6.638815, 11.397926, 6.975518,
+        14.806704, 8.741518, 18.346926, 16.618223, 21.948556, 11.122, 11.386889, 17.340074,
+        8.606037, 10.503, 20.339297, 8.894333, 17.972222, 9.091, 18.275481, 7.809408, 16.350074,
+        6.946333, 17.149741, 9.29926, 10.817, 5.73826
+      ],
+      "pair": 3,
+      "renderer": "solid",
+      "traceSha256": "39ad07e674dbe8df3ab008c02a3e7ec7ffcad8ea3b7cebdb69beef0f523ee0bc",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 11.739426,
+          "p95": 20.339297,
+          "worst": 21.948556
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 11.739426,
+          "p95": 20.339297,
+          "worst": 21.948556
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 12.811852,
+          "p95": 18.383,
+          "worst": 18.383
+        }
+      }
+    },
+    {
+      "postApplySwapMs": [
+        31.704852, 25.893481, 36.061074, 27.250445, 28.765963, 28.725667, 37.89837, 28.657407,
+        33.459556, 24.289778, 33.297815, 37.946333, 29.420408, 27.336148, 26.011667, 31.680963,
+        27.522297, 25.67763, 37.696, 28.869333, 28.352, 27.381, 38.558445, 31.288111, 33.506704,
+        20.087704, 21.034074, 28.423037, 31.179074, 29.298778
+      ],
+      "pair": 3,
+      "renderer": "react",
+      "traceSha256": "03da6e5e6c9c1761fccb4d066ee41e297fd9876c6039680b77de089cafb7cbba",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 28.817648,
+          "p95": 37.946333,
+          "worst": 38.558445
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 28.691537,
+          "p95": 37.89837,
+          "worst": 38.558445
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 31.2335925,
+          "p95": 37.946333,
+          "worst": 37.946333
+        }
+      }
+    },
+    {
+      "postApplySwapMs": [
+        29.934371, 35.555592, 25.99737, 30.403296, 38.437778, 27.837889, 39.442926, 29.113407,
+        36.994778, 26.229555, 36.171963, 35.630408, 21.51163, 19.993222, 26.024074, 39.086, 28.202,
+        35.71126, 35.448814, 24.624037, 30.515334, 28.993482, 37.030926, 22.052778, 28.568222,
+        26.101963, 31.549741, 23.862592, 30.592444, 19.843667
+      ],
+      "pair": 4,
+      "renderer": "react",
+      "traceSha256": "32e485e4752563927cf3126c69d39aa13a5b489bcc2d57fe8dd8fe5a18779538",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 29.523888999999997,
+          "p95": 39.086,
+          "worst": 39.442926
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 29.053444499999998,
+          "p95": 39.086,
+          "worst": 39.442926
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 33.111426,
+          "p95": 38.437778,
+          "worst": 38.437778
+        }
+      }
+    },
+    {
+      "postApplySwapMs": [
+        18.259111, 18.763482, 17.320704, 11.30963, 17.889963, 6.982592, 17.107593, 9.664407,
+        13.274852, 8.346111, 18.607296, 16.362666, 15.021185, 8.504889, 14.836667, 10.266963, 9.025,
+        16.987185, 16.485185, 9.013111, 16.993815, 8.60226, 17.831185, 8.507481, 19.828704,
+        8.281074, 12.841963, 5.575037, 16.048519, 9.096815
+      ],
+      "pair": 4,
+      "renderer": "solid",
+      "traceSha256": "0b9d5cc56e9f432c393d77851b430ed694e1534ea414ca31ba4da87fa5db29e0",
+      "metricsMs": {
+        "overall": {
+          "n": 30,
+          "median": 14.0557595,
+          "p95": 18.763482,
+          "worst": 19.828704
+        },
+        "nonScrolling": {
+          "n": 24,
+          "median": 13.839315,
+          "p95": 18.763482,
+          "worst": 19.828704
+        },
+        "scrolling": {
+          "n": 6,
+          "median": 14.661685499999999,
+          "p95": 17.889963,
+          "worst": 17.889963
+        }
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "order": ["react", "solid"],
+      "reactMinusSolidMs": {
+        "overall": {
+          "matchedMedian": 16.249537000000004,
+          "launchP95Difference": 18.125704999999996
+        },
+        "nonScrolling": {
+          "matchedMedian": 16.249537000000004,
+          "launchP95Difference": 19.560741000000004
+        },
+        "scrolling": {
+          "matchedMedian": 16.5898335,
+          "launchP95Difference": 18.35026
+        }
+      }
+    },
+    {
+      "order": ["solid", "react"],
+      "reactMinusSolidMs": {
+        "overall": {
+          "matchedMedian": 16.4125,
+          "launchP95Difference": 19.028667
+        },
+        "nonScrolling": {
+          "matchedMedian": 14.986833,
+          "launchP95Difference": 18.408926
+        },
+        "scrolling": {
+          "matchedMedian": 19.511463499999998,
+          "launchP95Difference": 19.678
+        }
+      }
+    },
+    {
+      "order": ["solid", "react"],
+      "reactMinusSolidMs": {
+        "overall": {
+          "matchedMedian": 17.2566665,
+          "launchP95Difference": 17.607036000000004
+        },
+        "nonScrolling": {
+          "matchedMedian": 16.1910925,
+          "launchP95Difference": 17.559073
+        },
+        "scrolling": {
+          "matchedMedian": 19.639167,
+          "launchP95Difference": 19.563333000000004
+        }
+      }
+    },
+    {
+      "order": ["react", "solid"],
+      "reactMinusSolidMs": {
+        "overall": {
+          "matchedMedian": 18.085499499999997,
+          "launchP95Difference": 20.322518
+        },
+        "nonScrolling": {
+          "matchedMedian": 17.852166500000003,
+          "launchP95Difference": 20.322518
+        },
+        "scrolling": {
+          "matchedMedian": 19.222371000000003,
+          "launchP95Difference": 20.547815
+        }
+      }
+    }
+  ],
+  "scoredInputs": 240,
+  "excludedAttempts": 0,
+  "maxSameBuildMedianAbsoluteMatchedMs": {
+    "react": {
+      "overall": 4.2422045000000015,
+      "nonScrolling": 5.018352,
+      "scrolling": 3.9075735000000016
+    },
+    "solid": {
+      "overall": 2.7055925000000003,
+      "nonScrolling": 3.4041664999999997,
+      "scrolling": 1.4058699999999993
+    }
+  },
+  "imageHoldout": "separate workload",
+  "firstVisibleHighlight": "UNMEASURED"
+}

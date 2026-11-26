@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="RNRAppControl" extends="Group" focusable="false">
+  <interface>
+    <field id="focusSampleTarget" type="node" />
+    <field id="focusSamplePrevious" type="node" />
+    <field id="focusSampleTicket" type="integer" onChange="onFocusSample" />
+    <field id="focusSampleReply" type="string" value="" />
+    <field id="exitRequested" type="boolean" value="false" onChange="onExitRequested" />
+    <field id="textEntryRequest" type="string" value="" alwaysNotify="true" />
+    <field id="textEntryReply" type="string" value="" alwaysNotify="true" />
+  </interface>
+  <script type="text/brightscript" uri="RNRAppControl.brs" />
+</component>

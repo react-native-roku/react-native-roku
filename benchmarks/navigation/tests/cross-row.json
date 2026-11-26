@@ -1,0 +1,317 @@
+{
+  "sourceTraceSha256": "489ec07d28ab7d4e8ab4663c4e47e69606630308b7c80a8b2033e800b81d4252",
+  "observedZipSha256": "e7f47d8de13b01a15fcda5a279f392ac6346eb60faa0b7ff84c65de3c19159f9",
+  "keys": [
+    0, 41026926, 83165629, 124340592, 166781259, 208765740, 249089111, 291721592, 340725000,
+    375444629, 421206370, 460685851, 765086185
+  ],
+  "expectedMoves": [
+    [9, 0],
+    [17, 104],
+    [18, 104],
+    [10, 104],
+    [9, 104],
+    [1, 0],
+    [2, 0],
+    [10, 0],
+    [11, 0],
+    [19, 104],
+    [11, 104]
+  ],
+  "initialState": {
+    "text": "Selected Card 9 · A feature-length selection with an extended catalog description. A feature-length selection with an extended catalog description. A feature-length selection with an extended catalog description.",
+    "width": 1050.0,
+    "height": 117.0,
+    "offset": -0.0,
+    "ellipsized": false,
+    "color0": 472529151,
+    "color1": 472529151,
+    "color2": 472529151,
+    "color3": 472529151,
+    "color4": 472529151,
+    "color5": 472529151,
+    "color6": 472529151,
+    "color7": 472529151,
+    "color8": 2278488831,
+    "color9": 472529151,
+    "color10": 472529151,
+    "color11": 472529151,
+    "color12": 472529151,
+    "color13": 472529151,
+    "color14": 472529151,
+    "color15": 472529151,
+    "color16": 472529151,
+    "color17": 472529151,
+    "color18": 472529151,
+    "color19": 472529151,
+    "color20": 472529151,
+    "color21": 472529151,
+    "color22": 472529151,
+    "color23": 472529151,
+    "focus": 8
+  },
+  "updates": [
+    [4415074, 5174629, [{ "index": 9, "kind": "focus", "seq": 8, "value": true }]],
+    [
+      42328703,
+      43580407,
+      [
+        { "index": -1, "kind": "height", "seq": 9, "value": 39 },
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 10,
+          "value": {
+            "height": 39,
+            "lines": 3,
+            "text": "Selected Card 10",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": -1, "kind": "lines", "seq": 11, "value": 1 },
+        { "index": 8, "kind": "color", "seq": 12, "value": 472529151 },
+        { "index": 9, "kind": "color", "seq": 13, "value": -2016478465 }
+      ]
+    ],
+    [44945815, 45514000, [{ "index": 17, "kind": "focus", "seq": 14, "value": true }]],
+    [
+      95828222,
+      97496259,
+      [
+        { "index": -1, "kind": "height", "seq": 15, "value": 117 },
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 16,
+          "value": {
+            "height": 117,
+            "lines": 1,
+            "text": "Selected Card 18 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": -1, "kind": "lines", "seq": 17, "value": 3 },
+        { "index": -1, "kind": "scroll", "seq": 18, "value": [0, -104] },
+        { "index": 9, "kind": "color", "seq": 19, "value": 472529151 },
+        { "index": 17, "kind": "color", "seq": 20, "value": -2016478465 }
+      ]
+    ],
+    [100445000, 100990666, [{ "index": 18, "kind": "focus", "seq": 21, "value": true }]],
+    [
+      133207370,
+      135090629,
+      [
+        { "index": -1, "kind": "height", "seq": 22, "value": 39 },
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 23,
+          "value": {
+            "height": 39,
+            "lines": 3,
+            "text": "Selected Card 19",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": -1, "kind": "lines", "seq": 24, "value": 1 },
+        { "index": 17, "kind": "color", "seq": 25, "value": 472529151 },
+        { "index": 18, "kind": "color", "seq": 26, "value": -2016478465 }
+      ]
+    ],
+    [135198148, 135679777, [{ "index": 10, "kind": "focus", "seq": 27, "value": true }]],
+    [
+      176794296,
+      178051407,
+      [
+        { "index": -1, "kind": "height", "seq": 28, "value": 117 },
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 29,
+          "value": {
+            "height": 117,
+            "lines": 1,
+            "text": "Selected Card 11 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": -1, "kind": "lines", "seq": 30, "value": 3 },
+        { "index": 10, "kind": "color", "seq": 31, "value": -2016478465 },
+        { "index": 18, "kind": "color", "seq": 32, "value": 472529151 }
+      ]
+    ],
+    [180234444, 180767185, [{ "index": 9, "kind": "focus", "seq": 33, "value": true }]],
+    [
+      213322629,
+      214515963,
+      [
+        { "index": -1, "kind": "height", "seq": 34, "value": 39 },
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 35,
+          "value": {
+            "height": 39,
+            "lines": 3,
+            "text": "Selected Card 10",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": -1, "kind": "lines", "seq": 36, "value": 1 },
+        { "index": 9, "kind": "color", "seq": 37, "value": -2016478465 },
+        { "index": 10, "kind": "color", "seq": 38, "value": 472529151 }
+      ]
+    ],
+    [215738222, 216270592, [{ "index": 1, "kind": "focus", "seq": 39, "value": true }]],
+    [
+      264708703,
+      267010111,
+      [
+        { "index": -1, "kind": "height", "seq": 40, "value": 117 },
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 41,
+          "value": {
+            "height": 117,
+            "lines": 1,
+            "text": "Selected Card 2 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": -1, "kind": "lines", "seq": 42, "value": 3 },
+        { "index": -1, "kind": "scroll", "seq": 43, "value": [0, 0] },
+        { "index": 1, "kind": "color", "seq": 44, "value": -2016478465 },
+        { "index": 9, "kind": "color", "seq": 45, "value": 472529151 }
+      ]
+    ],
+    [267119074, 267586555, [{ "index": 2, "kind": "focus", "seq": 46, "value": true }]],
+    [
+      311410111,
+      312410518,
+      [
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 47,
+          "value": {
+            "height": 117,
+            "lines": 3,
+            "text": "Selected Card 3 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": 1, "kind": "color", "seq": 48, "value": 472529151 },
+        { "index": 2, "kind": "color", "seq": 49, "value": -2016478465 }
+      ]
+    ],
+    [314608666, 315074222, [{ "index": 10, "kind": "focus", "seq": 50, "value": true }]],
+    [
+      351164185,
+      352199518,
+      [
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 51,
+          "value": {
+            "height": 117,
+            "lines": 3,
+            "text": "Selected Card 11 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": 2, "kind": "color", "seq": 52, "value": 472529151 },
+        { "index": 10, "kind": "color", "seq": 53, "value": -2016478465 }
+      ]
+    ],
+    [354340074, 354841407, [{ "index": 11, "kind": "focus", "seq": 54, "value": true }]],
+    [
+      400117629,
+      401266037,
+      [
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 55,
+          "value": {
+            "height": 117,
+            "lines": 3,
+            "text": "Selected Card 12 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": 10, "kind": "color", "seq": 56, "value": 472529151 },
+        { "index": 11, "kind": "color", "seq": 57, "value": -2016478465 }
+      ]
+    ],
+    [404270629, 404746777, [{ "index": 19, "kind": "focus", "seq": 58, "value": true }]],
+    [
+      456381481,
+      457592074,
+      [
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 59,
+          "value": {
+            "height": 117,
+            "lines": 3,
+            "text": "Selected Card 20 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": -1, "kind": "scroll", "seq": 60, "value": [0, -104] },
+        { "index": 11, "kind": "color", "seq": 61, "value": 472529151 },
+        { "index": 19, "kind": "color", "seq": 62, "value": -2016478465 }
+      ]
+    ],
+    [460133407, 460676074, [{ "index": 11, "kind": "focus", "seq": 63, "value": true }]],
+    [
+      508754148,
+      509748481,
+      [
+        {
+          "index": -1,
+          "kind": "title",
+          "seq": 64,
+          "value": {
+            "height": 117,
+            "lines": 3,
+            "text": "Selected Card 12 · A feature-length selection with an extended catalog\ndescription. A feature-length selection with an extended catalog description.\nA feature-length selection with an extended catalog description.",
+            "width": 1050,
+            "wrap": true
+          }
+        },
+        { "index": 11, "kind": "color", "seq": 65, "value": -2016478465 },
+        { "index": 19, "kind": "color", "seq": 66, "value": 472529151 }
+      ]
+    ],
+    [724982110, 725331629, [{ "index": 11, "kind": "color", "seq": 67, "value": 472529151 }]]
+  ],
+  "frames": [
+    [43595148, 45091778],
+    [97770740, 100635444],
+    [135694703, 136905926],
+    [178163037, 180387111],
+    [214615518, 215898333],
+    [267600296, 269817259],
+    [312477185, 314793740],
+    [352267037, 354499666],
+    [402169037, 404448000],
+    [457669925, 460076222],
+    [509834333, 512250999],
+    [699075222, 700017814],
+    [725400740, 726057147]
+  ]
+}

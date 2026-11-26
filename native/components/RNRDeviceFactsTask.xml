@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="RNRDeviceFactsTask" extends="Task">
+  <interface>
+    <field id="command" type="string" alwaysNotify="true" />
+    <field id="reply" type="string" alwaysNotify="true" />
+    <field id="event" type="string" alwaysNotify="true" />
+  </interface>
+  <script type="text/brightscript" uri="RNRDeviceFactsTask.brs" />
+</component>

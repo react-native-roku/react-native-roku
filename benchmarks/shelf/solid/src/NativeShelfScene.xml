@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="NativeShelfScene" extends="Scene" backExitsScene="true">
+    <children>
+        <NativeShelfAnchor id="shelf" />
+    </children>
+    <script type="text/brightscript" uri="NativeShelfScene.brs" />
+</component>

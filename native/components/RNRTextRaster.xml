@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="RNRTextRaster" extends="Group" focusable="false">
+  <interface>
+    <field id="namespace" type="string" />
+    <field id="request" type="string" onChange="onRequest" alwaysNotify="true" />
+    <field id="reply" type="string" alwaysNotify="true" />
+  </interface>
+  <script type="text/brightscript" uri="RNRTextRaster.brs" />
+</component>

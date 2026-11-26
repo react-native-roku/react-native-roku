@@ -1,0 +1,31 @@
+{
+  "name": "hello-react-native-roku",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc6 --noEmit -p tsconfig.react.json",
+    "build": "react-native-roku build",
+    "dev": "react-native-roku dev",
+    "doctor": "react-native-roku doctor"
+  },
+  "dependencies": {
+    "react-native-roku": "0.2.0",
+    "react": "19.2.8",
+    "@roku-sdk/rsg-ts": "2.19.1",
+    "@expo-google-fonts/inter": "0.4.2"
+  },
+  "devDependencies": {
+    "@roku-sdk/tooling": "2.19.1",
+    "@types/react": "19.2.18",
+    "@types/node": "24.19.1",
+    "esbuild": "0.28.1",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "@roku-sdk/dev-tools": "2.19.1"
+  },
+  "engines": {
+    "node": ">=24.18.1 <25",
+    "pnpm": "11.23.0"
+  },
+  "packageManager": "pnpm@11.23.0"
+}

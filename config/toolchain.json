@@ -1,0 +1,34 @@
+{
+  "schema": "react-native-roku-toolchain/v1",
+  "node": { "minimum": "24.18.1", "major": 24 },
+  "pnpm": "11.23.0",
+  "packages": {
+    "react": "19.2.8",
+    "react-reconciler": "0.33.0",
+    "scheduler": "0.27.0",
+    "@roku-sdk/tooling": "2.19.1",
+    "@roku-sdk/rsg-ts": "2.19.1",
+    "@roku-sdk/runtime": "2.19.1",
+    "esbuild": "0.28.1",
+    "yoga-layout-prebuilt": "1.10.0"
+  },
+  "optionalPackages": {
+    "metro": {
+      "metro": "0.84.6",
+      "metro-config": "0.84.6",
+      "@react-native/metro-config": "0.86.2",
+      "@react-native/metro-babel-transformer": "0.86.2",
+      "@react-native/babel-preset": "0.86.2",
+      "@babel/core": "7.29.7",
+      "@babel/plugin-transform-class-static-block": "7.29.7",
+      "react-refresh": "0.14.2",
+      "react-native": "npm:react-native-tvos@0.86.2-0"
+    }
+  },
+  "groups": {
+    "react": ["react", "react-reconciler", "scheduler"],
+    "sdk": ["@roku-sdk/*"],
+    "styles": ["nativewind", "react-native-css-interop", "tailwindcss"],
+    "layout": ["yoga-layout-prebuilt"]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "paths": {
+      "react-native": ["./src/react-native/index.ts"],
+      "react-native-svg": ["./src/vector/svg.ts"],
+      "react-native-reanimated": ["./src/animation/reanimated.ts"],
+      "react-native-worklets": ["./src/animation/worklets.ts"],
+      "react-native-safe-area-context": ["./src/react-native/safeArea.ts"],
+      "@react-native-async-storage/async-storage": ["./src/services/asyncStorage.ts"],
+      "expo-router": ["./src/navigation/expoRouter.ts"],
+      "expo-image": ["./src/react-native/image.ts"],
+      "expo-linear-gradient": ["./src/react-native/linearGradient.ts"],
+      "expo-constants": ["./src/services/expoConstants.ts"],
+      "expo-linking": ["./src/services/expoLinking.ts"],
+      "expo-status-bar": ["./src/services/expoStatusBar.ts"],
+      "expo-secure-store": ["./src/services/secureStore.ts"],
+      "expo-crypto": ["./src/services/crypto.ts"]
+    }
+  }
+}

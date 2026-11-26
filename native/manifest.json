@@ -1,0 +1,7 @@
+{
+  "AppControl": "RNRAppControl",
+  "TextRaster": "RNRTextRaster",
+  "TextRasterTask": "RNRTextRasterTask",
+  "DeviceFacts": "RNRDeviceFacts",
+  "DeviceFactsTask": "RNRDeviceFactsTask"
+}

@@ -1,0 +1,15 @@
+{
+  "extends": ["./tsconfig.json", "@roku-sdk/rsg-ts/tsconfig.json"],
+  "compilerOptions": {
+    "types": ["node", "react", "@roku-sdk/interfaces/global", "@roku-sdk/components/jsx"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "jsxImportSource": "@roku-sdk/solid",
+    "rootDir": ".",
+    "outDir": "./dist/sdk-types",
+    "composite": false,
+    "incremental": false
+  },
+  "include": ["src/scene/Sdk*.ts", "src/scene/createRokuHost.ts"],
+  "exclude": []
+}
