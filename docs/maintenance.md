@@ -321,8 +321,8 @@ evidence. No maintenance command commits, tags, pushes or publishes.
 
 Dispatch `release.yml` at the reviewed source ref with the inputs blank to
 prepare. The job packs once through `pnpm check --archive=ABSOLUTE_TGZ --output=ABSOLUTE_EVIDENCE`,
-uploads the tarball and six-lane evidence as `release-candidate`, and verifies
-a fresh download. Record the run ID, source commit and both SHA-256 values from
+uploads the tarball and six-lane evidence as `release-candidate-<attempt>`, and verifies
+a fresh download using the upload’s immutable artifact ID and SHA-256. Record the run ID, source commit and both SHA-256 values from
 the run summary. Verify an independent download before building the device
 consumer from it:
 

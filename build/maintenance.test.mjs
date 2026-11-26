@@ -37,13 +37,21 @@ test("CI qualifies both supported hosts and release workflow defaults to prepara
   assert.equal(stage.if, "inputs.preparation-run != ''");
   assert.equal(stage.environment, "npm-release");
   assert.equal(stage.permissions["id-token"], "write");
-  assert.equal(prepare.permissions?.["id-token"], undefined);
+  assert.deepEqual(prepare.permissions, { contents: "read", actions: "read" });
+  const upload = prepare.steps.find((step) => step.id === "upload");
+  assert.equal(upload.with.name, "release-candidate-${{ github.run_attempt }}");
+  const transfer = prepare.steps.find((step) => step.env?.ARTIFACT_ID);
+  assert.equal(transfer.env.ARTIFACT_ID, "${{ steps.upload.outputs.artifact-id }}");
+  assert.equal(transfer.env.ARTIFACT_SHA256, "${{ steps.upload.outputs.artifact-digest }}");
+  assert.match(transfer.run, /actions\/artifacts\/\$ARTIFACT_ID\/zip/);
+  assert.match(transfer.run, /sha256sum --check/);
   assert.ok(stage.steps.some((step) => step.run === "node scripts/release.mjs --check"));
   assert.ok(
     stage.steps.some(
       (step) =>
         step.uses?.startsWith("actions/download-artifact@") &&
-        step.with["run-id"] === "${{ inputs.preparation-run }}",
+        step.with["run-id"] === "${{ inputs.preparation-run }}" &&
+        step.with.name === "release-candidate-${{ steps.reviewed.outputs.attempt }}",
     ),
   );
   const command = stage.steps.at(-1).run;

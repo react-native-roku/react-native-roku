@@ -23,6 +23,9 @@ permissions:
 jobs:
   prepare:
     if: inputs.preparation-run == ''
+    permissions:
+      contents: read
+      actions: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -72,15 +75,27 @@ jobs:
             find "$evidence" -maxdepth 1 -name 'qualify-*.mjs.log' -exec tail -n 40 {} +
           fi
       - uses: actions/upload-artifact@v4
+        id: upload
         with:
-          name: release-candidate
+          name: release-candidate-${{ github.run_attempt }}
           path: .local/release-candidate/
           if-no-files-found: error
           include-hidden-files: true
-      - uses: actions/download-artifact@v4
-        with:
-          name: release-candidate
-          path: .local/rehearsal
+      - name: Download the uploaded artifact by its immutable ID
+        env:
+          ARTIFACT_ID: ${{ steps.upload.outputs.artifact-id }}
+          ARTIFACT_SHA256: ${{ steps.upload.outputs.artifact-digest }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [[ "$ARTIFACT_ID" =~ ^[1-9][0-9]*$ ]]
+          [[ "$ARTIFACT_SHA256" =~ ^[0-9a-f]{64}$ ]]
+          download="$RUNNER_TEMP/release-candidate.zip"
+          curl --fail --silent --show-error --location --retry 3 --retry-all-errors \
+            --max-time 150 --retry-max-time 240 \
+            --header "Authorization: Bearer $GH_TOKEN" --output "$download" \
+            "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/artifacts/$ARTIFACT_ID/zip"
+          echo "$ARTIFACT_SHA256  $download" | sha256sum --check
+          unzip -q "$download" -d .local/rehearsal
       - name: Verify the transferred preparation artifact
         env:
           RELEASE_MANIFEST_SHA256: ${{ steps.seal.outputs.manifest-sha256 }}
@@ -98,6 +113,7 @@ jobs:
       id-token: write
     steps:
       - name: Identify the reviewed preparation run
+        id: reviewed
         env:
           GH_TOKEN: ${{ github.token }}
           PREPARATION_RUN: ${{ inputs.preparation-run }}
@@ -111,9 +127,12 @@ jobs:
           repository="repos/$GITHUB_REPOSITORY"
           [[ "$(gh api "$repository" --jq .visibility)" == public ]]
           workflow_id="$(gh api "$repository/actions/workflows/release.yml" --jq .id)"
-          gh api "$repository/actions/runs/$PREPARATION_RUN" | jq -e \
+          record="$(gh api "$repository/actions/runs/$PREPARATION_RUN")"
+          jq -e \
             --arg sha "$GITHUB_SHA" --argjson workflow "$workflow_id" \
-            '.head_sha == $sha and .workflow_id == $workflow and .event == "workflow_dispatch" and .conclusion == "success"'
+            '.head_sha == $sha and .workflow_id == $workflow and .event == "workflow_dispatch" and .conclusion == "success"' <<< "$record"
+          attempt="$(jq -er '.run_attempt | select(type == "number" and . >= 1)' <<< "$record")"
+          echo "attempt=$attempt" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
@@ -125,7 +144,7 @@ jobs:
       - run: node scripts/release.mjs --check
       - uses: actions/download-artifact@v4
         with:
-          name: release-candidate
+          name: release-candidate-${{ steps.reviewed.outputs.attempt }}
           path: .local/candidate
           github-token: ${{ github.token }}
           run-id: ${{ inputs.preparation-run }}
