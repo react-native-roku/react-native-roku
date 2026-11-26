@@ -780,6 +780,16 @@ def terminate_group(child):
             os.killpg(child.pid, 0)
         except ProcessLookupError:
             break
+        except PermissionError:
+            if sys.platform != "darwin" or child.returncode is not None:
+                raise
+            # Darwin can deny a signal-zero probe during exit after accepting
+            # SIGTERM. Reap the direct child, then check for remaining workers.
+            try:
+                child.wait(timeout=max(0, deadline - time.monotonic()))
+            except subprocess.TimeoutExpired:
+                pass  # The deadline path signals the group with SIGKILL.
+            continue
         time.sleep(0.02)
     else:
         try:
