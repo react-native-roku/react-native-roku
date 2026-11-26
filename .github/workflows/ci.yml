@@ -9,6 +9,10 @@ on:
         description: Run all six lanes and verify the exact archive on macOS and Linux
         type: boolean
         default: false
+      release_diagnostics:
+        description: Reproduce browser startup and storage cleanup in isolation
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -16,6 +20,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   fast:
+    if: ${{ !inputs.release_diagnostics }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -100,3 +105,85 @@ jobs:
           path: .local/ci-qualification/
           if-no-files-found: warn
           include-hidden-files: true
+
+  browser-diagnostic:
+    if: inputs.release_diagnostics
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+        with:
+          chrome-version: stable
+          install-dependencies: true
+      - name: Compare managed and short temporary paths
+        env:
+          ROKU_TEST_CHROMIUM: ${{ steps.chrome.outputs.chrome-path }}
+        run: |
+          probe() {
+            node --input-type=module <<'JS'
+          import { createServer } from "node:http";
+          import { openTestBrowser } from "./scripts/browserHarness.mjs";
+          const server = createServer((request, response) => response.end("qualification test"));
+          await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+          try {
+            const browser = await openTestBrowser(`http://127.0.0.1:${server.address().port}/`);
+            console.log(JSON.stringify(browser.version));
+            await browser.close();
+          } finally {
+            server.close();
+          }
+          JS
+          }
+          long_tmp="$GITHUB_WORKSPACE/../.react-native-roku-qualification/workspaces/$(printf '%064d' 0)/tmp"
+          mkdir -p "$long_tmp"
+          TMPDIR="$(realpath "$long_tmp")" probe || echo "Managed path reproduction exited $?"
+          TMPDIR=/tmp probe
+  storage-diagnostic:
+    if: inputs.release_diagnostics
+    runs-on: macos-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Trace the real signal, wait and synthetic cleanup failure
+        shell: bash
+        run: |
+          python3 -VV
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          path = Path("scripts/test_qualification_storage.py")
+          text = path.read_text()
+          source = """            original(child)
+                      raise PermissionError("synthetic secondary cleanup failure")"""
+          replacement = """            real_killpg = os.killpg
+                      def traced_killpg(pid, sig):
+                          try:
+                              result = real_killpg(pid, sig)
+                          except OSError as error:
+                              print("killpg", pid, sig, repr(error), flush=True)
+                              raise
+                          print("killpg", pid, sig, "ok", flush=True)
+                          return result
+                      print("child process", os.getpid(), child.pid, child.poll(), flush=True)
+                      with mock.patch.object(storage.os, "killpg", side_effect=traced_killpg):
+                          try:
+                              original(child)
+                          except BaseException as error:
+                              print("real cleanup exception", repr(error), "returncode", child.poll(), flush=True)
+                              raise
+                      print("injecting secondary cleanup error, returncode", child.returncode, flush=True)
+                      raise PermissionError("synthetic secondary cleanup failure")"""
+          assert text.count(source) == 1, repr(source)
+          path.write_text(text.replace(source, replacement))
+          PYTHON
+          set +e
+          python3 scripts/test_qualification_storage.py StorageTests.test_cleanup_exception_keeps_the_primary_monitor_error
+          focused=$?
+          python3 scripts/qualification_storage.py run --project="$PWD" --store="$RUNNER_TEMP/diagnostic-storage" --run-limit-gib=4 -- python3 scripts/test_qualification_storage.py
+          suite=$?
+          echo "focused=$focused suite=$suite"
+          (( focused == 0 && suite == 0 ))
