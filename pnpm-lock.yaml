@@ -27,8 +27,8 @@ importers:
         specifier: 5.4.2
         version: 5.4.2
       '@formatjs/intl-numberformat':
-        specifier: 10.0.2
-        version: 10.0.2
+        specifier: 10.1.1
+        version: 10.1.1
       '@formatjs/intl-pluralrules':
         specifier: 7.0.2
         version: 7.0.2
@@ -937,8 +937,14 @@ packages:
   '@formatjs/bigdecimal@0.2.10':
     resolution: {integrity: sha512-npIs6UARNOg5amJY5UOVsd6HUQQfzYjet0sa0SWIqzsnVhxLSpaIx2DjoIVrr/vqmjURjvroeW6dItjfy3Uf8A==}
 
+  '@formatjs/bigdecimal@0.2.11':
+    resolution: {integrity: sha512-HPfzK4SCEU4K++s2GI8h3FaSqdR+F2UbFZ6X9655ZwQj6Enca41ddYyZwDu2nkDeLiBKY5pdXYHjcoAs00/vUQ==}
+
   '@formatjs/fast-memoize@3.1.7':
     resolution: {integrity: sha512-zXfhLpvA6T7+efdt9JLbBwZ00tT7NsBMDVnDu8rpHeNNv8KfRZAMo2gkG0k9lK/Nzc//3kJ9pImsfuJxk3KhUA==}
+
+  '@formatjs/fast-memoize@3.1.8':
+    resolution: {integrity: sha512-Y9YFFfeBDkAWmLWD3LVNHbHlyELsP2lYRNoY6+QhtPh1/ujCiX5QYBzAqe0cWdkCxKVezHLt0qjWz1veEUV7UA==}
 
   '@formatjs/intl-collator@0.3.1':
     resolution: {integrity: sha512-RMPsESfGRCw+pcTk/XSN6seOOCUOwEMsZ7cMrntjMg1UeQWqgSfPfWfZTalr1NKzutat5GkuBV3rCrlWdrmiQg==}
@@ -955,8 +961,11 @@ packages:
   '@formatjs/intl-localematcher@0.10.1':
     resolution: {integrity: sha512-gBqglQK9rXuHsLmM8wzTMBy4Xo4d0jamirIVKuEL8F1rwbskWdpMA1kZarSkny+uvr5q/K6GSzE0Rcq1wZLl3g==}
 
-  '@formatjs/intl-numberformat@10.0.2':
-    resolution: {integrity: sha512-iLS3ly1lGZ/a/IVpcSUgC37RjQUZ2wN6zR9+Zbr2uXsxATfMLD+fBqggiXuFudLmZXpbPueCs4Mz3vDsaOVE9A==}
+  '@formatjs/intl-localematcher@0.10.2':
+    resolution: {integrity: sha512-KvXcVOPLYRQ5s6O0MrHePLIIhkSUm5bZbsEHGmKI3xXoy7hvGxUoagaobAIi8/hc9YabgHvLDFeeqbrjPNIKwg==}
+
+  '@formatjs/intl-numberformat@10.1.1':
+    resolution: {integrity: sha512-3gYEk8xXZZwFwZ/bc9FGc5LYJY4cGdiF1lCpV6fcMRsCYj+pY+WSTRdR+71A0kDteIkzQiVs6Iv90XTTKIXVLQ==}
 
   '@formatjs/intl-pluralrules@7.0.2':
     resolution: {integrity: sha512-PJ4+ldlqXlo3csmP02u2HqyXw09TDB/fatYpDCyWryfEQeVWl2EbMzij9SBksPaW2U//+q69lXR3IMnCRQAmrw==}
@@ -5017,7 +5026,11 @@ snapshots:
 
   '@formatjs/bigdecimal@0.2.10': {}
 
+  '@formatjs/bigdecimal@0.2.11': {}
+
   '@formatjs/fast-memoize@3.1.7': {}
+
+  '@formatjs/fast-memoize@3.1.8': {}
 
   '@formatjs/intl-collator@0.3.1':
     dependencies:
@@ -5039,10 +5052,14 @@ snapshots:
     dependencies:
       '@formatjs/fast-memoize': 3.1.7
 
-  '@formatjs/intl-numberformat@10.0.2':
+  '@formatjs/intl-localematcher@0.10.2':
     dependencies:
-      '@formatjs/bigdecimal': 0.2.10
-      '@formatjs/intl-localematcher': 0.10.1
+      '@formatjs/fast-memoize': 3.1.8
+
+  '@formatjs/intl-numberformat@10.1.1':
+    dependencies:
+      '@formatjs/bigdecimal': 0.2.11
+      '@formatjs/intl-localematcher': 0.10.2
 
   '@formatjs/intl-pluralrules@7.0.2':
     dependencies:
