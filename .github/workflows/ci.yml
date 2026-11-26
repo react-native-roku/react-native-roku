@@ -141,7 +141,7 @@ jobs:
           }
           long_tmp="$GITHUB_WORKSPACE/../.react-native-roku-qualification/workspaces/$(printf '%064d' 0)/tmp"
           mkdir -p "$long_tmp"
-          TMPDIR="$(realpath "$long_tmp")" probe || echo "Managed path reproduction exited $?"
+          TMPDIR="$(realpath "$long_tmp")" probe
           TMPDIR=/tmp probe
   storage-diagnostic:
     if: github.ref_name == 'preview-qualification-diagnostics' || inputs.release_diagnostics

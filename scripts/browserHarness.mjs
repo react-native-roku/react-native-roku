@@ -1,6 +1,6 @@
 import { findChromium } from "../build/environment.mjs";
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 export const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -21,7 +21,24 @@ export async function until(work, { timeout = 30000, interval = 100 } = {}) {
 export async function openTestBrowser(url) {
   const browser = findChromium();
   if (!browser) throw Error("Set ROKU_TEST_CHROMIUM to run browser development-loop qualification");
-  const directory = mkdtempSync(resolve(tmpdir(), "roku-browser-"));
+  const workspace = mkdtempSync(resolve(tmpdir(), "roku-browser-"));
+  const directory = resolve(workspace, "profile");
+  let shortPath;
+  let env = process.env;
+  try {
+    if (process.platform === "linux") {
+      // Chromium binds SingletonSocket under TMPDIR. A short private alias
+      // keeps that socket within the Unix limit and its files in the owned workspace.
+      shortPath = mkdtempSync("/tmp/roku-browser-");
+      const temporary = resolve(shortPath, "work");
+      symlinkSync(workspace, temporary);
+      env = { ...env, TMPDIR: temporary };
+    }
+  } catch (error) {
+    rmSync(workspace, { recursive: true, force: true });
+    if (shortPath) rmSync(shortPath, { recursive: true, force: true });
+    throw error;
+  }
   const child = spawn(
     browser,
     [
@@ -37,7 +54,7 @@ export async function openTestBrowser(url) {
       `--user-data-dir=${directory}`,
       url,
     ],
-    { stdio: ["ignore", "ignore", "pipe"] },
+    { env, stdio: ["ignore", "ignore", "pipe"] },
   );
   let stderr = "";
   let spawnError;
@@ -55,6 +72,7 @@ export async function openTestBrowser(url) {
   const diagnostics = () => ({
     executable: browser,
     spawnError: spawnError ?? null,
+    temporaryDirectory: env.TMPDIR ?? null,
     exitCode: child.exitCode,
     signalCode: child.signalCode,
     socketState: socket?.readyState ?? null,
@@ -63,10 +81,7 @@ export async function openTestBrowser(url) {
   const closeChild = async () => {
     if (!closed && child.pid && child.exitCode === null && child.signalCode === null) {
       await new Promise((resolve) => {
-        const timer = setTimeout(() => {
-          child.kill("SIGKILL");
-          resolve();
-        }, 3000);
+        const timer = setTimeout(() => child.kill("SIGKILL"), 3000);
         child.once("exit", () => {
           clearTimeout(timer);
           resolve();
@@ -74,9 +89,12 @@ export async function openTestBrowser(url) {
         child.kill("SIGTERM");
       });
     }
-    try {
-      rmSync(directory, { recursive: true, force: true, maxRetries: 3, retryDelay: 100 });
-    } catch {}
+    for (const path of [shortPath, workspace]) {
+      if (!path) continue;
+      try {
+        rmSync(path, { recursive: true, force: true, maxRetries: 3, retryDelay: 100 });
+      } catch {}
+    }
   };
   try {
     const portFile = resolve(directory, "DevToolsActivePort");

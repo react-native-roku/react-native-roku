@@ -821,6 +821,20 @@ Path(result_path).write_text(json.dumps(results))
                 storage.terminate_group(child)
         child.wait.assert_not_called()
 
+    def test_darwin_group_probe_reaps_child_before_rechecking_workers(self):
+        child = mock.Mock(pid=43127, returncode=None)
+        child.poll.return_value = None
+        child.wait.return_value = -signal.SIGTERM
+        with mock.patch.object(storage.sys, "platform", "darwin"), \
+                mock.patch.object(storage.os, "killpg", side_effect=[None, PermissionError(), ProcessLookupError()]) as killpg:
+            storage.terminate_group(child)
+        self.assertEqual(killpg.call_args_list, [
+            mock.call(child.pid, signal.SIGTERM),
+            mock.call(child.pid, 0),
+            mock.call(child.pid, 0),
+        ])
+        self.assertIn("timeout", child.wait.call_args_list[0].kwargs)
+
     def test_cleanup_exception_preserves_interruption_and_restores_handler(self):
         original = storage.terminate_group
         def failed_probe(child):
@@ -858,16 +872,21 @@ Path(result_path).write_text(json.dumps(results))
         store = self.root / "cleanup-primary"
         previous = signal.getsignal(signal.SIGTERM)
         with mock.patch.object(storage, "terminate_group", side_effect=failed_probe):
-            with self.assertRaises(PermissionError):
+            with self.assertRaisesRegex(PermissionError, "synthetic secondary cleanup failure") as caught:
                 storage.guard_run(self.root, store, [sys.executable, "-c",
                                   "import pathlib,sys,time; pathlib.Path(sys.argv[1]).touch(); time.sleep(60)", str(ready)],
                                   policy=self.policy, free_space=interrupted_monitor)
+        self.assertIsInstance(caught.exception.__context__, RuntimeError)
+        self.assertEqual(str(caught.exception.__context__), "synthetic primary monitor failure")
         state = json.loads(next((store / "states").glob("*.json")).read_text())
         self.assertEqual(state["status"], "interrupted")
         self.assertEqual(state["error"], "RuntimeError")
         self.assertEqual(state["cleanupError"]["type"], "PermissionError")
-        self.assertIsNotNone(state["childExitCode"])
+        self.assertEqual(state["cleanupError"]["message"], "synthetic secondary cleanup failure")
+        self.assertEqual(state["childExitCode"], -signal.SIGTERM)
         self.assertEqual(signal.getsignal(signal.SIGTERM), previous)
+        with storage.exclusive(store / "active.lock"):
+            pass
 
     def test_cleanup_failure_after_sigterm_retains_primary_exception_and_inputs(self):
         original = storage.terminate_group
