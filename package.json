@@ -96,7 +96,7 @@
   "dependencies": {
     "@formatjs/intl-collator": "0.3.1",
     "@formatjs/intl-datetimeformat": "8.0.2",
-    "@formatjs/intl-getcanonicallocales": "3.3.0",
+    "@formatjs/intl-getcanonicallocales": "3.4.1",
     "@formatjs/intl-locale": "5.4.2",
     "@formatjs/intl-numberformat": "10.0.2",
     "@formatjs/intl-pluralrules": "7.0.2",
