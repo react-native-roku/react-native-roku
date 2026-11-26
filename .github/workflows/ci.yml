@@ -1,7 +1,7 @@
 name: Package qualification
 on:
   push:
-    branches: [main]
+    branches: [main, preview-qualification-diagnostics]
   pull_request:
   workflow_dispatch:
     inputs:
@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   fast:
-    if: ${{ !inputs.release_diagnostics }}
+    if: github.ref_name != 'preview-qualification-diagnostics' && !inputs.release_diagnostics
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -107,7 +107,7 @@ jobs:
           include-hidden-files: true
 
   browser-diagnostic:
-    if: inputs.release_diagnostics
+    if: github.ref_name == 'preview-qualification-diagnostics' || inputs.release_diagnostics
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -144,7 +144,7 @@ jobs:
           TMPDIR="$(realpath "$long_tmp")" probe || echo "Managed path reproduction exited $?"
           TMPDIR=/tmp probe
   storage-diagnostic:
-    if: inputs.release_diagnostics
+    if: github.ref_name == 'preview-qualification-diagnostics' || inputs.release_diagnostics
     runs-on: macos-latest
     timeout-minutes: 5
     steps:
