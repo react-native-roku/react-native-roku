@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.0-preview.2]
+
+- Publish approved previews under the default npm tag. The starter instructions
+  use `@latest` to select the current release.
+
 ## [0.2.0-preview.1]
 
 - Keep item content mounted through internal FlatList window updates. Parent renders, updated data, callbacks and extraData still refresh item content.

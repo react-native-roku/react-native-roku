@@ -7,10 +7,10 @@ complete React Native implementation.
 
 ## Create your first Roku app
 
-Use Node 24.18.1 and pnpm 11.23.0. The preview starter includes a counter and a virtualized catalog you can navigate with a remote.
+Use Node 24.18.1 and pnpm 11.23.0. The default npm release includes previews. The starter includes a counter and a virtualized catalog you can navigate with a remote.
 
 ```sh
-npx --yes react-native-roku@preview init my-roku-app
+npx --yes react-native-roku@latest init my-roku-app
 cd my-roku-app
 pnpm install
 pnpm run doctor

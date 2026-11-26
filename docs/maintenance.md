@@ -1,6 +1,6 @@
 # Maintaining react-native-roku
 
-This is an unpublished experimental platform package. Keep it independent of any
+This experimental platform package is published on npm. Keep it independent of any
 application's routes, server contracts, query policy and focus topology. The
 React application owns those decisions; this package owns renderer and native
 mechanics. The developer preview uses the MIT license.
@@ -345,10 +345,16 @@ pass on ZIPs built from that archive, obtain owner authorization. Supply the com
 on `v<version>` with `preparation-run`, `tarball-sha256` and `seal-sha256` from
 the original run. The job checks the run's source commit and both digests,
 downloads and verifies the sealed files, and stages the tarball with public
-access, provenance, and the `preview` dist-tag. It does not repack. Inspect the
+access, provenance, and the explicit `latest` dist-tag, including for preview
+versions. This makes each approved release the default install. Inspect the
 staged version and download it in an empty directory to compare its SHA-256
 with the reviewed tarball. The owner uses `npm stage approve <stage-id>` with 2FA
-to publish those bytes and can verify the tag with `npm view react-native-roku@preview version`.
+to publish those bytes. Verify that `npm view react-native-roku@latest version`
+matches the approved version. For a preview, also run
+`npm dist-tag add react-native-roku@<approved-version> preview` to keep existing
+`@preview` consumers on that release. Check that the main package page shows
+the release README. npm refreshes that README on publication of a new version.
+[npm package README updates](https://docs.npmjs.com/about-package-readme-files/)
 See [npm staged publishing](https://docs.npmjs.com/staged-publishing/).
 
 ## Device evidence

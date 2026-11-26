@@ -147,4 +147,4 @@ jobs:
       - name: Stage the exact archive for owner approval
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_BOOTSTRAP_STAGE_TOKEN }}
-        run: npm stage publish .local/candidate/react-native-roku.tgz --access public --tag preview --provenance --ignore-scripts
+        run: npm stage publish .local/candidate/react-native-roku.tgz --access public --tag latest --provenance --ignore-scripts

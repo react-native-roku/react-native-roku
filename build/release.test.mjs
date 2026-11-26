@@ -43,12 +43,12 @@ test("release preparation blocks unlicensed, uncommitted and unclassified packag
       inspectRelease(root, { git }).blockers.some((value) => value.includes("Package repository")),
     );
     manifest.repository.url = originalUrl;
-    manifest.publishConfig.tag = "latest";
+    manifest.publishConfig.tag = "preview";
     writeFileSync(resolve(root, "package.json"), JSON.stringify(manifest));
     assert.ok(
       inspectRelease(root, {
         git: { head: "fixture", clean: true, tags: [`v${manifest.version}`] },
-      }).blockers.some((value) => value.includes("preview npm dist-tag")),
+      }).blockers.some((value) => value.includes("latest npm dist-tag")),
     );
     manifest.dependencies["react-reconciler"] = "0.34.0";
     writeFileSync(resolve(root, "package.json"), JSON.stringify(manifest));

@@ -9,7 +9,7 @@ TypeScript source and public build adapters and requires only its declared depen
 With the published preview, create a project directly from the registry.
 
 ```sh
-npx --yes react-native-roku@preview init my-roku-app
+npx --yes react-native-roku@latest init my-roku-app
 cd my-roku-app
 pnpm install
 pnpm run doctor
@@ -24,13 +24,13 @@ directory. Compare its SHA-256 with the release record, then use the same steps
 as for an archive supplied for review.
 
 ```sh
-npm pack react-native-roku@preview
+npm pack react-native-roku@latest
 ```
 
 Set `archive` to the absolute path of that file:
 
 ```sh
-archive=/absolute/path/to/react-native-roku-0.2.0-preview.1.tgz
+archive=/absolute/path/to/react-native-roku-0.2.0-preview.2.tgz
 shasum -a 256 "$archive"
 scratch=$(mktemp -d)
 tar -xzf "$archive" -C "$scratch"

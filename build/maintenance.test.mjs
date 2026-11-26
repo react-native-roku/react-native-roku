@@ -48,7 +48,7 @@ test("CI qualifies both supported hosts and release workflow defaults to prepara
   );
   const command = stage.steps.at(-1).run;
   assert.match(command, /^npm stage publish \.local\/candidate\/react-native-roku\.tgz /);
-  assert.match(command, /--tag preview/);
+  assert.match(command, /--tag latest(?:\s|$)/);
   assert.match(command, /--provenance/);
   assert.ok(stage.steps.every((step) => !/\b(?:npm|pnpm) pack\b/.test(step.run ?? "")));
 });

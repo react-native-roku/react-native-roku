@@ -1,6 +1,6 @@
 {
   "name": "react-native-roku",
-  "version": "0.2.0-preview.1",
+  "version": "0.2.0-preview.2",
   "type": "module",
   "main": "src/index.ts",
   "exports": {
@@ -141,7 +141,7 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "tag": "preview",
+    "tag": "latest",
     "provenance": true
   },
   "repository": {
