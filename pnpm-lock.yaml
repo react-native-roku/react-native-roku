@@ -42,20 +42,20 @@ importers:
         specifier: 0.86.2
         version: 0.86.2
       '@roku-sdk/common':
-        specifier: 2.19.1
-        version: 2.19.1
+        specifier: 2.20.0
+        version: 2.20.0
       '@roku-sdk/components':
-        specifier: 2.19.1
-        version: 2.19.1
+        specifier: 2.20.0
+        version: 2.20.0
       '@roku-sdk/interfaces':
-        specifier: 2.19.1
-        version: 2.19.1
+        specifier: 2.20.0
+        version: 2.20.0
       '@roku-sdk/runtime':
-        specifier: 2.19.1
-        version: 2.19.1
+        specifier: 2.20.0
+        version: 2.20.0
       '@roku-sdk/solid':
-        specifier: 2.19.1
-        version: 2.19.1
+        specifier: 2.20.0
+        version: 2.20.0
       '@types/react-reconciler':
         specifier: 0.33.0
         version: 0.33.0(@types/react@19.2.18)
@@ -82,14 +82,14 @@ importers:
         specifier: 0.4.2
         version: 0.4.2
       '@roku-sdk/dev-tools':
-        specifier: 2.19.1
-        version: 2.19.1(@types/node@24.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)
+        specifier: 2.20.0
+        version: 2.20.0(@types/node@24.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)
       '@roku-sdk/rsg-ts':
-        specifier: 2.19.1
-        version: 2.19.1
+        specifier: 2.20.0
+        version: 2.20.0
       '@roku-sdk/tooling':
-        specifier: 2.19.1
-        version: 2.19.1(@roku-sdk/runtime@2.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)
+        specifier: 2.20.0
+        version: 2.20.0(@roku-sdk/runtime@2.20.0)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)
       '@types/node':
         specifier: 24.19.1
         version: 24.19.1
@@ -1364,64 +1364,64 @@ packages:
   '@react-native/normalize-colors@0.86.2':
     resolution: {integrity: sha512-EzPFc9Y6lzYOWeso2almwXI7f8+qReHxWvT+algsOczb2UhWXIWXDoSvkdwoSfiwwmGt/ijJgKJoeHlzPkLwRg==}
 
-  '@roku-sdk/ai@2.19.1':
-    resolution: {integrity: sha512-pyzGRxul9PcEMxrqhzbrR1v6spEPHdSqoGRFqtb7/rmsPGcy+KN1cJYe5JAcfjnBucd8fvW00FvKIGg9Y/G1Xw==}
+  '@roku-sdk/ai@2.20.0':
+    resolution: {integrity: sha512-q/QLFUM0R2847DwU07bdRyBBjPhrS0bpAhyBSGcP5ezPOCRXVvI4Au86Ar20L5CByec/zVLvHYVsjuBleiW1rw==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/common@2.19.1':
-    resolution: {integrity: sha512-n49G6ZaOGzq6qhnpuX1byHiky3Co0tS7vxeOkQjNgprOt955/tFOsPM+ooFzn1/HiRS85akWep49t/spQR9e/g==}
+  '@roku-sdk/common@2.20.0':
+    resolution: {integrity: sha512-/Nmxcjt6cTBA6CtULyXmBbCGJiwTdC1LYFjYIiq8Qbt5HiEHS9efhU3jHzmeizFuFKakxMbFcIxnjrdbf/s0bw==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/compat@2.19.1':
-    resolution: {integrity: sha512-8dPids9yQa0MMbaXICPbZp5JNvNeVCJuDpHS1mc9P6JQxqbGxF3iAqiFiU39mbIiGQBZubH56f86XguTiGHgIQ==}
+  '@roku-sdk/compat@2.20.0':
+    resolution: {integrity: sha512-cT+qZKSOYmJTqqVSiYA94iG6g29oGCGFR6DqBlFHN04Ej8rQN3vW9EGrn8EKVX2NB8v7PjDOBE5+i0SK7+Bu0A==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
     peerDependencies:
-      '@roku-sdk/runtime': ^2.19.1
-      '@roku-sdk/solid': ^2.19.1
+      '@roku-sdk/runtime': ^2.20.0
+      '@roku-sdk/solid': ^2.20.0
 
-  '@roku-sdk/components@2.19.1':
-    resolution: {integrity: sha512-SH2vbIx/ODHMZLmbN98Y4jpGF8lJz6z1YUwcoH+bl5W9pNCnt21+G7wyUhpR035ZJwDWsUhAIDAXjbACFdZAYg==}
+  '@roku-sdk/components@2.20.0':
+    resolution: {integrity: sha512-TnoyRBONJViXtp3VZj985eDjyouyNI1n3cL3g5DNle+HBLMrkSe1MswudTzdgyMhBRBpXeMwYmbpMgRyGIuMjQ==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/dev-tools@2.19.1':
-    resolution: {integrity: sha512-/L5jzhOgKRcSGfZYrmmQx4WBd19etC0LG8R/bBya/5Za2jUF9kKd1UnphBjN1BhePUq4YUdU7Xxpuxtl9C4r4g==}
+  '@roku-sdk/dev-tools@2.20.0':
+    resolution: {integrity: sha512-mp5eIKHdnYckHM2cvyBSYfL0UafyR22MyQmq3L4GkQzKSKWeL9iwpAUKwwfPw2GzoXtBLM4JB87oBlHDSdS0lA==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/interfaces@2.19.1':
-    resolution: {integrity: sha512-o05JUjAN2GzMeV9UJSJ9/XCq75OkLERA5V92EOpcGv0t2Dye0umsmIKMlYSCt0xPmu7lNQ5UQEIPQG9pU250Gg==}
+  '@roku-sdk/interfaces@2.20.0':
+    resolution: {integrity: sha512-DcffzJHDVWAAfdTdXGPy5ycmP8SWtXxRDFKqZPidCayK0JxjBDLFw8K0WjA1487qchd6DDj6+T3aIBDgGvJkQA==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/native@2.19.1':
-    resolution: {integrity: sha512-HWw4qdwvsAd5c0Do0CtIVNBIjOAsoaw+G+00C//aeBPpVaFSC6I6cd/uKRJLZHoqG2MV7TS98rUhPlhcFtn0vw==}
+  '@roku-sdk/native@2.20.0':
+    resolution: {integrity: sha512-bR9mCemDo1Ossa/tdNdl1U+8MUeMRPjKhjC4o3AQ80go/abWTZXXLg7d+58RTwWGFYw1Kcxh0uQNp5l+nIHyWg==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/navigation@2.19.1':
-    resolution: {integrity: sha512-zmQKNL0JlQJ+WmRFnbIA+5r5ocQnkOeFM7q1NrIx7M9669KCw3Y5TVAz1FmIfmPoPsEw8EHOrz7K9T3WWMneAQ==}
+  '@roku-sdk/navigation@2.20.0':
+    resolution: {integrity: sha512-hQMQ2gqkC7tX60k8sZkKTwDKqHkLa0WzJ7Zgzf9h6A+pPgbZHG5PxrK5Hbohpzt+1QBuPEbTz6PR4ugHh9Z1Gw==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/rsg-ts@2.19.1':
-    resolution: {integrity: sha512-9peQ3cCxhHhkSR9hEEd52+vi2gCZNbRmeOQSFdIepXhykgm7lx5zGteiKgPyG1UAJODgX4nvaIcSq1CJItpvxg==}
+  '@roku-sdk/rsg-ts@2.20.0':
+    resolution: {integrity: sha512-dVAS2xnF7wBYi64LwWQB0ZTfspM8DoaHI0Qx2RDtyReQDZHB9fRBVEvXXOi1ognFOKT1M/hsA5OWBOALDD5cGw==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/runtime@2.19.1':
-    resolution: {integrity: sha512-7QSA8SmbqfQfS4A9MiFJ9KWqi8L5vFAwsfqGgkF6jSP/4wUQ7R9cpBryTQxiRpiTZSDK/4hMlMGL7bEMCyZ1zA==}
+  '@roku-sdk/runtime@2.20.0':
+    resolution: {integrity: sha512-6J6b9CEUf7WNmMOYaUz4e7ueoc1JbyW/R2KuM5MtCRrunk5EQvz4SKOLnwLAre3MqdmPbdGiuz+PamZPh/MduA==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/sdk-config@2.19.1':
-    resolution: {integrity: sha512-ooYwC+7sdojiE7w5vSqMeeO53iknXjJGSkCH4J3DSWhUspKouXbhVPTqLv3odFEEYdbxJJwJBmpioq/H9QLZ4Q==}
+  '@roku-sdk/sdk-config@2.20.0':
+    resolution: {integrity: sha512-tPmz6vhmRdEiF4RQxjGnwFUd+zfFiane7K8GsG6WzpGI1sAzjQnEidmlfywscpnHcRvPq+qBA1pue5Ttx3xYug==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/solid@2.19.1':
-    resolution: {integrity: sha512-r9sxCD1C9ON80bEg3oLKhyqd/Co9E5Uavqw6LCIqtJaUytziAba0UPXCFcw9McQDYIixcZoqJVLx1MwXHelHUw==}
+  '@roku-sdk/solid@2.20.0':
+    resolution: {integrity: sha512-UGTK1wo9t+SAGjKDQbHwJb1Oz4874I0euRp1Kj79+7AadI2kJ6MHb2pfBIFWVwZEaDQfc048nkPk1ARgn7yeQg==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
-  '@roku-sdk/tooling@2.19.1':
-    resolution: {integrity: sha512-5/NGxYeSKmPo9mON4kC8K/1HMqCoDTUiIgn5i9x1il2mVn1KMSinNLAiRpfRd3PTAbIRxPAupyhpvOUuPPXY1g==}
+  '@roku-sdk/tooling@2.20.0':
+    resolution: {integrity: sha512-CB44o2HUCvwsZ/c1+fHSkv38HaGXDP9GY5JBa/yAKASd1nP+BxN0qR+HhcCbahMjaSliazDZ/UiiMUdIO1ffnA==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
     hasBin: true
 
-  '@roku-sdk/ts-core@2.19.1':
-    resolution: {integrity: sha512-5ZB5Ja+Ys+OakkNamK5O3n2GMwFMx+fOhfam0YnNfu8KaYp8aMP3Mi/qOFIn1kUNNxyJWwwq7v+L3H5mCDAJQw==}
+  '@roku-sdk/ts-core@2.20.0':
+    resolution: {integrity: sha512-nCwafe5xydJ+0CGnNv6YMsW4gFOvDfTJiL8JSAzCGk3pqTyBTaLtuP620DLWqLg5Ty72AtRQSbwfusppmJVj8Q==}
     engines: {node: '>=24.0.0', npm: '>=8.5.0'}
 
   '@rokucommunity/bslib@0.1.1':
@@ -5469,28 +5469,28 @@ snapshots:
 
   '@react-native/normalize-colors@0.86.2': {}
 
-  '@roku-sdk/ai@2.19.1':
+  '@roku-sdk/ai@2.20.0':
     dependencies:
       zod: 4.6.7
 
-  '@roku-sdk/common@2.19.1':
+  '@roku-sdk/common@2.20.0':
     dependencies:
-      '@roku-sdk/interfaces': 2.19.1
+      '@roku-sdk/interfaces': 2.20.0
 
-  '@roku-sdk/compat@2.19.1(@roku-sdk/runtime@2.19.1)(@roku-sdk/solid@2.19.1)':
+  '@roku-sdk/compat@2.20.0(@roku-sdk/runtime@2.20.0)(@roku-sdk/solid@2.20.0)':
     dependencies:
-      '@roku-sdk/runtime': 2.19.1
-      '@roku-sdk/solid': 2.19.1
+      '@roku-sdk/runtime': 2.20.0
+      '@roku-sdk/solid': 2.20.0
 
-  '@roku-sdk/components@2.19.1':
+  '@roku-sdk/components@2.20.0':
     dependencies:
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/interfaces': 2.19.1
-      '@roku-sdk/navigation': 2.19.1
-      '@roku-sdk/runtime': 2.19.1
-      '@roku-sdk/solid': 2.19.1
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/interfaces': 2.20.0
+      '@roku-sdk/navigation': 2.20.0
+      '@roku-sdk/runtime': 2.20.0
+      '@roku-sdk/solid': 2.20.0
 
-  '@roku-sdk/dev-tools@2.19.1(@types/node@24.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)':
+  '@roku-sdk/dev-tools@2.20.0(@types/node@24.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)':
     dependencies:
       '@babel/core': 7.29.13(supports-color@8.1.1)
       '@babel/preset-env': 7.29.7(@babel/core@7.29.13(supports-color@8.1.1))(supports-color@8.1.1)
@@ -5520,48 +5520,49 @@ snapshots:
       - supports-color
       - ts-node
 
-  '@roku-sdk/interfaces@2.19.1': {}
+  '@roku-sdk/interfaces@2.20.0': {}
 
-  '@roku-sdk/native@2.19.1':
+  '@roku-sdk/native@2.20.0':
     dependencies:
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/interfaces': 2.19.1
-      '@roku-sdk/ts-core': 2.19.1
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/interfaces': 2.20.0
+      '@roku-sdk/ts-core': 2.20.0
 
-  '@roku-sdk/navigation@2.19.1':
+  '@roku-sdk/navigation@2.20.0':
     dependencies:
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/interfaces': 2.19.1
-      '@roku-sdk/solid': 2.19.1
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/interfaces': 2.20.0
+      '@roku-sdk/runtime': 2.20.0
+      '@roku-sdk/solid': 2.20.0
 
-  '@roku-sdk/rsg-ts@2.19.1':
+  '@roku-sdk/rsg-ts@2.20.0':
     dependencies:
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/components': 2.19.1
-      '@roku-sdk/interfaces': 2.19.1
-      '@roku-sdk/native': 2.19.1
-      '@roku-sdk/runtime': 2.19.1
-      '@roku-sdk/sdk-config': 2.19.1
-      '@roku-sdk/solid': 2.19.1
-      '@roku-sdk/ts-core': 2.19.1
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/components': 2.20.0
+      '@roku-sdk/interfaces': 2.20.0
+      '@roku-sdk/native': 2.20.0
+      '@roku-sdk/runtime': 2.20.0
+      '@roku-sdk/sdk-config': 2.20.0
+      '@roku-sdk/solid': 2.20.0
+      '@roku-sdk/ts-core': 2.20.0
 
-  '@roku-sdk/runtime@2.19.1':
+  '@roku-sdk/runtime@2.20.0':
     dependencies:
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/interfaces': 2.19.1
-      '@roku-sdk/solid': 2.19.1
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/interfaces': 2.20.0
+      '@roku-sdk/solid': 2.20.0
 
-  '@roku-sdk/sdk-config@2.19.1':
+  '@roku-sdk/sdk-config@2.20.0':
     dependencies:
       esbuild: 0.28.1
 
-  '@roku-sdk/solid@2.19.1':
+  '@roku-sdk/solid@2.20.0':
     dependencies:
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/interfaces': 2.19.1
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/interfaces': 2.20.0
       solid-js: 1.9.18
 
-  '@roku-sdk/tooling@2.19.1(@roku-sdk/runtime@2.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)':
+  '@roku-sdk/tooling@2.20.0(@roku-sdk/runtime@2.20.0)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)':
     dependencies:
       '@babel/core': 7.29.13(supports-color@8.1.1)
       '@babel/plugin-transform-class-properties': 7.29.7(@babel/core@7.29.13(supports-color@8.1.1))(supports-color@8.1.1)
@@ -5571,15 +5572,15 @@ snapshots:
       '@jest/globals': 30.5.2(supports-color@8.1.1)
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/trace-mapping': 0.3.31
-      '@roku-sdk/ai': 2.19.1
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/compat': 2.19.1(@roku-sdk/runtime@2.19.1)(@roku-sdk/solid@2.19.1)
-      '@roku-sdk/components': 2.19.1
-      '@roku-sdk/dev-tools': 2.19.1(@types/node@24.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)
-      '@roku-sdk/interfaces': 2.19.1
-      '@roku-sdk/rsg-ts': 2.19.1
-      '@roku-sdk/sdk-config': 2.19.1
-      '@roku-sdk/solid': 2.19.1
+      '@roku-sdk/ai': 2.20.0
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/compat': 2.20.0(@roku-sdk/runtime@2.20.0)(@roku-sdk/solid@2.20.0)
+      '@roku-sdk/components': 2.20.0
+      '@roku-sdk/dev-tools': 2.20.0(@types/node@24.19.1)(jiti@1.21.7)(solid-js@1.9.18)(supports-color@8.1.1)
+      '@roku-sdk/interfaces': 2.20.0
+      '@roku-sdk/rsg-ts': 2.20.0
+      '@roku-sdk/sdk-config': 2.20.0
+      '@roku-sdk/solid': 2.20.0
       '@types/node': 24.19.1
       babel-preset-solid: 1.9.16(@babel/core@7.29.13(supports-color@8.1.1))(solid-js@1.9.18)
       chrome-remote-interface: 0.34.0
@@ -5608,12 +5609,12 @@ snapshots:
       - ts-node
       - utf-8-validate
 
-  '@roku-sdk/ts-core@2.19.1':
+  '@roku-sdk/ts-core@2.20.0':
     dependencies:
-      '@roku-sdk/common': 2.19.1
-      '@roku-sdk/interfaces': 2.19.1
-      '@roku-sdk/runtime': 2.19.1
-      '@roku-sdk/solid': 2.19.1
+      '@roku-sdk/common': 2.20.0
+      '@roku-sdk/interfaces': 2.20.0
+      '@roku-sdk/runtime': 2.20.0
+      '@roku-sdk/solid': 2.20.0
 
   '@rokucommunity/bslib@0.1.1': {}
 
