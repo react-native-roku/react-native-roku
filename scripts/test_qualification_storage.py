@@ -850,18 +850,17 @@ Path(result_path).write_text(json.dumps(results))
         def failed_probe(child):
             original(child)
             raise PermissionError("synthetic secondary cleanup failure")
-        calls = 0
+        ready = self.root / "cleanup-child-ready"
         def interrupted_monitor(_path):
-            nonlocal calls
-            calls += 1
-            if calls >= 3:
+            if ready.exists():
                 raise RuntimeError("synthetic primary monitor failure")
             return 64 * 1024**2
         store = self.root / "cleanup-primary"
         previous = signal.getsignal(signal.SIGTERM)
         with mock.patch.object(storage, "terminate_group", side_effect=failed_probe):
             with self.assertRaises(PermissionError):
-                storage.guard_run(self.root, store, [sys.executable, "-c", "import time;time.sleep(60)"],
+                storage.guard_run(self.root, store, [sys.executable, "-c",
+                                  "import pathlib,sys,time; pathlib.Path(sys.argv[1]).touch(); time.sleep(60)", str(ready)],
                                   policy=self.policy, free_space=interrupted_monitor)
         state = json.loads(next((store / "states").glob("*.json")).read_text())
         self.assertEqual(state["status"], "interrupted")

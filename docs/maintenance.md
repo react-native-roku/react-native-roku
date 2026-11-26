@@ -333,7 +333,7 @@ node scripts/qualify-package.mjs --verify-only --archive=DOWNLOADED_TGZ \
 
 The first npm submission requires an approved public GitHub repository matching
 `package.json` and the protected `npm-release` environment. For a new package,
-the owner supplies an npm granular token with stage-only permissions as
+the owner supplies an npm granular token with **Read and write (stage only)** package permission and **Bypass two-factor authentication** unchecked as
 `NPM_BOOTSTRAP_STAGE_TOKEN` on that environment. Staging a new name creates a
 public `0.0.0-stage` placeholder. The owner can configure
 [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) for this

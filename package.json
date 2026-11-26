@@ -1,6 +1,6 @@
 {
   "name": "react-native-roku",
-  "version": "0.2.0",
+  "version": "0.2.0-preview.1",
   "type": "module",
   "main": "src/index.ts",
   "exports": {

@@ -3,6 +3,7 @@ import {
   forwardRef,
   Fragment,
   isValidElement,
+  memo,
   useCallback,
   useImperativeHandle,
   useLayoutEffect,
@@ -127,10 +128,22 @@ interface CellProps<T> {
   readonly previousKey?: string;
   readonly horizontal: boolean;
   readonly separator?: FlatListProps<T>["ItemSeparatorComponent"];
-  readonly renderItem: FlatListProps<T>["renderItem"];
+  readonly itemRenderer: Pick<FlatListProps<T>, "renderItem">;
   readonly onLayout: NativeElementProps["onLayout"];
   readonly updates: Map<string, SeparatorUpdate>;
 }
+
+// A list update from its parent supplies fresh props (including extraData).
+// Internal window and measurement updates can keep the existing item subtree.
+function FlatListItemBody<T>({
+  itemRenderer,
+  item,
+  index,
+  separators,
+}: Pick<CellProps<T>, "itemRenderer" | "item" | "index"> & { separators: FlatListSeparators }) {
+  return itemRenderer.renderItem({ item, index, separators });
+}
+const FlatListItem = memo(FlatListItemBody) as typeof FlatListItemBody;
 
 /** Separator state and callback authority belong to one mounted keyed cell.
  * A retired callback cannot target a later cell that reuses the same key. */
@@ -193,7 +206,12 @@ function FlatListCell<T>(props: CellProps<T>) {
       style: props.horizontal ? { flexDirection: "row", flexShrink: 0 } : undefined,
       onLayout: props.onLayout,
     },
-    props.renderItem({ item: props.item, index: props.index, separators }),
+    createElement(FlatListItem<T>, {
+      itemRenderer: props.itemRenderer,
+      item: props.item,
+      index: props.index,
+      separators,
+    }),
     separator,
   );
 }
@@ -288,7 +306,12 @@ function useBatchedWindow(
   return window;
 }
 
-function FlatListWindow<T>(props: FlatListProps<T>, forwardedRef: ForwardedRef<FlatListHandle>) {
+type WindowProps<T> = FlatListProps<T> & Pick<CellProps<T>, "itemRenderer">;
+
+function FlatListWindow<T>(
+  { itemRenderer, ...props }: WindowProps<T>,
+  forwardedRef: ForwardedRef<FlatListHandle>,
+) {
   const horizontal = props.horizontal === true,
     axis = horizontal ? "x" : "y",
     dimension = horizontal ? "width" : "height";
@@ -825,7 +848,7 @@ function FlatListWindow<T>(props: FlatListProps<T>, forwardedRef: ForwardedRef<F
                 horizontal,
                 updates: separatorUpdates,
                 separator: index + 1 < props.data.length ? props.ItemSeparatorComponent : undefined,
-                renderItem: props.renderItem,
+                itemRenderer,
                 onLayout(event) {
                   const length = (
                     event as { nativeEvent: { layout: { width: number; height: number } } }
@@ -861,7 +884,7 @@ function FlatListWindow<T>(props: FlatListProps<T>, forwardedRef: ForwardedRef<F
 }
 
 const FlatListRows = forwardRef(FlatListWindow) as <T>(
-  props: FlatListProps<T> & RefAttributes<FlatListHandle>,
+  props: WindowProps<T> & RefAttributes<FlatListHandle>,
 ) => ReactElement;
 
 /** Match the pinned FlatList's row adapter: item callbacks use original indices,
@@ -960,11 +983,13 @@ function FlatListInner<T>(props: FlatListProps<T>, forwardedRef: ForwardedRef<Fl
     },
     [props.onViewableItemsChanged, props.keyExtractor, columns],
   );
-  if (columns === 1) return createElement(FlatListRows<T>, { ...props, ref: forwardedRef });
+  if (columns === 1)
+    return createElement(FlatListRows<T>, { ...props, itemRenderer: props, ref: forwardedRef });
   return createElement(FlatListRows<readonly T[]>, {
     ...props,
     ref: forwardedRef,
     data: rows,
+    itemRenderer: { renderItem },
     onViewableItemsChanged: props.onViewableItemsChanged ? onViewableItemsChanged : undefined,
     keyExtractor,
     renderItem,

@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## [0.2.0-preview.1]
+
+- Keep item content mounted through internal FlatList window updates. Parent renders, updated data, callbacks and extraData still refresh item content.
 
 - Reuse committed placement branches and submit the affected native nodes on
   stable React trees. Validate inherited presentation settings, geometry and
