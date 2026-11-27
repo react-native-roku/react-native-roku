@@ -30,7 +30,7 @@ npm pack react-native-roku@latest
 Set `archive` to the absolute path of that file:
 
 ```sh
-archive=/absolute/path/to/react-native-roku-0.2.0-preview.2.tgz
+archive=/absolute/path/to/react-native-roku-0.2.0-preview.3.tgz
 shasum -a 256 "$archive"
 scratch=$(mktemp -d)
 tar -xzf "$archive" -C "$scratch"

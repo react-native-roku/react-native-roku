@@ -2685,7 +2685,7 @@ packages:
 
   react-native-roku@file:../runtime.tgz:
     resolution: {integrity: sha512-8kpG362ePpkVa7HZumvDILrUH+o5WoUFpElRVdgaozA0BKaAf/deqDlR7t5Y4prMbmk5huUBxw2CvQugIxgF3g==, tarball: file:../runtime.tgz}
-    version: 0.2.0
+    version: 0.2.0-preview.3
     engines: {node: '>=24.18.1 <25', pnpm: 11.23.0}
     hasBin: true
     peerDependencies:

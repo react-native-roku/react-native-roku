@@ -10,7 +10,7 @@
     "doctor": "react-native-roku doctor"
   },
   "dependencies": {
-    "react-native-roku": "0.2.0-preview.2",
+    "react-native-roku": "0.2.0-preview.3",
     "react": "19.2.8",
     "@roku-sdk/rsg-ts": "2.19.1",
     "@expo-google-fonts/inter": "0.4.2"

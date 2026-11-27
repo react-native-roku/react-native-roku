@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.0-preview.3]
+
+- Verify the uploaded release artifact by its ID and checksum before staging the
+  preview under the default npm tag.
+
 ## [0.2.0-preview.2]
 
 - Publish approved previews under the default npm tag. The starter instructions
